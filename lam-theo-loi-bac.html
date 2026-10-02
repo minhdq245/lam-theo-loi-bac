@@ -1,0 +1,2376 @@
+<!doctype html>
+<html lang="vi" data-theme="light">
+<head>
+<meta charset="utf-8">
+<script>try{if(localStorage.getItem("lam-theo-loi-bac-theme")==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Làm theo lời Bác</title>
+<meta name="description" content="Một hành trình tư liệu về Chủ tịch Hồ Chí Minh: khám phá lịch sử, lắng nghe âm nhạc và học qua mười trò chơi tình huống môn Tư tưởng Hồ Chí Minh.">
+<meta name="theme-color" content="#982f27">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FCFBF8;
+  --grid:#F4E6E3;
+  --grid-strong:#EBCFCB;
+  --margin:#E26D6D;
+  --ink:#2B1D1B;
+  --ink-soft:#6B5652;
+  --purple:#C8102E;
+  --purple-deep:#9E0B22;
+  --purple-wash:rgba(200,16,46,.07);
+  --on-purple:#FFFFFF;
+  --red:#CF2530;
+  --red-wash:rgba(207,37,48,.09);
+  --shadow:rgba(60,10,10,.35);
+  --gold:#FFCD00;
+  --gold-deep:#EDB100;
+  --gold-wash:rgba(255,205,0,.34);
+  --gold-ink:#6B4A00;
+  --flag:#DA251D;
+  --star:#FFDF00;
+  --hand:"Patrick Hand","Segoe Print","Bradley Hand","Comic Sans MS",cursive;
+  --serif:"Literata","Noto Serif",Georgia,"Times New Roman",serif;
+  --mx:3.5rem;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#1B1414; --grid:#271B1B; --grid-strong:#382626; --margin:#7A2E30;
+    --ink:#F3EAE6; --ink-soft:#C9B6B0; --purple:#FF6B6B; --purple-deep:#FF9A9A;
+    --purple-wash:rgba(255,107,107,.12); --on-purple:#1B1414;
+    --red:#FF8A7A; --red-wash:rgba(255,138,122,.12); --shadow:rgba(0,0,0,.6);
+    --gold:#FFD84D; --gold-deep:#FFC400; --gold-wash:rgba(255,216,77,.18); --gold-ink:#FFD84D;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#1B1414; --grid:#271B1B; --grid-strong:#382626; --margin:#7A2E30;
+  --ink:#F3EAE6; --ink-soft:#C9B6B0; --purple:#FF6B6B; --purple-deep:#FF9A9A;
+  --purple-wash:rgba(255,107,107,.12); --on-purple:#1B1414;
+  --red:#FF8A7A; --red-wash:rgba(255,138,122,.12); --shadow:rgba(0,0,0,.6);
+    --gold:#FFD84D; --gold-deep:#FFC400; --gold-wash:rgba(255,216,77,.18); --gold-ink:#FFD84D;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+[hidden]{display:none !important}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px);background:var(--paper);-webkit-text-size-adjust:100%}
+.ruled{
+  background-color:var(--paper);
+  background-image:
+    repeating-linear-gradient(to bottom,var(--grid-strong) 0 1px,transparent 1px 36px),
+    repeating-linear-gradient(to right,var(--grid-strong) 0 1px,transparent 1px 36px),
+    repeating-linear-gradient(to bottom,var(--grid) 0 1px,transparent 1px 9px);
+}
+body{margin:0;min-height:100%;display:flex;flex-direction:column;color:var(--ink);font-family:var(--serif);font-size:1.125rem;line-height:1.65}
+svg{max-width:100%}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+:focus-visible{outline:2px dashed var(--red);outline-offset:3px}
+
+.page{flex:1;width:100%;max-width:72rem;margin:0 auto;position:relative;padding:1.25rem 1.5rem 4rem calc(var(--mx) + 1.75rem)}
+.page::before{content:"";position:absolute;top:0;bottom:0;left:var(--mx);width:2px;background:var(--margin)}
+@media (max-width:640px){
+  :root{--mx:1.1rem}
+  .page{padding:1rem 1rem 3rem calc(var(--mx) + 1rem)}
+}
+
+/* Buttons */
+.btn{font-family:var(--serif);font-size:1rem;font-weight:600;line-height:1.2;padding:.75rem 1.25rem;border:2px solid var(--purple);border-radius:6px;background:var(--paper);color:var(--purple);cursor:pointer;transition:background-color .15s,color .15s,border-color .15s}
+.btn:hover{background:linear-gradient(var(--purple-wash),var(--purple-wash)),var(--paper)}
+.btn-primary{background:var(--purple);color:var(--on-purple)}
+.btn-primary:hover{background:var(--purple-deep);border-color:var(--purple-deep)}
+.btn-quiet{border-color:transparent;background:transparent;padding:.5rem .25rem;text-decoration:underline;text-decoration-color:var(--grid-strong);text-decoration-thickness:2px;text-underline-offset:5px}
+.btn-quiet:hover{background:transparent;text-decoration-color:var(--purple)}
+
+/* Top bar */
+.bar{display:flex;justify-content:space-between;align-items:center;gap:.5rem 1rem;flex-wrap:wrap;margin-bottom:1.25rem}
+.bar-left{display:flex;align-items:center;gap:.25rem 1rem;flex-wrap:wrap;min-width:0}
+.brand{font-family:var(--hand);font-size:1.5rem;color:var(--purple);line-height:1.1}
+
+/* Home */
+#home{max-width:46rem;padding-top:clamp(.5rem,4vh,3rem)}
+.hero-title{font-family:var(--hand);font-weight:400;font-size:clamp(3.25rem,10vw,6rem);line-height:.95;color:var(--purple);margin:0 0 1rem}
+.lede{margin:0 0 2rem;max-width:36em;color:var(--ink-soft)}
+.copied{margin:0 0 2.5rem}
+.copied blockquote{margin:0;font-family:var(--hand);font-size:clamp(1.4rem,3.2vw,1.85rem);line-height:1.5;color:var(--ink);max-width:30em}
+.copied figcaption{margin-top:.75rem;font-size:.9375rem;color:var(--ink-soft)}
+.mark{position:relative;white-space:nowrap}
+.mark svg{position:absolute;left:-3%;bottom:-.3em;width:106%;height:.55em;overflow:visible;pointer-events:none}
+.mark path,.ring path{fill:none;stroke:var(--red);stroke-width:3;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1}
+.mark path{animation:draw 1.1s cubic-bezier(.6,.1,.3,1) .5s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.toc-heading{font-family:var(--hand);font-weight:400;font-size:2rem;color:var(--purple);margin:0 0 .25rem;line-height:1.1}
+.toc{list-style:none;margin:.5rem 0 1.75rem;padding:0;border-top:1px solid var(--grid-strong)}
+.toc-row{display:grid;grid-template-columns:1.75rem minmax(0,1fr) auto;gap:.75rem;align-items:start;width:100%;padding:1rem .5rem;text-align:left;font:inherit;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--grid-strong);cursor:pointer;transition:background-color .15s}
+.toc-row:hover{background:var(--purple-wash)}
+.toc-num{font-family:var(--hand);font-size:1.6rem;color:var(--purple);line-height:1.2}
+.toc-main{display:block;min-width:0}
+.toc-line{display:flex;align-items:baseline;gap:.5rem}
+.toc-title{font-family:var(--hand);font-size:1.6rem;color:var(--purple);line-height:1.2}
+.toc-dots{flex:1;min-width:1rem;border-bottom:2px dotted var(--grid-strong);transform:translateY(-.3em)}
+.toc-count{font-size:.875rem;color:var(--ink-soft);white-space:nowrap}
+.toc-label{display:block;font-weight:600;font-size:1rem;line-height:1.4;margin-top:.15rem}
+.toc-role{display:block;font-size:.9375rem;color:var(--ink-soft);line-height:1.5;margin-top:.15rem}
+.toc-status{font-family:var(--hand);font-size:1.75rem;color:var(--red);line-height:1.2;min-width:2.25rem;text-align:right}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;margin:0 0 1rem}
+.tip{font-size:.9375rem;color:var(--ink-soft);max-width:36em;margin:0}
+
+/* Play */
+.play-grid{display:grid;gap:2.5rem;grid-template-columns:minmax(0,1fr)}
+@media (min-width:960px){
+  .play-grid{grid-template-columns:minmax(0,42rem) 16rem;justify-content:space-between;align-items:start}
+  .meters-panel{position:sticky;top:calc(env(safe-area-inset-top,0px) + 1.5rem)}
+}
+.scene-head{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem}
+.when{font-family:var(--hand);font-size:1.75rem;color:var(--purple);margin:0;line-height:1}
+.progress{display:flex;gap:2px;flex-wrap:wrap}
+.progress span{width:18px;height:18px;background:var(--grid-strong);clip-path:polygon(50% 0%,61.2% 34.5%,97.6% 34.5%,68.2% 55.9%,79.4% 90.5%,50% 69.1%,20.6% 90.5%,31.8% 55.9%,2.4% 34.5%,38.8% 34.5%)}
+.progress span.done{background:var(--gold-deep)}
+.progress span.now{background:var(--purple)}
+.count{margin:0;font-size:.875rem;color:var(--ink-soft)}
+.role{margin:.875rem 0 0;max-width:38em;font-size:.9375rem;color:var(--ink-soft);font-style:italic}
+#scene-title{font-size:clamp(1.625rem,4vw,2.125rem);line-height:1.2;font-weight:600;margin:.625rem 0 .75rem;outline:none}
+.situation{margin:0 0 1.5rem;max-width:38em}
+.choices{list-style:none;margin:0;padding:0;display:grid;gap:.75rem}
+.choice{display:grid;grid-template-columns:2.25rem minmax(0,1fr);gap:.875rem;align-items:start;width:100%;padding:.875rem 1rem;text-align:left;font:inherit;color:var(--ink);background:var(--paper);border:1.5px solid var(--grid-strong);border-radius:6px;cursor:pointer;transition:border-color .15s,background-color .15s,opacity .2s}
+.choice:not(:disabled):hover{border-color:var(--purple);background:linear-gradient(var(--purple-wash),var(--purple-wash)),var(--paper)}
+.letter{display:grid;place-items:center;width:2.25rem;height:2.25rem;font-family:var(--hand);font-size:1.4rem;line-height:1;color:var(--purple);border:2px solid var(--purple);border-radius:52% 48% 46% 54% / 50% 54% 46% 50%}
+.choice-text{padding-top:.2rem}
+.choice:disabled{cursor:default}
+.choice:disabled:not(.picked){opacity:.45}
+.choice.picked{border:2px solid var(--red)}
+.choice.picked .letter{color:var(--red);border-color:var(--red)}
+
+.feedback:empty{display:none}
+.feedback{margin-top:2rem;padding-top:1.25rem;border-top:2px solid var(--red);scroll-margin-top:1rem}
+.fb-top{display:flex;flex-wrap:wrap;gap:.4rem .5rem;align-items:center;margin-bottom:.25rem}
+.picked-line{margin:0 .25rem 0 0;font-weight:600}
+.chip{font-family:var(--hand);font-size:1.25rem;line-height:1.3;padding:0 .45rem;border-radius:4px;white-space:nowrap}
+.chip.up{color:var(--gold-ink);background:var(--gold-wash)}
+.chip.down{color:var(--red);background:var(--red-wash)}
+.chip.zero{color:var(--ink-soft);background:var(--grid)}
+.remark{font-family:var(--hand);color:var(--red);font-size:1.5rem;line-height:1.35;margin:.5rem 0 1.25rem;max-width:32em}
+.history{margin:0 0 1.25rem;padding:.75rem 1rem;border:1.5px dashed var(--ink-soft);border-radius:4px;max-width:38em;background:var(--paper)}
+.history-label{font-family:var(--hand);font-size:1.3rem;color:var(--purple);margin:0 0 .2rem;line-height:1.2}
+.history p:last-child{margin:0}
+.quote{margin:0 0 1.25rem;padding:.25rem 0 .25rem 1.25rem;border-left:3px solid var(--purple)}
+.quote p{margin:0;font-style:italic;font-size:1.1875rem;line-height:1.6}
+.quote footer{margin-top:.4rem;font-size:.9375rem;color:var(--ink-soft)}
+.explain{margin:0 0 .75rem;max-width:38em}
+.link{margin:0 0 1.5rem;font-size:.9375rem;color:var(--ink-soft)}
+.link strong{color:var(--purple);font-weight:600}
+
+/* Meters */
+.panel-title{font-family:var(--hand);font-weight:400;font-size:1.625rem;color:var(--purple);margin:0 0 .25rem;line-height:1.1}
+.panel-note{margin:0 0 1rem;font-size:.875rem;color:var(--ink-soft)}
+.meters{max-width:24rem}
+.meter{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:.2rem .75rem;margin:0 0 .875rem}
+.meter-name{font-weight:600;font-size:.9375rem;line-height:1.3}
+.meter .cells{grid-column:1 / -1}
+.cells{display:grid;grid-template-columns:repeat(10,1fr);border:1.5px solid var(--purple);background:var(--paper)}
+.cell{aspect-ratio:1;border-right:1px solid var(--grid-strong);transition:background-color .4s}
+.cell:last-child{border-right:0}
+.cell.on{background:var(--purple)}
+.meter-val{font-family:var(--hand);font-size:1.25rem;line-height:1;display:flex;gap:.35rem;align-items:baseline;white-space:nowrap}
+.flash{font-size:1.1rem}
+.flash.up{color:var(--gold-ink)}
+.flash.down{color:var(--red)}
+
+/* Result */
+.result-title{font-family:var(--hand);font-weight:400;font-size:clamp(2.25rem,6vw,3.5rem);color:var(--purple);margin:.25rem 0 1.25rem;line-height:1.05;outline:none}
+.grade-row{display:flex;align-items:center;gap:1rem 2rem;flex-wrap:wrap;margin-bottom:2.25rem}
+.grade{position:relative;font-family:var(--hand);color:var(--red);font-size:clamp(4rem,12vw,6rem);line-height:1;padding:.2em .5em}
+.ring{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.ring.draw path{animation:draw 1s cubic-bezier(.6,.1,.3,1) .15s forwards}
+.rank{font-family:var(--hand);font-size:clamp(1.75rem,4vw,2.25rem);color:var(--red);margin:0;line-height:1.2}
+.rank-note{display:block;font-family:var(--serif);font-size:.9375rem;color:var(--ink-soft);margin-top:.25rem}
+.result-grid{display:grid;gap:2rem;grid-template-columns:minmax(0,1fr);margin-bottom:2.5rem}
+@media (min-width:900px){.result-grid{grid-template-columns:20rem minmax(0,1fr);gap:3.5rem}}
+.remark-lg{font-size:1.625rem;margin-top:.75rem}
+.review{margin:.75rem 0 2.25rem;padding:0;list-style:none;max-width:46rem}
+.review li{display:grid;grid-template-columns:6.5rem minmax(0,1fr);gap:1rem;padding:.875rem 0;border-bottom:1px solid var(--grid-strong)}
+.review .wk{font-family:var(--hand);font-size:1.25rem;color:var(--purple);line-height:1.3}
+.review .t{display:block;font-weight:600;line-height:1.35}
+.review .c{display:block;color:var(--ink-soft);font-size:1rem;line-height:1.5;margin-top:.15rem}
+.review .chips{display:flex;gap:.3rem;flex-wrap:wrap;margin-top:.35rem}
+.review .chip{font-size:1.1rem}
+@media (max-width:520px){.review li{grid-template-columns:minmax(0,1fr);gap:.1rem}}
+
+/* Notes dialog */
+dialog.notes{width:min(48rem,calc(100vw - 1.5rem));max-height:calc(100vh - 3rem);max-height:calc(100dvh - 3rem);padding:0;border:0;border-radius:8px;color:var(--ink);box-shadow:0 24px 64px var(--shadow);overflow:auto;overscroll-behavior:contain}
+dialog.notes::backdrop{background:rgba(40,10,10,.55)}
+.notes-head{position:sticky;top:0;z-index:1;background:var(--paper);border-bottom:2px solid var(--margin)}
+.notes-top{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 1.25rem .5rem 1.5rem}
+.notes-top h2{font-family:var(--hand);font-weight:400;font-size:1.75rem;color:var(--purple);margin:0;line-height:1.1}
+.note-tabs{display:flex;flex-wrap:wrap;gap:0 .25rem;padding:0 1.25rem}
+.note-tab{font-family:var(--serif);font-size:.9375rem;line-height:1.3;padding:.5rem .75rem;border:0;border-bottom:3px solid transparent;background:transparent;color:var(--ink-soft);cursor:pointer;white-space:nowrap}
+.note-tab:hover{color:var(--purple)}
+.note-tab[aria-pressed="true"]{color:var(--purple);border-bottom-color:var(--purple);font-weight:600}
+.notes-body{padding:1.25rem 1.5rem 2rem;font-size:1.0625rem}
+.notes-body .intro{margin-top:0;color:var(--ink-soft)}
+.notes-body h3{font-size:1.2rem;margin:1.75rem 0 .5rem;line-height:1.35}
+.notes-body dl{margin:0}
+.notes-body dt{font-weight:600;margin-top:1rem}
+.notes-body dd{margin:.25rem 0 0}
+.notes-body .quote p{font-size:1.0625rem}
+.wks{font-family:var(--hand);color:var(--purple);font-size:1.15rem;white-space:nowrap}
+.source-note{font-size:.875rem;color:var(--ink-soft);border-top:1px solid var(--grid-strong);padding-top:1rem;margin-top:2rem}
+
+/* Background scene: Bác's stilt house by the fish pond, areca palms, lotus (Làng Sen) */
+.backdrop{position:fixed;right:0;bottom:0;width:min(60vw,780px);color:var(--purple);pointer-events:none;z-index:0;padding-bottom:env(safe-area-inset-bottom,0px)}
+.backdrop .lines{opacity:.2}
+.backdrop .flagpole{opacity:.8}
+.backdrop svg{display:block;width:100%;height:auto}
+.backdrop .leaf{fill:currentColor;fill-opacity:.12}
+.backdrop .petal{fill:var(--red);fill-opacity:.25;stroke:var(--red)}
+.page{z-index:1}
+@media (max-width:760px){.backdrop{width:100vw}.backdrop .lines{opacity:.13}.backdrop .flagpole{opacity:.45}}
+
+/* Cờ đỏ sao vàng */
+.ribbon{position:absolute;top:0;right:clamp(1rem,5vw,3.5rem);width:58px;height:138px;background:var(--flag);clip-path:polygon(0 0,100% 0,100% 100%,50% 84%,0 100%);display:flex;justify-content:center;padding-top:64px}
+.ribbon svg{width:36px;height:36px}
+.flag-line{display:flex;align-items:center;gap:.6rem;margin:0 0 .75rem;font-size:.9375rem;color:var(--ink-soft)}
+.flag-mini{display:inline-block;width:30px;height:20px;border-radius:2px;background:var(--flag);position:relative;flex:none}
+.flag-mini::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:12px;transform:translate(-50%,-50%);background:var(--star);clip-path:polygon(50% 0%,61.2% 34.5%,97.6% 34.5%,68.2% 55.9%,79.4% 90.5%,50% 69.1%,20.6% 90.5%,31.8% 55.9%,2.4% 34.5%,38.8% 34.5%)}
+.grade.star::after{content:"";position:absolute;top:-.12em;right:-.15em;width:.5em;height:.5em;background:var(--gold);clip-path:polygon(50% 0%,61.2% 34.5%,97.6% 34.5%,68.2% 55.9%,79.4% 90.5%,50% 69.1%,20.6% 90.5%,31.8% 55.9%,2.4% 34.5%,38.8% 34.5%)}
+@media (max-width:640px){
+  .ribbon{width:42px;height:104px;padding-top:48px}
+  .ribbon svg{width:26px;height:26px}
+  .hero-title{padding-right:3rem}
+}
+
+/* Dòng thời gian */
+.tl{list-style:none;margin:1.75rem 0 1.5rem;padding:0 0 0 1.75rem;border-left:3px solid var(--purple);max-width:46rem}
+.tl li{position:relative;padding:0 0 1.75rem .75rem}
+.tl li::before{content:"";position:absolute;left:calc(-1.75rem - 14px);top:.35rem;width:25px;height:25px;background:var(--gold-deep);clip-path:polygon(50% 0%,61.2% 34.5%,97.6% 34.5%,68.2% 55.9%,79.4% 90.5%,50% 69.1%,20.6% 90.5%,31.8% 55.9%,2.4% 34.5%,38.8% 34.5%)}
+.tl-head{display:flex;align-items:baseline;flex-wrap:wrap;gap:.25rem .75rem}
+.tl-year{font-family:var(--hand);font-size:2rem;color:var(--purple);line-height:1.1}
+.tl-date{font-size:.875rem;color:var(--ink-soft)}
+.tl-title{display:block;font-weight:600;font-size:1.0625rem;margin:.2rem 0 .15rem;line-height:1.35}
+.tl-text{margin:0 0 .35rem;max-width:38em}
+.tl-go{font-size:.9375rem;padding:.25rem 0}
+@media (prefers-reduced-motion: reduce){
+  .mark path,.ring.draw path{animation:none;stroke-dashoffset:0}
+  .cell,.choice,.btn,.toc-row{transition:none}
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/experience.css">
+<script defer src="assets/experience.js"></script>
+</head>
+<body class="ruled">
+<div class="reading-progress" aria-hidden="true"></div>
+
+<div class="page">
+
+  <nav class="site-nav" aria-label="Điều hướng chính">
+    <a class="site-brand" href="#dau-trang"><span class="brand-seal" aria-hidden="true">★</span><span class="brand-type">LÀM THEO LỜI BÁC<small>TƯ TƯỞNG HỒ CHÍ MINH</small></span></a>
+    <div class="nav-links"><a href="#hanh-trinh">Hành trình</a><a href="#hoc-va-lam">Học & thực hành</a><a href="#tu-lieu">Góc tư liệu</a></div>
+    <div class="nav-tools"><button class="icon-btn" type="button" data-theme-toggle aria-label="Chuyển nền sáng hoặc tối">Nền tối</button><button class="icon-btn" type="button" data-open-notes aria-label="Mở sổ tay lý thuyết"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 5v15M12 5C8 3 5 3 2 4v15c3-1 6-1 10 1 4-2 7-2 10-1V4c-3-1-6-1-10 1Z"/></svg></button></div>
+  </nav>
+  <header class="bar" id="bar" hidden>
+    <div class="bar-left">
+      <button class="btn btn-quiet" type="button" id="home-btn">Về mục lục</button>
+      <span class="brand" id="brand"></span>
+    </div>
+    <div class="bar-left">
+      <button class="btn btn-quiet" type="button" data-theme-toggle>Nền tối</button>
+      <button class="btn btn-quiet" type="button" data-open-notes>Sổ tay lý thuyết</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section id="home" aria-labelledby="hero-title">
+      <div class="hero" id="dau-trang">
+        <div class="hero-copy" data-reveal>
+          <p class="eyebrow">Không gian học tập · Tư tưởng Hồ Chí Minh</p>
+          <h1 class="hero-title" id="hero-title">Làm theo<br>lời <em>Bác.</em></h1>
+          <p class="hero-description">Đi qua những trang sử. Lắng nghe những lời dạy.<br>Mang tư tưởng của Người vào những lựa chọn nhỏ trong cuộc sống hôm nay.</p>
+          <div class="hero-actions">
+            <a class="exhibit-btn" href="#hanh-trinh">Khám phá hành trình <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="#hoc-va-lam">Bắt đầu học <span class="arrow" aria-hidden="true">↗</span></a>
+          </div>
+          <p class="hero-footnote">Một hành trình để hiểu, để nhớ, để làm theo.</p>
+        </div>
+        <div class="hero-art" data-reveal style="--delay:160ms">
+          <div class="hero-orbit" aria-hidden="true"></div>
+          <span class="hero-watermark" aria-hidden="true">1890</span>
+          <div data-parallax="-0.08">
+            <figure class="paper-photo portrait-paper">
+              <button type="button" class="photo-open" data-asset="portrait" aria-label="Mở ảnh tư liệu"><img src="assets/images/portrait.jpg" alt="Chân dung Chủ tịch Hồ Chí Minh" width="1200" height="1602" fetchpriority="high"></button>
+              <figcaption>Chủ tịch Hồ Chí Minh<small>1890 — 1969 · ẢNH TƯ LIỆU</small></figcaption>
+            </figure>
+          </div>
+          <div data-parallax="0.07">
+            <figure class="paper-photo hero-postcard">
+              <button type="button" class="photo-open" data-asset="congress" aria-label="Mở ảnh tư liệu"><img src="assets/images/congress.jpg" alt="Chủ tịch Hồ Chí Minh trình bày báo cáo tại Đại hội II của Đảng, năm 1951" width="600" height="400"></button>
+              <figcaption>Một lòng vì nước, vì dân.<small>ĐẠI HỘI II CỦA ĐẢNG · 1951</small></figcaption>
+            </figure>
+          </div>
+          <div class="archive-stamp" aria-hidden="true">NHỮNG TRANG SỬ<strong>★</strong>NHỮNG BÀI HỌC</div>
+          <div class="pinned-note" aria-hidden="true">Học từ lịch sử.<br>Sống với hôm nay.</div>
+        </div>
+      </div>
+      <div class="hero-bottom" data-reveal>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>10</strong><span>chủ đề<br>để khám phá</span></div>
+          <div class="hero-stat"><strong>19</strong><span>dấu mốc<br>trong cuộc đời</span></div>
+          <div class="hero-stat"><strong>01</strong><span>tinh thần<br>học đi đôi với hành</span></div>
+        </div>
+        <a class="scroll-invitation" href="#hanh-trinh">CUỘN ĐỂ MỞ TỪNG TRANG <span class="scroll-symbol" aria-hidden="true"></span></a>
+      </div>
+
+      <section id="hanh-trinh" aria-labelledby="journey-heading">
+        <div class="chapter-intro" data-reveal>
+          <div><p class="eyebrow">01 / Theo dấu chân Người</p><h2 class="section-heading" id="journey-heading">Những trang sử,<br><em>những điều còn mãi.</em></h2></div>
+          <p class="section-summary">Từ khát vọng độc lập đến lý tưởng phụng sự nhân dân. Mỗi chặng đường mở ra một cách hiểu sâu hơn về tư tưởng Hồ Chí Minh.</p>
+        </div>
+        <article class="chapter" id="khat-vong">
+          <div class="chapter-art" data-reveal>
+            <span class="chapter-year" aria-hidden="true">1911</span>
+            <div data-parallax="-0.07" style="width:100%;display:flex;justify-content:center">
+              <figure class="paper-photo young-photo">
+                <button type="button" class="photo-open" data-asset="young" aria-label="Mở ảnh tư liệu"><img src="assets/images/young.jpg" alt="Nguyễn Ái Quốc tại Đại hội Marseille ở Pháp, năm 1921" width="1200" height="1650" loading="lazy"></button>
+                <figcaption>Nguyễn Ái Quốc, Marseille, 1921<small>ẢNH: AGENCE MEURISSE · BNF / GALLICA</small></figcaption>
+              </figure>
+            </div>
+            <div class="corner-note" aria-hidden="true">Một chuyến đi.<br>Một khát vọng.<br>Một con đường.</div>
+          </div>
+          <div class="chapter-copy" data-reveal>
+            <span class="chapter-no">TRANG 01 · 1911 — 1920</span>
+            <h3>Từ một khát vọng,<br>đến <em>con đường cứu nước.</em></h3>
+            <p>Ngày 5/6/1911, người thanh niên Nguyễn Tất Thành rời bến Nhà Rồng. Hành trình tìm đường cứu nước đưa Người đến nhiều quốc gia, tìm hiểu cuộc sống của những người lao động và các dân tộc bị áp bức.</p>
+            <p>Năm 1920, Nguyễn Ái Quốc đọc Luận cương của Lênin về vấn đề dân tộc và thuộc địa — một dấu mốc quan trọng trong quá trình tìm thấy con đường giải phóng dân tộc.</p>
+            <div class="concept"><span>Gắn với bài học</span><p>Cơ sở và quá trình hình thành tư tưởng Hồ Chí Minh.</p></div>
+            <button class="text-link" type="button" data-play-topic="hanhtrinh">Nhập vai trong hành trình <span class="arrow" aria-hidden="true">↗</span></button>
+          </div>
+        </article>
+        <article class="chapter reversed" id="ly-tuong">
+          <div class="chapter-art" data-reveal>
+            <span class="chapter-year" aria-hidden="true">1930</span>
+            <div data-parallax="0.06" style="width:100%;display:flex;justify-content:center">
+              <figure class="paper-photo party-paper">
+                <button type="button" class="photo-open" data-asset="congress" aria-label="Mở ảnh tư liệu"><img src="assets/images/congress.jpg" alt="Hồ Chí Minh trình bày báo cáo chính trị tại Đại hội II của Đảng, Tuyên Quang, tháng 2 năm 1951" width="600" height="400" loading="lazy"></button>
+                <span class="party-corner" aria-hidden="true">☭</span>
+                <figcaption>Đại hội II của Đảng, tháng 2/1951<small>TUYÊN QUANG · ẢNH TƯ LIỆU</small></figcaption>
+              </figure>
+            </div>
+            <div class="corner-note" aria-hidden="true">Đạo đức là gốc.<br>Nhân dân là<br>trung tâm.</div>
+          </div>
+          <div class="chapter-copy" data-reveal>
+            <span class="chapter-no">TRANG 02 · ĐẢNG & NHÂN DÂN</span>
+            <h3>Một lý tưởng.<br><em>Một lòng phụng sự.</em></h3>
+            <p>Đầu năm 1930, Nguyễn Ái Quốc chủ trì Hội nghị hợp nhất các tổ chức cộng sản, thành lập Đảng Cộng sản Việt Nam và thông qua Cương lĩnh chính trị đầu tiên.</p>
+            <p>Tìm hiểu tư tưởng Hồ Chí Minh về Đảng là tìm hiểu vai trò lãnh đạo, trách nhiệm trước nhân dân, tinh thần đoàn kết và việc rèn luyện đạo đức của người cán bộ, đảng viên.</p>
+            <div class="concept"><span>Gắn với bài học</span><p>Đảng Cộng sản Việt Nam; xây dựng Đảng trong sạch, vững mạnh.</p></div>
+            <button class="text-link" type="button" data-play-topic="dang">Khám phá chủ đề về Đảng <span class="arrow" aria-hidden="true">↗</span></button>
+          </div>
+        </article>
+        <article class="chapter" id="doc-lap">
+          <div class="chapter-art" data-reveal>
+            <span class="chapter-year" aria-hidden="true">1945</span>
+            <div data-parallax="-0.06" style="width:100%;display:flex;justify-content:center">
+              <figure class="paper-photo">
+                <button type="button" class="photo-open" data-asset="declaration" aria-label="Mở ảnh tư liệu"><img src="assets/images/declaration.jpg" alt="Bản Tuyên ngôn độc lập của nước Việt Nam Dân chủ Cộng hòa, lưu trữ tại Trung tâm Lưu trữ quốc gia III" width="1200" height="509" loading="lazy" style="object-fit:contain;background:#dcd3c0"></button>
+                <figcaption>Tuyên ngôn độc lập · 2/9/1945<small>TRUNG TÂM LƯU TRỮ QUỐC GIA III · PHÔNG PHỦ THỦ TƯỚNG</small></figcaption>
+              </figure>
+            </div>
+            <div class="corner-note" aria-hidden="true">Độc lập.<br>Tự do.<br>Hạnh phúc.</div>
+          </div>
+          <div class="chapter-copy" data-reveal>
+            <span class="chapter-no">TRANG 03 · MÙA THU 1945</span>
+            <h3>Độc lập cho dân tộc.<br><em>Hạnh phúc cho nhân dân.</em></h3>
+            <p>Ngày 2/9/1945, tại Quảng trường Ba Đình, Chủ tịch Hồ Chí Minh đọc Tuyên ngôn độc lập, khai sinh nước Việt Nam Dân chủ Cộng hòa.</p>
+            <p>Trong tư tưởng của Người, độc lập gắn với tự do và hạnh phúc của nhân dân. Bài học ấy trở nên cụ thể qua những nhiệm vụ cứu đói, xóa mù chữ và xây dựng chính quyền của dân.</p>
+            <div class="concept"><span>Gắn với bài học</span><p>Độc lập dân tộc; nhà nước của nhân dân, do nhân dân, vì nhân dân.</p></div>
+            <button class="text-link" type="button" data-play-topic="doclap">Bạn sẽ chọn gì giữa mùa thu 1945? <span class="arrow" aria-hidden="true">↗</span></button>
+          </div>
+        </article>
+        <article class="chapter reversed" id="doi-thuong">
+          <div class="chapter-art" data-reveal>
+            <span class="chapter-year" aria-hidden="true">Hôm nay</span>
+            <div data-parallax="0.07" style="width:100%;display:flex;justify-content:center">
+              <figure class="paper-photo">
+                <button type="button" class="photo-open" data-asset="children" aria-label="Mở ảnh tư liệu"><img src="assets/images/children.jpg" alt="Chủ tịch Hồ Chí Minh bên các em thiếu nhi trong thập niên 1950" width="600" height="400" loading="lazy"></button>
+                <figcaption>Bác Hồ với thiếu nhi<small>THẬP NIÊN 1950 · ẢNH TƯ LIỆU</small></figcaption>
+              </figure>
+            </div>
+            <div class="corner-note" aria-hidden="true">Bắt đầu từ<br>những việc nhỏ,<br>mỗi ngày.</div>
+          </div>
+          <div class="chapter-copy" data-reveal>
+            <span class="chapter-no">TRANG 04 · TỪ BÀI HỌC ĐẾN CUỘC SỐNG</span>
+            <h3>Những điều lớn lao<br>từ <em>việc làm giản dị.</em></h3>
+            <p>Tinh thần cần, kiệm, liêm, chính; lòng yêu thương con người; sự chăm lo cho thế hệ trẻ — những nội dung ấy có thể bắt đầu từ chính đời sống sinh viên.</p>
+            <p>Trung thực trong học tập, có trách nhiệm khi làm việc nhóm, tiết kiệm thời gian, biết lắng nghe và giúp đỡ người khác. Mỗi lựa chọn là một cơ hội để học đi đôi với hành.</p>
+            <div class="concept"><span>Gắn với bài học</span><p>Đạo đức, văn hóa, con người và bồi dưỡng thế hệ trẻ.</p></div>
+            <button class="text-link" type="button" data-play-topic="daoduc">Thử một lựa chọn trong đời thường <span class="arrow" aria-hidden="true">↗</span></button>
+          </div>
+        </article>
+        <div class="journey-end" data-reveal><button class="exhibit-btn" type="button" id="open-timeline">Xem toàn bộ dòng thời gian <span aria-hidden="true">↗</span></button></div>
+      </section>
+
+      <figure class="belief-band" data-reveal>
+        <p class="eyebrow">Lời của Người · Điều để suy ngẫm</p>
+        <span class="quote-mark" aria-hidden="true">“</span>
+        <blockquote>Tôi chỉ có một sự ham muốn, ham muốn tột bậc, là làm sao cho nước ta được hoàn toàn độc lập, dân ta được hoàn toàn tự do, đồng bào ai cũng có cơm ăn áo mặc, ai cũng được học hành.</blockquote>
+        <figcaption class="quote-attribution">CHỦ TỊCH HỒ CHÍ MINH<br>Trả lời các nhà báo nước ngoài, năm 1946</figcaption>
+      </figure>
+
+      <section class="learning-section home-return-target" id="hoc-va-lam" aria-labelledby="learning-heading">
+        <div class="learning-head" data-reveal>
+          <div><p class="eyebrow">02 / Học đi đôi với hành</p><h2 class="section-heading" id="learning-heading">Nếu là bạn,<br><em>bạn sẽ chọn thế nào?</em></h2></div>
+          <p class="section-summary">10 chủ đề, nhiều góc nhìn. Nhập vai, đưa ra lựa chọn rồi đối chiếu với lịch sử, lời Bác và lý thuyết môn học.</p>
+        </div>
+        <ol class="toc" id="toc" aria-label="Mười chủ đề trò chơi"></ol>
+        <div class="actions" data-reveal><button class="btn" type="button" data-open-notes>Đọc sổ tay lý thuyết ↗</button></div>
+        <div class="study-note" data-reveal><span aria-hidden="true">✎</span><p><strong>CÙNG HỌC TRÊN LỚP</strong><br>Cả lớp có thể giơ tay chọn A, B hoặc C trước khi bấm. Dùng phím 1, 2, 3 để chọn và Enter để sang tình huống tiếp theo. Điểm trong trò chơi giúp tự nhìn lại lựa chọn, không thay thế đánh giá của giảng viên.</p></div>
+      </section>
+
+      <section class="memory-section" id="tu-lieu" aria-labelledby="memory-heading">
+        <div class="memory-head" data-reveal><p class="eyebrow">03 / Góc tư liệu</p><h2 class="section-heading" id="memory-heading">Ở lại trong <em>những điều bình dị.</em></h2><p>Nhìn gần hơn một bức ảnh, để hiểu thêm một câu chuyện.<br>Chạm vào ảnh để mở lớn và xem nguồn tư liệu.</p></div>
+        <div class="memory-gallery">
+          <div data-reveal><figure class="paper-photo"><button type="button" class="photo-open" data-asset="house" aria-label="Mở ảnh nhà sàn Bác Hồ"><img src="assets/images/house.jpg" alt="Ngôi nhà sàn của Chủ tịch Hồ Chí Minh tại Hà Nội, ảnh chụp năm 2003" width="600" height="400" loading="lazy"></button><figcaption>Không gian trong nhà sàn<small>HÀ NỘI · ẢNH CHỤP NĂM 2003</small></figcaption><button class="photo-credit text-link" type="button" data-asset="house">Xem ảnh & nguồn ↗</button></figure></div>
+          <div data-reveal style="--delay:100ms"><figure class="paper-photo"><button type="button" class="photo-open" data-asset="children" aria-label="Mở ảnh Bác Hồ với thiếu nhi"><img src="assets/images/children.jpg" alt="Bác Hồ cùng các em thiếu nhi" width="600" height="400" loading="lazy"></button><figcaption>Niềm vui bên những mầm xanh<small>BÁC HỒ VỚI THIẾU NHI · ẢNH TƯ LIỆU</small></figcaption><button class="photo-credit text-link" type="button" data-asset="children">Xem ảnh & nguồn ↗</button></figure></div>
+          <div data-reveal style="--delay:200ms"><figure class="paper-photo"><button type="button" class="photo-open" data-asset="young" aria-label="Mở ảnh Nguyễn Ái Quốc năm 1921"><img src="assets/images/young.jpg" alt="Ảnh Nguyễn Ái Quốc do Agence Meurisse chụp tại Pháp năm 1921" width="600" height="800" loading="lazy" style="object-position:center 25%"></button><figcaption>Dấu chân trên hành trình xa<small>NGUYỄN ÁI QUỐC · PHÁP, 1921</small></figcaption><button class="photo-credit text-link" type="button" data-asset="young">Xem ảnh & nguồn ↗</button></figure></div>
+        </div>
+      </section>
+      <footer class="site-footer">
+        <div><p class="footer-title">Làm theo lời Bác.</p><p class="footer-note">Sản phẩm học tập môn Tư tưởng Hồ Chí Minh.<br>Tìm hiểu lịch sử · Suy ngẫm tư tưởng · Vận dụng vào cuộc sống.</p></div>
+        <div class="footer-links"><button type="button" data-open-sources>Nguồn ảnh & âm nhạc ↗</button><button type="button" data-open-notes>Sổ tay lý thuyết ↗</button><a href="#dau-trang">Trở về đầu trang ↑</a></div>
+      </footer>
+    </section>
+
+
+    <!-- PLAY -->
+    <section id="play" hidden aria-labelledby="scene-title">
+      <div class="play-grid">
+        <article class="scene">
+          <div class="scene-head">
+            <p class="when" id="when"></p>
+            <div class="progress" id="progress" aria-hidden="true"></div>
+            <p class="count" id="count"></p>
+          </div>
+          <p class="role" id="role"></p>
+          <h2 id="scene-title" tabindex="-1"></h2>
+          <p class="situation" id="situation"></p>
+          <ul class="choices" id="choices"></ul>
+          <div class="feedback" id="feedback" aria-live="polite"></div>
+        </article>
+        <aside class="meters-panel" aria-labelledby="meters-title">
+          <h2 class="panel-title" id="meters-title">Sổ theo dõi</h2>
+          <p class="panel-note">Mỗi mục bắt đầu ở 5/10.</p>
+          <div class="meters" id="meters"></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- RESULT -->
+    <section id="result" hidden aria-labelledby="result-title">
+      <h2 class="result-title" id="result-title" tabindex="-1">Phiếu đánh giá</h2>
+      <div class="grade-row">
+        <div class="grade">
+          <span id="grade-num">0</span>
+          <svg class="ring" id="ring" viewBox="0 0 200 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M 38 22 C 90 2, 175 10, 190 52 C 204 94, 120 116, 64 108 C 14 100, 2 62, 22 36 C 32 24, 52 14, 80 10"/></svg>
+        </div>
+        <p class="rank"><span id="rank"></span><span class="rank-note">Điểm trung bình các mục, thang điểm 10</span></p>
+      </div>
+      <div class="result-grid">
+        <div>
+          <h3 class="panel-title">Sổ theo dõi</h3>
+          <div class="meters" id="result-meters"></div>
+        </div>
+        <div>
+          <h3 class="panel-title">Lời phê</h3>
+          <p class="remark remark-lg" id="verdict"></p>
+          <blockquote class="quote" id="verdict-quote"></blockquote>
+        </div>
+      </div>
+      <h3 class="panel-title">Nhìn lại lựa chọn của bạn</h3>
+      <ol class="review" id="review"></ol>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" id="next-topic"></button>
+        <button class="btn" type="button" id="restart">Chơi lại chủ đề này</button>
+        <button class="btn btn-quiet" type="button" id="to-home">Về mục lục</button>
+      </div>
+    </section>
+    <!-- TIMELINE -->
+    <section id="timeline" hidden aria-labelledby="tl-heading">
+      <h2 class="result-title" id="tl-heading" tabindex="-1">Dòng thời gian cuộc đời Bác</h2>
+      <p class="lede">Những mốc lớn trong cuộc đời Chủ tịch Hồ Chí Minh, từ làng Sen đến ngôi nhà sàn. Mỗi mốc có nút mở chủ đề trò chơi liên quan.</p>
+      <ol class="tl" id="tl"></ol>
+      <p class="tip">Các mốc theo tiểu sử Chủ tịch Hồ Chí Minh. Khi đưa vào bài nộp, nên đối chiếu với giáo trình.</p>
+      <div class="actions" style="margin-top:1rem">
+        <button class="btn" type="button" id="tl-home">Về mục lục</button>
+      </div>
+    </section>
+  </main>
+</div>
+
+
+<button class="music-launcher" id="music-launcher" type="button" aria-expanded="false" aria-controls="music-panel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 18V5l11-2v13M9 8l11-2"/><ellipse cx="6" cy="18" rx="3" ry="2"/><ellipse cx="17" cy="16" rx="3" ry="2"/></svg><span>Giai điệu về Bác</span></button>
+<aside class="music-panel" id="music-panel" hidden aria-labelledby="music-title">
+  <div class="music-panel-head"><h2 id="music-title">Giai điệu về Người</h2><button class="icon-btn" type="button" id="close-music" aria-label="Đóng và dừng nhạc">×</button></div>
+  <p>Một khoảng lắng giữa những trang sử. Chọn ca khúc và bấm phát; bạn có thể tiếp tục cuộn trang khi nghe.</p>
+  <div class="music-player" id="music-player"></div>
+  <div class="track-list"><button class="track" type="button" data-track="0" aria-pressed="true">01 · Hồ Chí Minh đẹp nhất tên Người<small>Trần Kiết Tường · Trọng Tấn</small></button><button class="track" type="button" data-track="1" aria-pressed="false">02 · Bác Hồ một tình yêu bao la<small>Thuận Yến · Trọng Tấn</small></button></div>
+  <p class="music-status" id="music-status" role="status"></p>
+  <a class="music-fallback" id="music-external" href="https://www.youtube.com/watch?v=y5597X_nwFc" target="_blank" rel="noopener noreferrer">Mở trên YouTube nếu trình phát không tải ↗</a>
+</aside>
+<dialog class="asset-dialog" id="asset-dialog" aria-labelledby="asset-title"><div class="asset-dialog-head"><h2 id="asset-title"></h2><button class="icon-btn" type="button" data-close-dialog aria-label="Đóng ảnh">×</button></div><img id="asset-image" alt=""><p id="asset-credit"></p><a id="asset-source" href="https://commons.wikimedia.org" target="_blank" rel="noopener noreferrer">Xem tư liệu gốc & giấy phép ↗</a></dialog>
+<dialog class="asset-dialog" id="source-dialog" aria-labelledby="source-title"><div class="asset-dialog-head"><h2 id="source-title">Nguồn ảnh & âm nhạc</h2><button class="icon-btn" type="button" data-close-dialog aria-label="Đóng nguồn tư liệu">×</button></div><p>Ảnh được lưu cùng dự án, chú thích theo nguồn tư liệu. Hiệu ứng sepia và khung giấy dùng để trình bày. Ca khúc dùng trình phát nhúng từ kênh Trọng Tấn Official; cần kết nối Internet.</p><ol class="sources-list" id="sources-list"></ol><p>Lý thuyết và trích dẫn: xem ghi chú trong Sổ tay lý thuyết; đối chiếu với giáo trình môn học và <cite>Hồ Chí Minh Toàn tập</cite>, NXB Chính trị quốc gia Sự thật, 2011.</p></dialog>
+
+<script>window.EXHIBIT_ASSETS={"portrait": {"title": "File:Ho Chi Minh - 1946 Portrait.jpg", "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Ho_Chi_Minh_-_1946_Portrait.jpg/1280px-Ho_Chi_Minh_-_1946_Portrait.jpg", "source": "https://commons.wikimedia.org/wiki/File:Ho_Chi_Minh_-_1946_Portrait.jpg", "license": "Public domain", "artist": "Không rõ tác giả", "description": "Portrait of Ho Chi Minh, also known as Nguyen Ai Quoc", "local": "assets/images/portrait.jpg"}, "young": {"title": "File:Nguyen Aïn Nuä'C (Ho-Chi-Minh), délégué indochinois, Congrès communiste de Marseille, 1921, Meurisse, BNF Gallica.jpg", "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Nguyen_Aïn_Nuä'C_(Ho-Chi-Minh),_délégué_indochinois,_Congrès_communiste_de_Marseille,_1921,_Meurisse,_BNF_Gallica.jpg/1280px-Nguyen_Aïn_Nuä'C_(Ho-Chi-Minh),_délégué_indochinois,_Congrès_communiste_de_Marseille,_1921,_Meurisse,_BNF_Gallica.jpg", "source": "https://commons.wikimedia.org/wiki/File:Nguyen_A%C3%AFn_Nu%C3%A4%27C_(Ho-Chi-Minh),_d%C3%A9l%C3%A9gu%C3%A9_indochinois,_Congr%C3%A8s_communiste_de_Marseille,_1921,_Meurisse,_BNF_Gallica.jpg", "license": "Public domain", "artist": "Agence de presse Meurisse", "description": "<a href=\"https://en.wikipedia.org/wiki/Ho_Chi_Minh\" class=\"extiw\" title=\"en:Ho Chi Minh\">Ho Chi Minh<\/a>, here named <i>Nguyen Ai Quoc<\/i> (1890 - 1969), indochinese delegate to the French Communist Congress in Marseilles, 1921.", "local": "assets/images/young.jpg"}, "congress": {"title": "File:ICP 1951b, II Party Congress.jpg", "url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/ICP_1951b,_II_Party_Congress.jpg", "source": "https://commons.wikimedia.org/wiki/File:ICP_1951b,_II_Party_Congress.jpg", "license": "Public domain", "artist": "Không rõ tác giả", "description": "Hồ Chí Minh delivers a political report at the Second Congress of the Indochinese Communist Party, Tuyên Quang, February 1951", "local": "assets/images/congress.jpg"}, "children": {"title": "File:Ho-chi-Minh with children (10).jpg", "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Ho-chi-Minh_with_children_(10).jpg", "source": "https://commons.wikimedia.org/wiki/File:Ho-chi-Minh_with_children_(10).jpg", "license": "Public domain", "artist": "Musée Annam", "description": "Hồ-chí-Minh giao-lưu thiếu-nhi thập-niên 1950.", "local": "assets/images/children.jpg"}, "house": {"title": "File:2003, Ho Chi Minh's house on a rainy day.jpg", "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/2003,_Ho_Chi_Minh's_house_on_a_rainy_day.jpg", "source": "https://commons.wikimedia.org/wiki/File:2003,_Ho_Chi_Minh%27s_house_on_a_rainy_day.jpg", "license": "CC0", "artist": "Syced", "description": "2003, Ho Chi Minh's house on a rainy day <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"//commons.wikimedia.org/wiki/File:2003,_Ho_Chi_Minh%27s_house_on_a_rainy_day.jpg#ooui-php-4\" title=\"Edit this at Structured Data on Commons\"><img alt=\"Edit this at Structured Data on Commons\" src=\"https://thumb.wikimedia.org/wikiped", "local": "assets/images/house.jpg"}, "declaration": {"title": "File:Bản Tuyên ngôn độc lập của nước Việt Nam Dân chủ Cộng hòa. - Trung tâm Lưu trữ quốc gia III. Phông Phủ Thủ tướng, hồ sơ 586, tờ số 1 – 3.jpg", "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Bản_Tuyên_ngôn_độc_lập_của_nước_Việt_Nam_Dân_chủ_Cộng_hòa._-_Trung_tâm_Lưu_trữ_quốc_gia_III._Phông_Phủ_Thủ_tướng,_hồ_sơ_586,_tờ_số_1_–_3.jpg/1280px-thumbnail.jpg", "source": "https://commons.wikimedia.org/wiki/File:B%E1%BA%A3n_Tuy%C3%AAn_ng%C3%B4n_%C4%91%E1%BB%99c_l%E1%BA%ADp_c%E1%BB%A7a_n%C6%B0%E1%BB%9Bc_Vi%E1%BB%87t_Nam_D%C3%A2n_ch%E1%BB%A7_C%E1%BB%99ng_h%C3%B2a._-_Trung_t%C3%A2m_L%C6%B0u_tr%E1%BB%AF_qu%E1%BB%91c_gia_III._Ph%C3%B4ng_Ph%E1%BB%A7_Th%E1%BB%A7_t%C6%B0%E1%BB%9Bng,_h%E1%BB%93_s%C6%A1_586,_t%E1%BB%9D_s%E1%BB%91_1_%E2%80%93_3.jpg", "license": "Public domain", "artist": "Chính phủ Việt Nam / Trung tâm Lưu trữ quốc gia III", "description": "A file from the Cục Văn thư và Lưu trữ nhà nước related to the August Revolution at the end of World War II (two).", "local": "assets/images/declaration.jpg"}};</script>
+
+<!-- NOTES -->
+<dialog class="notes ruled" id="notes" aria-labelledby="notes-title">
+  <div class="notes-head">
+    <div class="notes-top">
+      <h2 id="notes-title">Sổ tay lý thuyết</h2>
+      <button class="btn" type="button" id="close-notes">Đóng</button>
+    </div>
+    <div class="note-tabs" id="note-tabs"></div>
+  </div>
+  <div class="notes-body">
+    <div id="notes-content"></div>
+    <p class="source-note">Ghi chú nguồn: các trích dẫn lấy từ tác phẩm, bài nói và bài viết của Hồ Chí Minh. Khi đưa vào bài nộp, nên đối chiếu tập và số trang trong <cite>Hồ Chí Minh Toàn tập</cite> (NXB Chính trị quốc gia Sự thật, 2011).</p>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  /* ---------- Helpers for content ---------- */
+  var HCM = 'Hồ Chí Minh';
+  var SRC49 = 'Hồ Chí Minh, <cite>Cần, kiệm, liêm, chính</cite> (1949)';
+  var DANVAN = 'Hồ Chí Minh, <cite>Dân vận</cite> (1949)';
+  var THU45 = 'Hồ Chí Minh, <cite>Thư gửi Ủy ban nhân dân các kỳ, tỉnh, huyện và làng</cite> (1945)';
+  function Q(text, src){ return '<blockquote class="quote"><p>“' + text + '”</p><footer>' + src + '</footer></blockquote>'; }
+  function W(s){ return ' <span class="wks">' + s + '</span>'; }
+
+  var Q_HAMMUON = 'Tôi chỉ có một sự ham muốn, ham muốn tột bậc, là làm sao cho nước ta được hoàn toàn độc lập, dân ta được hoàn toàn tự do, đồng bào ai cũng có cơm ăn áo mặc, ai cũng được học hành.';
+  var Q_KHANGCHIEN = 'Chúng ta thà hy sinh tất cả, chứ nhất định không chịu mất nước, nhất định không chịu làm nô lệ.';
+  var Q_TNDL = 'Tất cả mọi người đều sinh ra có quyền bình đẳng. Tạo hóa cho họ những quyền không ai có thể xâm phạm được; trong những quyền ấy, có quyền được sống, quyền tự do và quyền mưu cầu hạnh phúc.';
+  var Q_HANHPHUC = 'Nếu nước độc lập mà dân không hưởng hạnh phúc tự do, thì độc lập cũng chẳng có nghĩa lý gì.';
+  var Q_CONGBOC = 'Các cơ quan của Chính phủ từ toàn quốc cho đến các làng, đều là công bộc của dân, nghĩa là để gánh việc chung cho dân, chứ không phải để đè đầu dân như trong thời kỳ dưới quyền thống trị của Pháp, Nhật.';
+  var Q_DEMUOI = 'Dễ mười lần không dân cũng chịu. Khó trăm lần dân liệu cũng xong.';
+  var Q_DANCHU = 'Nước ta là nước dân chủ. Bao nhiêu lợi ích đều vì dân. Bao nhiêu quyền hạn đều của dân.';
+  var Q_PHAPQUYEN = 'Trăm điều phải có thần linh pháp quyền.';
+  var Q_1952 = 'Tham ô, lãng phí và bệnh quan liêu, dù cố ý hay không, cũng là bạn đồng minh của thực dân và phong kiến.';
+  var Q_NAMNGON = 'Năm ngón tay cũng có ngón vắn ngón dài. Nhưng vắn dài đều họp nhau lại nơi bàn tay.';
+  var Q_AICOTAI = 'Ai có tài, có đức, có sức, có lòng phụng sự Tổ quốc và phục vụ nhân dân thì ta đoàn kết với họ.';
+  var Q_DAIDOANKET = 'Đoàn kết, đoàn kết, đại đoàn kết. Thành công, thành công, đại thành công.';
+  var Q_THATSU = 'Đoàn kết thật sự nghĩa là vừa đoàn kết, vừa đấu tranh, học những cái tốt của nhau, phê bình những cái sai của nhau và phê bình trên lập trường thân ái, vì nước, vì dân.';
+  var Q_BAUTROI = 'Trong bầu trời không gì quý bằng nhân dân. Trong thế giới không gì mạnh bằng lực lượng đoàn kết của nhân dân.';
+  var Q_TAYDONG = 'Tây phương hay Đông phương có cái gì tốt ta học lấy để tạo ra một nền văn hóa Việt Nam.';
+  var Q_SOIDUONG = 'Văn hóa phải soi đường cho quốc dân đi.';
+  var Q_TIENGNOI = 'Tiếng nói là thứ của cải vô cùng lâu đời và vô cùng quý báu của dân tộc. Chúng ta phải giữ gìn nó, quý trọng nó, làm cho nó phổ biến ngày càng rộng khắp.';
+  var Q_TRONGNGUOI = 'Vì lợi ích mười năm thì phải trồng cây, vì lợi ích trăm năm thì phải trồng người.';
+  var Q_VANHOA = 'Vì lẽ sinh tồn cũng như mục đích của cuộc sống, loài người mới sáng tạo và phát minh ra ngôn ngữ, chữ viết, đạo đức, pháp luật, khoa học, tôn giáo, văn học, nghệ thuật, những công cụ cho sinh hoạt hằng ngày về mặc, ăn, ở và các phương thức sử dụng. Toàn bộ những sáng tạo và phát minh đó tức là văn hóa.';
+  var Q_NGOC = 'Đạo đức cách mạng không phải trên trời sa xuống. Nó do đấu tranh, rèn luyện bền bỉ hằng ngày mà phát triển và củng cố. Cũng như ngọc càng mài càng sáng, vàng càng luyện càng trong.';
+  var S_NGOC = 'Hồ Chí Minh, <cite>Đạo đức cách mạng</cite> (1958)';
+
+  /* ---------- Topics ---------- */
+  var TOPICS = [
+  /* ===== 1. ĐỘC LẬP DÂN TỘC ===== */
+  {
+    id:'doclap', title:'Mùa thu 1945', label:'Độc lập dân tộc',
+    blurb:'Bạn là thư ký trẻ của Chính phủ lâm thời, giữa lúc thù trong giặc ngoài.',
+    role:'Hà Nội, tháng 9/1945. Bạn là thư ký trẻ của Chính phủ lâm thời. Trước mỗi quyết định lớn, hãy tự chọn, rồi xem lịch sử đã chọn gì.',
+    closing:'Độc lập, tự do, hạnh phúc phải đi cùng nhau.',
+    meters:[{key:'doclap',name:'Độc lập'},{key:'tudo',name:'Tự do'},{key:'hanhphuc',name:'Hạnh phúc'}],
+    tips:{
+      doclap:'giữ vững mục tiêu độc lập, không đổi nó lấy sự yên ổn trước mắt, nhưng mềm dẻo trong cách làm.',
+      tudo:'tôn trọng quyền tự do của người dân: quyền bầu cử, tự do tín ngưỡng, sự tự nguyện đóng góp.',
+      hanhphuc:'đặt cơm ăn, áo mặc, học hành của dân lên hàng đầu. Độc lập phải được đo bằng đời sống thật.'
+    },
+    vquotes:{
+      doclap:{q:Q_KHANGCHIEN, s:'Hồ Chí Minh, <cite>Lời kêu gọi toàn quốc kháng chiến</cite> (1946)'},
+      tudo:{q:Q_TNDL, s:'Hồ Chí Minh, <cite>Tuyên ngôn độc lập</cite> (1945)'},
+      hanhphuc:{q:Q_HANHPHUC, s:'Hồ Chí Minh (1945)'},
+      all:{q:Q_HAMMUON, s:'Hồ Chí Minh, trả lời các nhà báo nước ngoài (1946)'}
+    },
+    scenes:[
+      {
+        when:'3/9/1945', title:'Giặc đói',
+        text:'Nạn đói đầu năm 1945 đã làm khoảng hai triệu người chết. Kho lương gần như trống, mùa màng mất trắng vì lũ lụt. Phiên họp đầu tiên của Chính phủ phải chọn cách cứu đói.',
+        options:[
+          {text:'Tịch thu gạo của mọi nhà khá giả để chia đều ngay.', fx:{hanhphuc:1, tudo:-2},
+           remark:'Nhanh, nhưng cưỡng đoạt sẽ mất lòng dân và đẩy nhiều người sang phía chống lại chính quyền non trẻ.'},
+          {text:'Phát động tăng gia sản xuất và lạc quyên cứu đói; mời mọi người mười ngày nhịn một bữa, người đứng đầu làm trước.', fx:{hanhphuc:2, tudo:1},
+           remark:'Huy động bằng tự nguyện và bằng nêu gương. Cứu đói trước mắt, tăng gia cho lâu dài.'},
+          {text:'Chờ viện trợ gạo từ nước ngoài rồi mới phân phát.', fx:{doclap:-1},
+           remark:'Trông chờ bên ngoài giữa lúc nước vừa độc lập là đặt vận mệnh vào tay người khác.'}
+        ],
+        history:'Tại phiên họp đầu tiên ngày 3/9/1945, Chủ tịch Hồ Chí Minh nêu sáu nhiệm vụ cấp bách, đứng đầu là cứu đói: phát động tăng gia sản xuất và mở cuộc lạc quyên. Người đề nghị đồng bào cứ mười ngày nhịn ăn một bữa để cứu dân nghèo, và tự mình làm trước.',
+        quote:Q_HANHPHUC, source:'Hồ Chí Minh (1945)',
+        explain:'Độc lập dân tộc phải gắn liền với tự do, cơm no áo ấm và hạnh phúc của nhân dân. Giữ độc lập vì thế bắt đầu từ việc cứu người dân khỏi đói.',
+        link:'Độc lập dân tộc gắn liền với tự do, hạnh phúc của nhân dân'
+      },
+      {
+        when:'8/9/1945', title:'Giặc dốt',
+        text:'Hơn 90% dân số không biết chữ. Trường lớp và giáo viên đều thiếu, ngân sách gần như bằng không.',
+        options:[
+          {text:'Chờ đủ trường lớp và giáo viên chính quy rồi mới mở lớp.', fx:{hanhphuc:-1},
+           remark:'Chờ đủ điều kiện thì cả một thế hệ sẽ lỡ mất cơ hội biết chữ.'},
+          {text:'Phát động phong trào xóa mù chữ: người biết chữ dạy người chưa biết, học ở đình, chùa, nhà dân, hoàn toàn miễn phí.', fx:{hanhphuc:2, tudo:1},
+           remark:'Biến cả nước thành một lớp học. Biết chữ thì mới biết và dùng được quyền của mình.'},
+          {text:'Chỉ dạy cho cán bộ trước, dân học sau.', fx:{},
+           remark:'Cán bộ cần học, nhưng một chính quyền của dân không thể để dân đứng ngoài con chữ.'}
+        ],
+        history:'Ngày 8/9/1945, Chủ tịch Hồ Chí Minh ký sắc lệnh thành lập Nha Bình dân học vụ, mở lớp học miễn phí khắp nơi. Chỉ sau khoảng một năm, hàng triệu người đã biết đọc, biết viết.',
+        quote:'Một dân tộc dốt là một dân tộc yếu.', source:'Hồ Chí Minh, <cite>Chống nạn thất học</cite> (1945)',
+        explain:'Với Hồ Chí Minh, độc lập phải đi cùng việc mọi người dân được học hành. Xóa mù chữ vừa nâng cao dân trí, vừa là điều kiện để dân thực hiện quyền làm chủ.',
+        link:'Độc lập dân tộc gắn liền với tự do, hạnh phúc của nhân dân'
+      },
+      {
+        when:'Tháng 9/1945', title:'Ngân quỹ trống rỗng',
+        text:'Kho bạc gần như không còn gì. Dân vẫn đang phải đóng thuế thân, thuế chợ, thuế đò từ thời Pháp thuộc, và thuốc phiện vẫn bán tràn lan.',
+        options:[
+          {text:'Giữ nguyên các thứ thuế cũ để có tiền chi tiêu.', fx:{hanhphuc:-1, tudo:-1},
+           remark:'Có tiền trước mắt, nhưng dân sẽ hỏi: độc lập rồi thì khác gì trước?'},
+          {text:'Bỏ thuế thân, thuế chợ, thuế đò, cấm thuốc phiện; kêu gọi dân tự nguyện đóng góp cho ngân quỹ.', fx:{hanhphuc:2, tudo:1, doclap:1},
+           remark:'Bỏ gánh nặng cho dân trước, rồi tin vào lòng dân. Ngân quỹ được xây từ niềm tin.'},
+          {text:'In thật nhiều tiền mới để trang trải.', fx:{hanhphuc:-2},
+           remark:'In tiền ồ ạt sẽ làm giá cả tăng vọt, và người nghèo là người chịu thiệt nhất.'}
+        ],
+        history:'Chính phủ bãi bỏ thuế thân cùng nhiều thứ thuế vô lý và nghiêm cấm thuốc phiện. Trong “Tuần lễ vàng” tháng 9/1945, nhân dân tự nguyện đóng góp hàng trăm ký vàng cho ngân quỹ quốc gia.',
+        quote:'Việc gì có lợi cho dân, ta phải hết sức làm. Việc gì có hại đến dân, ta phải hết sức tránh.', source:THU45,
+        explain:'Một chính quyền của dân thì chính sách phải xuất phát từ lợi ích của dân. Bỏ những thứ thuế vô lý của chế độ cũ cho người dân thấy độc lập mang lại đổi thay thật trong cuộc sống.',
+        link:'Độc lập thật sự: nhân dân được hưởng quyền lợi thiết thực'
+      },
+      {
+        when:'Tháng 9/1945', title:'Tin đồn cấm đạo',
+        text:'Ở vài nơi, kẻ xấu tung tin chính quyền mới sẽ cấm đạo, gây căng thẳng giữa đồng bào theo đạo và không theo đạo.',
+        options:[
+          {text:'Tạm hạn chế sinh hoạt tôn giáo cho đến khi tình hình yên ổn.', fx:{tudo:-2, doclap:-1},
+           remark:'Hạn chế tôn giáo đúng là điều kẻ xấu muốn: chia rẽ dân tộc lúc cần đoàn kết nhất.'},
+          {text:'Tuyên bố tự do tín ngưỡng, lương giáo đoàn kết; mời chức sắc các tôn giáo cùng tham gia công việc chung.', fx:{tudo:2, doclap:1},
+           remark:'Tôn trọng niềm tin của mọi người là cách nhanh nhất để dập tin đồn và giữ khối đoàn kết.'},
+          {text:'Làm ngơ, chuyện tôn giáo để tôn giáo tự lo.', fx:{},
+           remark:'Im lặng để tin đồn tự lan thì chia rẽ sẽ lớn dần.'}
+        ],
+        history:'“Tín ngưỡng tự do và lương giáo đoàn kết” là một trong sáu nhiệm vụ cấp bách Chủ tịch Hồ Chí Minh nêu ngày 3/9/1945. Nhiều chức sắc và tín đồ các tôn giáo đã tham gia Mặt trận và chính quyền mới.',
+        quote:Q_TNDL, source:'Hồ Chí Minh, <cite>Tuyên ngôn độc lập</cite> (1945), dẫn Tuyên ngôn độc lập của Mỹ (1776)',
+        explain:'Hồ Chí Minh xuất phát từ quyền con người để khẳng định quyền dân tộc. Tự do tín ngưỡng là một quyền tự do cơ bản, và đoàn kết lương giáo là nền tảng để giữ độc lập.',
+        link:'Quyền con người và quyền độc lập dân tộc'
+      },
+      {
+        when:'Cuối năm 1945', title:'Có nên bầu cử ngay?',
+        text:'Thù trong giặc ngoài, thực dân Pháp đã gây chiến ở Nam Bộ. Có ý kiến cho rằng bầu cử lúc này quá mạo hiểm, nên để Chính phủ lâm thời tự chỉ định Quốc hội.',
+        options:[
+          {text:'Chính phủ tự chỉ định đại biểu cho nhanh và an toàn.', fx:{tudo:-2, doclap:-1},
+           remark:'Nhanh thật, nhưng một Quốc hội không do dân bầu thì khó nói là của dân, và khó được thế giới thừa nhận.'},
+          {text:'Tổ chức Tổng tuyển cử càng sớm càng tốt: công dân từ 18 tuổi, không phân biệt nam nữ, giàu nghèo, tôn giáo, dân tộc, đều được bầu cử và ứng cử.', fx:{tudo:2, doclap:1},
+           remark:'Mạo hiểm nhưng đúng: một chính quyền có gốc từ lá phiếu của dân thì vững hơn mọi lời tuyên bố.'},
+          {text:'Chỉ cho người biết chữ và có tài sản đi bầu.', fx:{tudo:-1},
+           remark:'Đó là kiểu bầu cử của chế độ cũ. Quyền làm chủ không thể chỉ dành cho người có của.'}
+        ],
+        history:'Ngày 6/1/1946, Tổng tuyển cử đầu tiên diễn ra trên cả nước theo chế độ phổ thông đầu phiếu, kể cả những nơi đang có chiến sự ở Nam Bộ. Hơn 89% cử tri đi bầu, bầu ra Quốc hội khóa I.',
+        quote:'Tổng tuyển cử là một dịp cho toàn thể quốc dân tự do lựa chọn những người có tài, có đức để gánh vác công việc nước nhà.', source:'Hồ Chí Minh, <cite>Ý nghĩa Tổng tuyển cử</cite> (1945)',
+        explain:'Tổng tuyển cử khẳng định Nhà nước Việt Nam Dân chủ Cộng hòa là nhà nước hợp hiến, hợp pháp, do nhân dân lập nên. Độc lập dân tộc và quyền làm chủ của nhân dân đi liền với nhau.',
+        link:'Độc lập dân tộc gắn với dân chủ'
+      },
+      {
+        when:'Đầu năm 1946', title:'Hai đạo quân ngoài cửa',
+        text:'Gần 20 vạn quân Tưởng đang đóng ở miền Bắc, còn thực dân Pháp muốn đưa quân ra Bắc. Đánh cả hai cùng lúc là quá sức với chính quyền non trẻ.',
+        options:[
+          {text:'Đánh cả quân Pháp lẫn quân Tưởng cùng lúc, không nhân nhượng bên nào.', fx:{doclap:-1, hanhphuc:-1},
+           remark:'Quyết tâm rất cao, nhưng lực còn non. Đánh trên hai mặt trận cùng lúc có thể mất tất cả.'},
+          {text:'Tạm hòa với Pháp để đẩy quân Tưởng về nước, tranh thủ thời gian xây dựng lực lượng, nhưng không lùi bước về mục tiêu độc lập.', fx:{doclap:2, hanhphuc:1},
+           remark:'Mềm về cách làm, cứng về mục tiêu. Thêm thời gian là thêm lực lượng.'},
+          {text:'Chấp nhận để Pháp trở lại cai quản, đổi lấy yên ổn.', fx:{doclap:-2, tudo:-2},
+           remark:'Yên ổn đổi bằng độc lập thì không còn là yên ổn của người dân một nước tự do.'}
+        ],
+        history:'Ngày 6/3/1946, Chủ tịch Hồ Chí Minh ký Hiệp định Sơ bộ: Pháp công nhận Việt Nam là một quốc gia tự do, có chính phủ, nghị viện, quân đội và tài chính riêng; đổi lại, quân Pháp được ra Bắc thay quân Tưởng trong thời hạn nhất định. Khi thực dân Pháp bội ước, ngày 19/12/1946, Người ra Lời kêu gọi toàn quốc kháng chiến.',
+        quote:Q_KHANGCHIEN, source:'Hồ Chí Minh, <cite>Lời kêu gọi toàn quốc kháng chiến</cite> (1946)',
+        explain:'Hồ Chí Minh kiên định mục tiêu độc lập nhưng mềm dẻo về sách lược: nhân nhượng có nguyên tắc để tránh đối đầu nhiều kẻ thù cùng lúc. Độc lập là thứ không thể đem ra đổi chác.',
+        link:'Độc lập dân tộc là quyền thiêng liêng, bất khả xâm phạm'
+      }
+    ],
+    notes:
+      '<p class="intro">Tóm tắt tư tưởng Hồ Chí Minh về độc lập dân tộc, dùng trong chủ đề “Mùa thu 1945”.</p>' +
+      '<h3>1. Độc lập dân tộc là quyền thiêng liêng, bất khả xâm phạm</h3>' +
+      '<p>Hồ Chí Minh xuất phát từ quyền con người (quyền được sống, quyền tự do, quyền mưu cầu hạnh phúc) để khẳng định quyền của các dân tộc. Tuyên ngôn độc lập 1945 tuyên bố nước Việt Nam có quyền hưởng tự do, độc lập, và toàn dân quyết đem tất cả để giữ vững quyền ấy.' + W('9/1945') + '</p>' +
+      Q('Nước Việt Nam có quyền hưởng tự do và độc lập, và sự thật đã thành một nước tự do, độc lập.', 'Hồ Chí Minh, <cite>Tuyên ngôn độc lập</cite> (1945)') +
+      '<h3>2. Độc lập phải gắn với tự do, hạnh phúc của nhân dân</h3>' +
+      '<p>Độc lập mà dân không được hưởng tự do, hạnh phúc thì độc lập chẳng có nghĩa lý gì. Vì vậy ngay sau Cách mạng Tháng Tám, Chính phủ đặt ra sáu nhiệm vụ cấp bách: chống đói, chống mù chữ, tổng tuyển cử, giáo dục cần kiệm liêm chính, bỏ các thứ thuế vô lý và cấm thuốc phiện, tự do tín ngưỡng và lương giáo đoàn kết.' + W('3/9 và 8/9/1945') + '</p>' +
+      Q(Q_HAMMUON, 'Hồ Chí Minh, trả lời các nhà báo nước ngoài (1946)') +
+      '<h3>3. Độc lập thật sự, hoàn toàn và triệt để</h3>' +
+      '<p>Độc lập phải là độc lập thật sự về chính trị, kinh tế, quân sự, ngoại giao, gắn với thống nhất và toàn vẹn lãnh thổ. Hiệp định Sơ bộ 1946 cho thấy cách Hồ Chí Minh nhân nhượng có nguyên tắc: mềm dẻo về sách lược nhưng không đổi mục tiêu.' + W('Đầu năm 1946') + '</p>' +
+      Q('Không có gì quý hơn độc lập, tự do.', 'Hồ Chí Minh (1966)') +
+      '<h3>4. Độc lập dân tộc gắn liền với chủ nghĩa xã hội</h3>' +
+      '<p>Theo Hồ Chí Minh, độc lập dân tộc là điều kiện tiên quyết để đi lên chủ nghĩa xã hội, và chủ nghĩa xã hội là cơ sở bảo đảm vững chắc cho độc lập dân tộc. Câu hỏi thảo luận thêm: vì sao độc lập chỉ bền vững khi đời sống nhân dân được nâng lên?</p>'
+  },
+
+  /* ===== 2. NHÀ NƯỚC ===== */
+  {
+    id:'nhanuoc', title:'Công bộc của dân', label:'Nhà nước của dân, do dân, vì dân',
+    blurb:'Bạn là cán bộ trẻ nhất của một phường ven đô, trong năm công tác đầu tiên.',
+    role:'Bạn vừa trở thành cán bộ trẻ nhất của một phường ven đô. Một năm công tác, sáu tình huống.',
+    closing:'Nói tóm lại, quyền hành và lực lượng đều ở nơi dân.',
+    meters:[{key:'cuadan',name:'Của dân'},{key:'dodan',name:'Do dân'},{key:'vidan',name:'Vì dân'},{key:'phapquyen',name:'Pháp quyền'},{key:'trongsach',name:'Trong sạch'}],
+    tips:{
+      cuadan:'nhớ rằng quyền lực là do dân giao cho, và lắng nghe cả những lời phê bình khó nghe.',
+      dodan:'để dân được biết, được bàn và được kiểm tra những việc liên quan đến họ.',
+      vidan:'lấy sự thuận tiện của người dân làm thước đo công việc, không chỉ là đúng quy trình.',
+      phapquyen:'áp dụng quy định như nhau cho mọi người, kể cả người thân của mình.',
+      trongsach:'tách bạch tiền công với lợi ích riêng, kể cả những khoản nhỏ tưởng như vô hại.'
+    },
+    vquotes:{
+      cuadan:{q:Q_DANCHU, s:DANVAN},
+      dodan:{q:Q_DEMUOI, s:DANVAN},
+      vidan:{q:Q_CONGBOC, s:THU45},
+      phapquyen:{q:Q_PHAPQUYEN, s:'Hồ Chí Minh, <cite>Việt Nam yêu cầu ca</cite> (1919)'},
+      trongsach:{q:Q_1952, s:'Hồ Chí Minh (1952)'},
+      all:{q:'Việc gì có lợi cho dân, ta phải hết sức làm. Việc gì có hại đến dân, ta phải hết sức tránh.', s:THU45}
+    },
+    scenes:[
+      {
+        when:'Tháng 1', title:'Bà cụ thiếu một tờ giấy',
+        text:'Một bà cụ 78 tuổi đi xe ôm lên phường làm hồ sơ hưởng trợ cấp, nhưng thiếu một bản sao giấy tờ. Hàng chờ phía sau còn dài.',
+        options:[
+          {text:'Đúng quy định thì phải đủ giấy. Mời cụ về bổ sung rồi quay lại.', fx:{vidan:-1},
+           remark:'Không sai quy định, nhưng cụ sẽ mất thêm một buổi và một chuyến xe ôm vì một tờ giấy.'},
+          {text:'Kiểm tra xem thông tin đó có tra được trên hệ thống dữ liệu dân cư không; nếu không, ghi rõ giấy cần bổ sung và nhận bổ sung qua con cháu để cụ khỏi phải đi lại.', fx:{vidan:2, trongsach:1, phapquyen:1},
+           remark:'Đúng quy định mà vẫn bớt cho dân một chuyến đi. Công bộc là như vậy.'},
+          {text:'Gợi ý có “dịch vụ làm nhanh”, chỉ cần cụ gửi chút phí bồi dưỡng.', fx:{trongsach:-2, vidan:-1},
+           remark:'Đây chính là kiểu “đè đầu dân” mà Hồ Chí Minh phê phán, dù số tiền nhỏ đến đâu.'}
+        ],
+        quote:Q_CONGBOC, source:THU45,
+        explain:'Nhà nước vì dân là nhà nước phục vụ lợi ích của nhân dân, không có đặc quyền đặc lợi. Hồ Chí Minh gọi cán bộ là “công bộc”, là “đày tớ” của dân, và phê phán gay gắt thói quan liêu, hách dịch, cửa quyền.',
+        link:'Nhà nước vì dân: cán bộ là công bộc của dân'
+      },
+      {
+        when:'Tháng 2', title:'Con ngõ cần mở rộng',
+        text:'Phường có kế hoạch mở rộng một con ngõ hay ngập, vài hộ sẽ phải lùi tường. Cấp trên muốn khởi công trước Tết.',
+        options:[
+          {text:'Ra quyết định, dán thông báo; hộ nào không chấp hành thì cưỡng chế.', fx:{dodan:-2, cuadan:-1},
+           remark:'Làm vì dân mà không bàn với dân thì dễ thành làm thay dân, rồi làm trái ý dân.'},
+          {text:'Họp dân công khai phương án và kinh phí, lắng nghe ý kiến, điều chỉnh thiết kế, thống nhất mức hỗ trợ rồi mới làm.', fx:{dodan:2, cuadan:1, vidan:1},
+           remark:'Chậm hơn vài tuần, nhưng con ngõ làm xong sẽ không để lại mâu thuẫn.'},
+          {text:'Chỉ bàn với tổ trưởng dân phố rồi quyết.', fx:{dodan:-1},
+           remark:'Tổ trưởng là cầu nối, nhưng không thay được tiếng nói của những hộ bị ảnh hưởng trực tiếp.'}
+        ],
+        quote:Q_DEMUOI, source:DANVAN,
+        explain:'Nhà nước do dân nghĩa là do dân lập ra, dân tham gia quản lý và kiểm soát. Những việc liên quan đến dân thì phải để dân được biết, được bàn và được góp ý.',
+        link:'Nhà nước do dân: dân tham gia quản lý'
+      },
+      {
+        when:'Tháng 4', title:'Em họ lấn vỉa hè',
+        text:'Em họ bạn mở quán trà sữa, bày bàn ghế kín vỉa hè. Đội trật tự đang lập biên bản thì em gọi cho bạn: “Nói giúp em một câu.”',
+        options:[
+          {text:'Gọi đội trật tự bảo bỏ qua lần này, người nhà cả.', fx:{phapquyen:-2, trongsach:-1},
+           remark:'Một cuộc gọi “nhờ vả” là đủ để dân mất niềm tin rằng pháp luật áp dụng như nhau cho mọi người.'},
+          {text:'Từ chối can thiệp, khuyên em chấp hành, dọn lại quán và hướng dẫn thủ tục nếu muốn sử dụng vỉa hè hợp pháp.', fx:{phapquyen:2, trongsach:2},
+           remark:'Nghiêm với người thân khó hơn nghiêm với người lạ. Nhưng pháp luật chỉ có sức nặng khi không có ngoại lệ.'},
+          {text:'Không can thiệp lần này, nhưng nhắn riêng báo trước cho em những đợt kiểm tra sau.', fx:{phapquyen:-1, trongsach:-1},
+           remark:'Lộ lịch kiểm tra là dùng vị trí công việc để giúp người nhà lách luật.'}
+        ],
+        quote:Q_PHAPQUYEN, source:'Hồ Chí Minh, <cite>Việt Nam yêu cầu ca</cite> (1919)',
+        explain:'Từ rất sớm, Hồ Chí Minh đã đề cao vai trò của pháp luật. Nhà nước phải quản lý xã hội bằng pháp luật, mọi người đều bình đẳng trước pháp luật, và cán bộ phải gương mẫu chấp hành trước.',
+        link:'Nhà nước pháp quyền: quản lý xã hội bằng pháp luật'
+      },
+      {
+        when:'Tháng 6', title:'Bài đăng chê phường',
+        text:'Một người dân đăng Facebook chê phường để bãi rác tự phát tồn tại cả tháng, lời lẽ gay gắt, được hàng nghìn lượt chia sẻ.',
+        options:[
+          {text:'Đề nghị gỡ bài, dọa xử lý vì “nói xấu chính quyền”.', fx:{cuadan:-2, dodan:-1},
+           remark:'Dập lời phê bình là quên mất ai mới là chủ. Rác vẫn còn đó, còn lòng tin thì mất.'},
+          {text:'Trả lời công khai, nhận phần chậm trễ, nêu thời hạn xử lý và mời người đăng bài cùng giám sát.', fx:{cuadan:2, dodan:1, vidan:1},
+           remark:'Nhận phê bình và để dân giám sát là tôn trọng quyền làm chủ của dân.'},
+          {text:'Im lặng, rồi âm thầm cho dọn bãi rác.', fx:{vidan:1},
+           remark:'Việc được giải quyết, nhưng bạn bỏ lỡ cơ hội để dân thấy ý kiến của họ có trọng lượng.'}
+        ],
+        quote:Q_DANCHU, source:DANVAN,
+        explain:'Nhà nước của dân là nhà nước mà mọi quyền lực thuộc về nhân dân. Dân có quyền phê bình, giám sát cán bộ, và cán bộ có trách nhiệm lắng nghe, kể cả những lời khó nghe.',
+        link:'Nhà nước của dân: quyền lực thuộc về nhân dân'
+      },
+      {
+        when:'Tháng 9', title:'Bốn thẻ cử tri',
+        text:'Tại tổ bầu cử bạn phụ trách, một ông cụ mang theo bốn thẻ cử tri của cả nhà, muốn “bầu hộ cho nhanh” vì con cháu bận đi làm.',
+        options:[
+          {text:'Cho bầu hộ, miễn đủ tỷ lệ cử tri đi bầu.', fx:{dodan:-2, phapquyen:-1},
+           remark:'Tỷ lệ đẹp trên giấy, nhưng ba người đã mất quyền tự mình lựa chọn.'},
+          {text:'Giải thích mỗi cử tri phải tự mình đi bầu; nếu trong nhà có người ốm, già yếu thì tổ bầu cử mang hòm phiếu phụ đến tận nơi.', fx:{dodan:2, phapquyen:1, vidan:1, cuadan:1},
+           remark:'Đúng luật mà vẫn chu đáo. Lá phiếu phải là của chính người cử tri.'},
+          {text:'Nhận thẻ, hẹn chiều sẽ tự điền phiếu giúp cả nhà.', fx:{dodan:-2, trongsach:-1},
+           remark:'Điền phiếu thay dân là làm sai lệch ý chí của dân, dù với ý định tốt đến đâu.'}
+        ],
+        quote:'Chính quyền từ xã đến Chính phủ trung ương do dân cử ra.', source:DANVAN,
+        explain:'Nhân dân trao quyền cho Nhà nước qua lá phiếu. Bầu hộ tưởng là chuyện nhỏ nhưng làm mất quyền làm chủ trực tiếp của từng công dân, đúng điều mà Nhà nước do dân phải bảo vệ.',
+        link:'Nhà nước do dân: do nhân dân bầu ra'
+      },
+      {
+        when:'Tháng 12', title:'Khoản tiền cuối năm',
+        text:'Cuối năm, phường tiết kiệm được một khoản kinh phí hoạt động. Có đề xuất dùng nó tổ chức tất niên ở nhà hàng và mua quà cho cán bộ.',
+        options:[
+          {text:'Đồng ý, cả năm vất vả rồi.', fx:{trongsach:-2, vidan:-1},
+           remark:'Tiền ngân sách là tiền của dân. Tự thưởng cho mình bằng tiền đó là lãng phí, dù cả năm có vất vả.'},
+          {text:'Đề xuất dùng khoản đó sửa đèn chiếu sáng ở các ngõ tối, công khai trên bảng tin; tất niên đơn giản và tự đóng góp.', fx:{trongsach:2, vidan:1, cuadan:1, phapquyen:1},
+           remark:'Tiền của dân quay về với dân, lại được công khai. Đó là trong sạch nhìn thấy được.'},
+          {text:'Vẫn tổ chức tiệc, nhưng ghi chứng từ thành “hội nghị tổng kết”.', fx:{trongsach:-2, phapquyen:-2},
+           remark:'Từ lãng phí đã chuyển sang làm sai chứng từ. Tham ô thường bắt đầu từ những “sáng kiến” như thế.'}
+        ],
+        quote:Q_1952, source:'Hồ Chí Minh (1952)',
+        explain:'Nhà nước trong sạch, vững mạnh là yêu cầu Hồ Chí Minh đặt ra từ những ngày đầu. Người coi tham ô, lãng phí, quan liêu là “giặc nội xâm”, và yêu cầu phòng ngừa ngay từ những khoản nhỏ.',
+        link:'Xây dựng Nhà nước trong sạch, vững mạnh'
+      }
+    ],
+    notes:
+      '<p class="intro">Tóm tắt tư tưởng Hồ Chí Minh về Nhà nước của nhân dân, do nhân dân, vì nhân dân, dùng trong chủ đề “Công bộc của dân”.</p>' +
+      '<h3>1. Nhà nước của dân</h3>' +
+      '<p>Mọi quyền lực trong Nhà nước và trong xã hội đều thuộc về nhân dân. Dân là chủ và dân làm chủ: có quyền kiểm soát, phê bình Nhà nước, có quyền bãi miễn đại biểu không xứng đáng.' + W('Tháng 6') + '</p>' +
+      Q(Q_DANCHU + ' … Nói tóm lại, quyền hành và lực lượng đều ở nơi dân.', DANVAN) +
+      '<h3>2. Nhà nước do dân</h3>' +
+      '<p>Nhà nước do nhân dân lập ra thông qua tổng tuyển cử; nhân dân ủng hộ, đóng góp và tham gia quản lý Nhà nước. Việc gì liên quan đến dân thì phải để dân được biết, được bàn.' + W('Tháng 2, Tháng 9') + '</p>' +
+      Q(Q_DEMUOI, DANVAN) +
+      '<h3>3. Nhà nước vì dân</h3>' +
+      '<p>Nhà nước phục vụ lợi ích của nhân dân, không có đặc quyền đặc lợi. Cán bộ là công bộc, là đày tớ của dân, phải vừa có đức vừa có tài.' + W('Tháng 1') + '</p>' +
+      Q('Việc gì có lợi cho dân, ta phải hết sức làm. Việc gì có hại đến dân, ta phải hết sức tránh.', THU45) +
+      '<h3>4. Nhà nước pháp quyền, trong sạch, vững mạnh</h3>' +
+      '<p>Nhà nước quản lý xã hội bằng pháp luật, kết hợp với giáo dục đạo đức; mọi người bình đẳng trước pháp luật. Phải kiên quyết phòng chống tham ô, lãng phí, quan liêu, đặc quyền đặc lợi, những thứ Hồ Chí Minh gọi là “giặc nội xâm”.' + W('Tháng 4, Tháng 12') + '</p>' +
+      Q(Q_PHAPQUYEN, 'Hồ Chí Minh, <cite>Việt Nam yêu cầu ca</cite> (1919)')
+  },
+
+  /* ===== 3. ĐẠI ĐOÀN KẾT ===== */
+  {
+    id:'doanket', title:'Năm ngón tay', label:'Đại đoàn kết toàn dân tộc',
+    blurb:'Bạn là chủ nhiệm một câu lạc bộ tình nguyện 40 thành viên.',
+    role:'Bạn vừa được bầu làm chủ nhiệm một câu lạc bộ tình nguyện 40 thành viên. Một năm học, sáu lần thử thách sự đoàn kết.',
+    closing:'Đoàn kết, đoàn kết, đại đoàn kết.',
+    meters:[{key:'rongrai',name:'Rộng rãi'},{key:'khoandung',name:'Khoan dung'},{key:'hiepthuong',name:'Hiệp thương'},{key:'chanthanh',name:'Chân thành'}],
+    tips:{
+      rongrai:'chủ động mời những người đang đứng ngoài, dù khác vùng miền, dân tộc hay hoàn cảnh.',
+      khoandung:'mở lòng với cả những người từng bất đồng với mình, nếu họ thật lòng muốn làm việc chung.',
+      hiepthuong:'bàn bạc để đi đến đồng thuận trước khi quyết, thay vì quyết thay mọi người.',
+      chanthanh:'nói thẳng về việc, không nhắm vào người, và không né mâu thuẫn.'
+    },
+    vquotes:{
+      rongrai:{q:Q_NAMNGON, s:'Hồ Chí Minh (1946)'},
+      khoandung:{q:Q_AICOTAI, s:HCM},
+      hiepthuong:{q:Q_DAIDOANKET, s:HCM},
+      chanthanh:{q:Q_THATSU, s:HCM},
+      all:{q:Q_BAUTROI, s:HCM}
+    },
+    scenes:[
+      {
+        when:'Tháng 9', title:'Giọng nói quê nhà',
+        text:'Trong buổi phỏng vấn tuyển thành viên, một bạn từ Quảng Bình vừa giới thiệu xong thì vài thành viên cũ nhại giọng, cả phòng cười ồ.',
+        options:[
+          {text:'Cười xòa cho qua, chỉ là đùa thôi.', fx:{rongrai:-1, chanthanh:-1},
+           remark:'“Đùa thôi” với người nói, nhưng người nghe có thể nhớ cả năm và không bao giờ quay lại.'},
+          {text:'Dừng buổi phỏng vấn một chút, nhắc nhẹ mà rõ rằng CLB không đùa kiểu đó, rồi mời bạn ấy kể về quê mình.', fx:{rongrai:2, chanthanh:1, khoandung:1},
+           remark:'Bảo vệ người bị trêu mà không làm bẽ mặt người trêu. Cả phòng học được cách đối xử với nhau.'},
+          {text:'Loại bạn ấy vì sợ “khó hòa nhập”.', fx:{rongrai:-2},
+           remark:'Khó hòa nhập là vì môi trường, không phải vì giọng nói.'}
+        ],
+        quote:Q_NAMNGON, source:'Hồ Chí Minh (1946)',
+        explain:'Đại đoàn kết toàn dân tộc là tập hợp mọi người Việt Nam, không phân biệt vùng miền, dân tộc, tôn giáo, giàu nghèo, già trẻ, gái trai, miễn là cùng hướng về mục tiêu chung.',
+        link:'Đại đoàn kết toàn dân tộc: đoàn kết rộng rãi'
+      },
+      {
+        when:'Tháng 10', title:'Bạn mới từ Tây Nguyên',
+        text:'Một bạn người Ê Đê từ Đắk Lắk mới vào CLB, còn ngại nói trước đám đông nên hay ngồi một mình. Các nhóm dự án đã chia xong, không nhóm nào nhắc đến bạn ấy.',
+        options:[
+          {text:'Để bạn ấy tự tìm nhóm, ai cũng phải tự thích nghi.', fx:{rongrai:-1},
+           remark:'Không ai bị đuổi đi, nhưng cũng không ai được mời vào. Đoàn kết không thể chỉ chờ người khác tự đến.'},
+          {text:'Mời bạn ấy vào nhóm của mình, giao phần việc bạn ấy mạnh và rủ cùng đi các buổi hoạt động đầu tiên.', fx:{rongrai:2, chanthanh:1},
+           remark:'Một lời mời đúng lúc có thể giữ chân một thành viên cho cả bốn năm.'},
+          {text:'Xếp vào một nhóm bất kỳ, giao việc vặt cho đỡ vướng.', fx:{rongrai:-1, chanthanh:-1},
+           remark:'Có tên trong nhóm mà không có vai trò thì vẫn là đứng ngoài.'}
+        ],
+        quote:'Đồng bào … đều là con cháu Việt Nam, đều là anh em ruột thịt. Chúng ta sống chết có nhau, sướng khổ cùng nhau, no đói giúp nhau.', source:'Hồ Chí Minh, <cite>Thư gửi Đại hội các dân tộc thiểu số miền Nam</cite> (1946)',
+        explain:'Hồ Chí Minh coi đoàn kết các dân tộc là một bộ phận quan trọng của đại đoàn kết toàn dân tộc: các dân tộc bình đẳng, tôn trọng và giúp đỡ nhau cùng phát triển.',
+        link:'Đoàn kết các dân tộc anh em'
+      },
+      {
+        when:'Tháng 11', title:'Hai dự án, một mùa đông',
+        text:'CLB phải chọn giữa “Áo ấm vùng cao” và “Thư viện cho trường tiểu học ven sông”. Ý kiến chia đôi, cuộc họp bắt đầu to tiếng.',
+        options:[
+          {text:'Chủ nhiệm quyết luôn cho nhanh, ai không đồng ý thì thôi.', fx:{hiepthuong:-2},
+           remark:'Quyết nhanh, nhưng nửa CLB sẽ làm với tâm thế “việc của người khác”.'},
+          {text:'Cho hai bên trình bày, cùng xem nguồn lực thực tế, tìm phương án cả hai bên chấp nhận được rồi mới chốt.', fx:{hiepthuong:2, rongrai:1},
+           remark:'Bàn đến khi thông rồi mới làm. Chậm lúc đầu, nhanh lúc sau.'},
+          {text:'Biểu quyết ngay, bên thua phải theo.', fx:{},
+           remark:'Biểu quyết là dân chủ, nhưng thiếu bàn bạc thì bên thiểu số dễ thấy mình bị gạt ra.'}
+        ],
+        quote:Q_DAIDOANKET, source:HCM,
+        explain:'Mặt trận dân tộc thống nhất, hình thức tổ chức của khối đại đoàn kết, hoạt động theo nguyên tắc hiệp thương dân chủ: mọi vấn đề được bàn bạc công khai để đi đến nhất trí, trên nền tảng lợi ích chung.',
+        link:'Nguyên tắc hoạt động của Mặt trận: hiệp thương dân chủ'
+      },
+      {
+        when:'Tháng 12', title:'Người từng phản đối mình',
+        text:'Trong kỳ bầu chủ nhiệm, Minh từng vận động chống bạn. Giờ Minh xin vào ban truyền thông, và cậu ấy là người thiết kế giỏi nhất khoa.',
+        options:[
+          {text:'Từ chối. Ai từng chống mình thì khó làm việc chung.', fx:{khoandung:-2, rongrai:-1},
+           remark:'Bạn giữ được sự yên tâm, nhưng CLB mất một người giỏi, và bạn tự thu hẹp khối đoàn kết của mình.'},
+          {text:'Nhận Minh, nói thẳng chuyện cũ một lần cho nhẹ lòng, rồi giao việc đúng sở trường.', fx:{khoandung:2, rongrai:1, chanthanh:1},
+           remark:'Cạnh tranh trong bầu cử không phải là thù. Mở lòng đúng lúc biến đối thủ thành đồng đội.'},
+          {text:'Nhận vào nhưng giao việc phụ, chờ xem thái độ.', fx:{khoandung:-1},
+           remark:'Nửa tin nửa ngờ thì người ta cũng chỉ làm nửa lòng.'}
+        ],
+        quote:Q_AICOTAI, source:HCM,
+        explain:'Khoan dung, độ lượng là một điều kiện để xây dựng khối đại đoàn kết. Hồ Chí Minh không khép cửa với những người từng khác chính kiến hay từng lầm lạc, miễn là họ thật lòng muốn cùng làm việc chung.',
+        link:'Điều kiện xây dựng khối đại đoàn kết: khoan dung, độ lượng'
+      },
+      {
+        when:'Tháng 1', title:'Hai ban không nhìn mặt nhau',
+        text:'Sau một sự kiện lộn xộn, ban hậu cần và ban truyền thông đổ lỗi cho nhau. Group chat bắt đầu có những câu nặng lời.',
+        options:[
+          {text:'Xóa bớt tin nhắn, bảo mọi người thôi cãi, coi như chưa có gì.', fx:{chanthanh:-2},
+           remark:'Im lặng không phải là đoàn kết. Mâu thuẫn bị đè xuống sẽ bùng lên ở sự kiện sau.'},
+          {text:'Họp hai ban, cùng nhìn lại sự việc theo trình tự, mỗi bên nhận phần mình, thống nhất quy trình mới.', fx:{chanthanh:2, hiepthuong:2, khoandung:2},
+           remark:'Nói thẳng về việc, không nhắm vào người. Đó là vừa đoàn kết vừa đấu tranh.'},
+          {text:'Đứng về phía ban mình thân hơn.', fx:{chanthanh:-1, rongrai:-1},
+           remark:'Chủ nhiệm mà chọn phe thì một CLB sẽ tách thành hai.'}
+        ],
+        quote:Q_THATSU, source:HCM,
+        explain:'Với Hồ Chí Minh, đoàn kết phải thật sự, chân thành, không phải đoàn kết xuôi chiều. Phê bình để cùng tiến bộ chính là một phần của đoàn kết.',
+        link:'Đoàn kết thật sự, chân thành, thân ái giúp nhau cùng tiến bộ'
+      },
+      {
+        when:'Tháng 3', title:'Một nghìn phần quà',
+        text:'Chiến dịch cần gom 1.000 phần quà cho trẻ em vùng lũ trong hai tuần. Ban chủ nhiệm năm người đang quá tải.',
+        options:[
+          {text:'Ban chủ nhiệm tự gánh hết, thức đêm cho xong, không phiền ai.', fx:{rongrai:-1},
+           remark:'Năm người cố hết sức vẫn chỉ là sức của năm người.'},
+          {text:'Chia việc cho cả 40 thành viên, mời các CLB khác, phụ huynh và cửa hàng quanh trường cùng tham gia, công khai tiến độ mỗi ngày.', fx:{rongrai:2, hiepthuong:1, chanthanh:1},
+           remark:'Khi việc chung được chia đều và minh bạch, ai cũng thấy mình là một phần của chiến dịch.'},
+          {text:'Giảm mục tiêu xuống 200 phần cho vừa sức.', fx:{},
+           remark:'An toàn, nhưng chưa tin vào sức mạnh của nhiều người.'}
+        ],
+        quote:Q_BAUTROI, source:HCM,
+        explain:'Đại đoàn kết là vấn đề chiến lược, quyết định thành công. Hồ Chí Minh tin rằng khi được tập hợp và tổ chức tốt, sức mạnh của nhân dân làm được những việc tưởng như không thể.',
+        link:'Vai trò của đại đoàn kết: quyết định thành công'
+      }
+    ],
+    notes:
+      '<p class="intro">Tóm tắt tư tưởng Hồ Chí Minh về đại đoàn kết toàn dân tộc, dùng trong chủ đề “Năm ngón tay”.</p>' +
+      '<h3>1. Vai trò của đại đoàn kết</h3>' +
+      '<p>Đại đoàn kết là vấn đề có ý nghĩa chiến lược, quyết định thành công của cách mạng; là mục tiêu, nhiệm vụ hàng đầu của cách mạng Việt Nam.' + W('Tháng 3') + '</p>' +
+      Q(Q_DAIDOANKET, HCM) +
+      '<h3>2. Lực lượng của khối đại đoàn kết</h3>' +
+      '<p>Chủ thể là toàn dân tộc: mọi người Việt Nam yêu nước, không phân biệt dân tộc, tôn giáo, giai cấp, vùng miền. Nền tảng là liên minh công nhân, nông dân và trí thức.' + W('Tháng 9, Tháng 10') + '</p>' +
+      '<h3>3. Điều kiện để xây dựng khối đại đoàn kết</h3>' +
+      '<p>Kế thừa truyền thống yêu nước, nhân nghĩa, đoàn kết của dân tộc; có lòng khoan dung, độ lượng với con người; có niềm tin vào nhân dân.' + W('Tháng 12') + '</p>' +
+      Q(Q_NAMNGON, 'Hồ Chí Minh (1946)') +
+      '<h3>4. Hình thức và nguyên tắc: Mặt trận dân tộc thống nhất</h3>' +
+      '<p>Mặt trận hoạt động trên cơ sở lợi ích chung của dân tộc, theo nguyên tắc hiệp thương dân chủ, đoàn kết lâu dài, chặt chẽ, thật sự, chân thành, thân ái giúp đỡ nhau cùng tiến bộ.' + W('Tháng 11, Tháng 1') + '</p>' +
+      Q(Q_THATSU, HCM) +
+      '<h3>5. Đoàn kết quốc tế</h3>' +
+      '<p>Kết hợp sức mạnh dân tộc với sức mạnh thời đại; đoàn kết với các dân tộc trên cơ sở độc lập, tự chủ, bình đẳng, cùng có lợi. Nội dung này chưa có trong game, có thể dùng làm câu hỏi thảo luận thêm.</p>'
+  },
+
+  /* ===== 4. VĂN HÓA ===== */
+  {
+    id:'vanhoa', title:'Văn hóa soi đường', label:'Văn hóa và con người',
+    blurb:'Bạn là trưởng ban nội dung của câu lạc bộ truyền thông sinh viên.',
+    role:'Bạn là trưởng ban nội dung của câu lạc bộ truyền thông sinh viên. Sáu dự án, sáu lựa chọn về cách làm văn hóa.',
+    closing:'Văn hóa phải soi đường cho quốc dân đi.',
+    meters:[{key:'dantoc',name:'Dân tộc'},{key:'khoahoc',name:'Khoa học'},{key:'daichung',name:'Đại chúng'},{key:'tiepthu',name:'Tiếp thu'}],
+    tips:{
+      dantoc:'tự tin dùng chất liệu văn hóa Việt, kể theo cách của thời mình.',
+      khoahoc:'kiểm chứng trước khi tin, và để lý trí dẫn đường thay cho nỗi sợ.',
+      daichung:'làm cho điều mình biết trở nên dễ hiểu và đến được với nhiều người hơn.',
+      tiepthu:'học cái hay của người một cách có chọn lọc, trên tinh thần tôn trọng.'
+    },
+    vquotes:{
+      dantoc:{q:Q_TIENGNOI, s:HCM},
+      khoahoc:{q:Q_SOIDUONG, s:'Hồ Chí Minh, Hội nghị Văn hóa toàn quốc lần thứ nhất (1946)'},
+      daichung:{q:Q_TRONGNGUOI, s:'Hồ Chí Minh (1958)'},
+      tiepthu:{q:Q_TAYDONG, s:HCM},
+      all:{q:Q_VANHOA, s:'Hồ Chí Minh (1943)'}
+    },
+    scenes:[
+      {
+        when:'Tháng 9', title:'Video giới thiệu trường',
+        text:'CLB dự thi làm video giới thiệu trường cho sinh viên quốc tế. Nhóm đưa ra ba hướng làm.',
+        options:[
+          {text:'Làm toàn tiếng Anh, bắt chước y hệt phong cách một video đang viral của một trường Mỹ.', fx:{tiepthu:1, dantoc:-2},
+           remark:'Học cách làm của người là tốt, nhưng sao chép y hệt thì video không còn là của trường mình.'},
+          {text:'Lấy chất liệu Việt như phố cổ, tiếng rao, bữa cơm sinh viên, kể bằng cách dựng phim hiện đại, có phụ đề tiếng Anh.', fx:{dantoc:2, tiepthu:1, daichung:1},
+           remark:'Hồn Việt, cách kể mới. Người nước ngoài xem để hiểu mình, không phải để thấy bản sao của họ.'},
+          {text:'Chỉ quay cổng trường và phòng học, đọc lời giới thiệu cho an toàn.', fx:{daichung:-1},
+           remark:'Không sai, nhưng một video không ai xem hết thì không đến được với ai.'}
+        ],
+        quote:Q_TAYDONG, source:HCM,
+        explain:'Hồ Chí Minh chủ trương xây dựng nền văn hóa mang tính dân tộc, đồng thời tiếp thu tinh hoa văn hóa nhân loại. Tiếp thu để làm giàu cho văn hóa Việt Nam, không phải để hòa tan.',
+        link:'Văn hóa dân tộc và tiếp thu tinh hoa nhân loại'
+      },
+      {
+        when:'Tháng 10', title:'“Thầy” phán hạn thi',
+        text:'Trước kỳ thi, cả phòng rủ nhau đi xem bói. “Thầy” phán bạn đang gặp hạn thi cử và đòi 2 triệu làm lễ giải hạn.',
+        options:[
+          {text:'Nộp tiền giải hạn cho yên tâm.', fx:{khoahoc:-2},
+           remark:'Mất 2 triệu cho một nỗi lo không có cơ sở. Kết quả thi vẫn nằm ở số giờ bạn ôn.'},
+          {text:'Cảm ơn rồi về, dùng thời gian đó ôn bài và lập nhóm học.', fx:{khoahoc:2},
+           remark:'Tin vào việc mình có thể làm được. Đó là tinh thần khoa học.'},
+          {text:'Không làm lễ, nhưng mua bùa hộ mệnh 300 nghìn cho chắc.', fx:{khoahoc:-1},
+           remark:'Rẻ hơn, nhưng vẫn để nỗi sợ quyết định thay mình.'}
+        ],
+        quote:Q_SOIDUONG, source:'Hồ Chí Minh, Hội nghị Văn hóa toàn quốc lần thứ nhất (1946)',
+        explain:'Tính khoa học của nền văn hóa mới là chống mê tín, lạc hậu, tin vào lý trí và hiểu biết. Tôn trọng tín ngưỡng của người khác khác với để mê tín dẫn dắt quyết định của mình.',
+        link:'Tính chất nền văn hóa mới: khoa học'
+      },
+      {
+        when:'Tháng 11', title:'Bài viết cho fanpage khoa',
+        text:'Bạn viết bài giới thiệu hội thảo về trí tuệ nhân tạo cho fanpage khoa. Bản nháp đầu đầy thuật ngữ và chữ tiếng Anh chêm vào.',
+        options:[
+          {text:'Giữ nguyên. Viết thế mới “xịn”, ai không hiểu thì tự tra.', fx:{daichung:-2},
+           remark:'Bài viết để khoe thì hay, để người đọc hiểu thì chưa.'},
+          {text:'Viết lại bằng tiếng Việt dễ hiểu, giải thích các thuật ngữ cần thiết, ghi tên tiếng Anh trong ngoặc ở lần đầu.', fx:{daichung:2, dantoc:1, khoahoc:1},
+           remark:'Chính xác mà vẫn dễ hiểu, lại giữ được tiếng Việt trong sáng.'},
+          {text:'Cắt thành vài câu giật tít cho nhiều lượt xem.', fx:{daichung:1, khoahoc:-2},
+           remark:'Nhiều người xem, nhưng thứ họ nhận được là thông tin méo mó.'}
+        ],
+        quote:Q_TIENGNOI, source:HCM,
+        explain:'Văn hóa mang tính đại chúng là văn hóa phục vụ số đông và do số đông sáng tạo. Hồ Chí Minh luôn yêu cầu viết ngắn gọn, dễ hiểu, đúng đối tượng, và giữ gìn sự trong sáng của tiếng Việt.',
+        link:'Tính chất nền văn hóa mới: đại chúng'
+      },
+      {
+        when:'Tháng 12', title:'Lớp học điện thoại',
+        text:'Phường nhờ CLB mở lớp dạy người cao tuổi dùng điện thoại: gọi video, chuyển khoản, nhận biết tin nhắn lừa đảo. Lịch trùng buổi quay dự án của CLB.',
+        options:[
+          {text:'Từ chối, việc này không phải chuyên môn của CLB truyền thông.', fx:{daichung:-1},
+           remark:'Kỹ năng truyền thông của CLB chính là thứ các cụ đang cần.'},
+          {text:'Nhận lời, soạn tài liệu chữ to, dạy theo nhóm nhỏ, lồng cách nhận biết tin lừa đảo.', fx:{daichung:2, khoahoc:1},
+           remark:'Đưa tri thức đến đúng người cần nó. Văn hóa phục vụ đại chúng là như vậy.'},
+          {text:'Nhận lời, chiếu slide một buổi rồi chụp ảnh đăng bài.', fx:{daichung:-1},
+           remark:'Có ảnh đẹp, nhưng các cụ về nhà vẫn chưa biết gọi video cho con cháu.'}
+        ],
+        quote:Q_TRONGNGUOI, source:'Hồ Chí Minh (1958)',
+        explain:'Văn hóa vì đại chúng nghĩa là đưa tri thức đến với mọi người, nhất là những người dễ bị bỏ lại phía sau. Nâng cao dân trí, “trồng người”, là nhiệm vụ Hồ Chí Minh coi trọng suốt đời.',
+        link:'Tư tưởng Hồ Chí Minh về con người: chiến lược trồng người'
+      },
+      {
+        when:'Tháng 2', title:'Tết cùng bạn quốc tế',
+        text:'Hai bạn trao đổi từ Hàn Quốc ở lại ký túc xá dịp Tết và hỏi CLB: Tết Việt khác Tết Hàn thế nào?',
+        options:[
+          {text:'Gửi họ link một bài viết về Tết là xong.', fx:{},
+           remark:'Đủ thông tin, nhưng văn hóa được hiểu rõ nhất khi cùng sống với nó.'},
+          {text:'Tổ chức buổi gói bánh chưng ở ký túc xá, mời họ kể về Tết Hàn Quốc để cùng so sánh.', fx:{dantoc:2, tiepthu:2},
+           remark:'Giới thiệu cái của mình, lắng nghe cái của bạn. Giao lưu văn hóa là hai chiều.'},
+          {text:'Bảo Tết Việt hay hơn hẳn, Tết Hàn nhạt nhẽo.', fx:{tiepthu:-2},
+           remark:'Yêu văn hóa mình không cần phải chê văn hóa người.'}
+        ],
+        quote:Q_VANHOA, source:'Hồ Chí Minh (1943)',
+        explain:'Theo Hồ Chí Minh, văn hóa bao trùm mọi sáng tạo của con người, từ tư tưởng đến cách ăn, mặc, ở. Giao lưu văn hóa bắt đầu từ việc chia sẻ đời sống thường ngày, trên tinh thần tôn trọng lẫn nhau.',
+        link:'Quan niệm của Hồ Chí Minh về văn hóa'
+      },
+      {
+        when:'Tháng 4', title:'Tiểu luận nhờ AI viết',
+        text:'Hạn nộp tiểu luận môn Tư tưởng Hồ Chí Minh đã cận kề. Một bạn gợi ý nhờ AI viết trọn bài rồi nộp.',
+        options:[
+          {text:'Cho AI viết trọn, sửa vài chữ rồi nộp.', fx:{khoahoc:-2},
+           remark:'Bài nộp được, nhưng bạn không học được gì, và trích dẫn do AI viết có thể sai mà bạn không biết.'},
+          {text:'Tự lập dàn ý và lập luận, dùng AI để gợi ý tài liệu và soát lỗi, đối chiếu mọi trích dẫn với sách gốc, ghi rõ phần có dùng AI.', fx:{khoahoc:2, tiepthu:2},
+           remark:'Dùng công cụ mới mà vẫn giữ tư duy của mình. Đó là tiếp thu có chọn lọc.'},
+          {text:'Không dùng AI, chép một bài trên mạng cho chắc.', fx:{khoahoc:-2},
+           remark:'Đổi công cụ nhưng vẫn là không tự học. Chép bài trên mạng cũng là gian dối.'}
+        ],
+        quote:'Học để làm việc, làm người, làm cán bộ.', source:HCM,
+        explain:'Tính khoa học trong văn hóa đòi hỏi tôn trọng sự thật và tiếp thu tri thức mới một cách có phê phán. Công cụ mới là để học tốt hơn, không phải để làm thay việc học.',
+        link:'Tiếp thu có chọn lọc và tinh thần khoa học'
+      }
+    ],
+    notes:
+      '<p class="intro">Tóm tắt tư tưởng Hồ Chí Minh về văn hóa và con người, dùng trong chủ đề “Văn hóa soi đường”.</p>' +
+      '<h3>1. Quan niệm về văn hóa</h3>' +
+      '<p>Hồ Chí Minh hiểu văn hóa theo nghĩa rộng: toàn bộ những sáng tạo vật chất và tinh thần của con người vì lẽ sinh tồn và mục đích cuộc sống.' + W('Tháng 2') + '</p>' +
+      Q(Q_VANHOA, 'Hồ Chí Minh (1943)') +
+      '<h3>2. Vị trí, vai trò của văn hóa</h3>' +
+      '<p>Văn hóa là mục tiêu và là động lực của cách mạng. Văn hóa không đứng ngoài mà ở trong kinh tế và chính trị; văn hóa nghệ thuật cũng là một mặt trận.' + W('Tháng 10') + '</p>' +
+      Q(Q_SOIDUONG, 'Hồ Chí Minh, Hội nghị Văn hóa toàn quốc lần thứ nhất (1946)') +
+      '<h3>3. Xây dựng nền văn hóa mới</h3>' +
+      '<p>Nền văn hóa mới mang tính dân tộc, khoa học và đại chúng: giữ gìn bản sắc, chống mê tín lạc hậu, phục vụ số đông; đồng thời tiếp thu có chọn lọc tinh hoa văn hóa nhân loại.' + W('Tháng 9, 11, 4') + '</p>' +
+      Q(Q_TAYDONG, HCM) +
+      '<h3>4. Con người và chiến lược trồng người</h3>' +
+      '<p>Con người vừa là mục tiêu, vừa là động lực của cách mạng. Xây dựng con người mới, nâng cao dân trí là nhiệm vụ lâu dài, bắt đầu từ giáo dục.' + W('Tháng 12') + '</p>' +
+      Q(Q_TRONGNGUOI, 'Hồ Chí Minh (1958)')
+  },
+
+  /* ===== 5. ĐẠO ĐỨC ===== */
+  {
+    id:'daoduc', title:'Học kỳ bốn đức', label:'Đạo đức',
+    blurb:'Bạn là sinh viên, sống qua 16 tuần của một học kỳ đại học.',
+    role:'Bạn sống qua 16 tuần của một học kỳ đại học, gặp 10 tình huống và tự chọn cách xử lý. Không có đáp án in sẵn, hãy chọn điều bạn thật sự sẽ làm.',
+    closing:'Thiếu một đức, thì không thành người.',
+    meters:[{key:'can',name:'Cần'},{key:'kiem',name:'Kiệm'},{key:'liem',name:'Liêm'},{key:'chinh',name:'Chính'},{key:'cong',name:'Chí công vô tư'}],
+    tips:{
+      can:'đặt việc chính lên trước và chăm đều mỗi ngày, thay vì dồn vào phút chót.',
+      kiem:'lập kế hoạch cho tiền và thời gian, chi đúng việc chứ không chi theo cảm hứng.',
+      liem:'tách bạch của mình, của người và của chung, kể cả những khoản nhỏ không ai biết.',
+      chinh:'thẳng thắn với cái sai, kể cả cái sai của chính mình.',
+      cong:'khi lợi ích riêng và việc chung va nhau, hãy hỏi việc này có lợi cho số đông không.'
+    },
+    vquotes:{
+      can:{q:'Cần tức là siêng năng, chăm chỉ, cố gắng dẻo dai.', s:SRC49},
+      kiem:{q:'Kiệm là thế nào? Là tiết kiệm, không xa xỉ, không hoang phí, không bừa bãi.', s:SRC49},
+      liem:{q:'Liêm là trong sạch, không tham lam.', s:SRC49},
+      chinh:{q:'Chính nghĩa là không tà, nghĩa là thẳng thắn, đứng đắn.', s:SRC49},
+      cong:{q:'Phải lo trước thiên hạ, vui sau thiên hạ.', s:'Hồ Chí Minh, mượn lời cổ nhân'},
+      all:{q:Q_NGOC, s:S_NGOC}
+    },
+    scenes:[
+      {
+        when:'Tuần 1', title:'Tiền tháng đầu tiên',
+        text:'Bố mẹ vừa chuyển 4 triệu tiền sinh hoạt cho cả tháng. Bạn cùng phòng gửi link một chiếc tai nghe gaming giá 2,8 triệu, đang giảm 30% đến hết đêm nay.',
+        options:[
+          {text:'Chốt đơn luôn. Giảm 30% cơ mà, không mua thì phí.', fx:{kiem:-2},
+           remark:'Mua rẻ thứ chưa cần vẫn là tiêu hoang. Còn 1,2 triệu cho cả tháng ăn ở thì Kiệm đã thua ngay tuần đầu.'},
+          {text:'Ghi ra các khoản bắt buộc của tháng, để riêng một phần dự phòng. Nếu tháng sau vẫn cần tai nghe thì mua.', fx:{kiem:2, can:1},
+           remark:'Lập kế hoạch là bắt đầu của Kiệm. Cần thì vẫn mua, nhưng mua khi đã tính.'},
+          {text:'Không tiêu gì hết. Cả tháng ăn mì gói để dồn tiền.', fx:{},
+           remark:'Nhịn đến mức hại sức khỏe không phải là Kiệm. Bác viết rõ: tiết kiệm không phải là bủn xỉn.'}
+        ],
+        quote:'Kiệm là thế nào? Là tiết kiệm, không xa xỉ, không hoang phí, không bừa bãi.', source:SRC49,
+        explain:'Theo Hồ Chí Minh, Kiệm là tiết kiệm sức lao động, thời gian và tiền của, của mình, của dân, của nước. Nhưng Kiệm không phải là bủn xỉn: việc đáng chi thì chi, việc không đáng thì một đồng cũng không tiêu.',
+        link:'Chuẩn mực cần, kiệm, liêm, chính, chí công vô tư'
+      },
+      {
+        when:'Tuần 3', title:'Bài tập hay giải đấu?',
+        text:'Bài tập lập trình tuần này khó, hạn nộp 23h59 tối mai. Tối nay nhóm bạn rủ đánh giải game online, trận đầu bắt đầu lúc 20h.',
+        options:[
+          {text:'Làm bài cho xong đã, vào từ trận thứ hai và đặt giờ đi ngủ.', fx:{can:2, kiem:1},
+           remark:'Việc chính làm trước, giải trí sau. Biết giữ giờ giấc cũng là Kiệm, kiệm thời gian.'},
+          {text:'Vào game trước, bài tập để sáng mai dậy sớm làm.', fx:{can:-2},
+           remark:'“Để mai” là con đường ngắn nhất đến trễ hạn. Sáng mai bạn còn giờ học trên lớp.'},
+          {text:'Xin code của bạn cùng lớp, sửa tên biến rồi nộp cho kịp.', fx:{can:-1, chinh:-2},
+           remark:'Nộp kịp thật, nhưng đây là gian dối, và bạn vẫn chưa biết làm bài.'}
+        ],
+        quote:'Cần tức là siêng năng, chăm chỉ, cố gắng dẻo dai.', source:SRC49,
+        explain:'Cần không phải là làm cật lực một lúc rồi bỏ, mà là chăm chỉ đều đặn, có kế hoạch. Hồ Chí Minh luôn đặt Cần đi cùng Kiệm: siêng năng mà để thời gian trôi tuột thì công sức cũng hao hụt.',
+        link:'Chuẩn mực cần, kiệm, liêm, chính, chí công vô tư'
+      },
+      {
+        when:'Tuần 5', title:'Thành viên “ké tên”',
+        text:'Nhóm 5 người làm báo cáo giữa kỳ. Một bạn gần như không đóng góp gì, sát hạn mới nhắn: “Ghi tên mình vào nhé, lần sau mình bù.”',
+        options:[
+          {text:'Ghi tên cho êm. Bạn bè với nhau, làm căng làm gì.', fx:{chinh:-1, cong:-1},
+           remark:'Nể nang là che cái sai. Bốn người còn lại chịu thiệt, còn bạn kia không có lý do để thay đổi.'},
+          {text:'Chụp màn hình tin nhắn, đăng lên group lớp cho mọi người biết.', fx:{chinh:-1},
+           remark:'Bạn ấy sai thật, nhưng bêu riếu công khai là nhắm vào con người chứ không giúp sửa việc.'},
+          {text:'Nói thẳng trong nhóm, giao cho bạn ấy một phần việc bù trước hạn. Nếu vẫn không làm, báo đúng mức đóng góp với giảng viên.', fx:{chinh:2, cong:1},
+           remark:'Thẳng thắn nhưng vẫn cho bạn cơ hội sửa. Phê bình là để xây, không phải để hạ nhau.'}
+        ],
+        quote:'Chính nghĩa là không tà, nghĩa là thẳng thắn, đứng đắn.', source:SRC49,
+        explain:'Hồ Chí Minh đề cao tự phê bình và phê bình, với điều kiện phải thật thà, có tình thương: phê bình việc làm chứ không phải phê bình người. Chống cái sai là để xây cái đúng.',
+        link:'Nguyên tắc xây đi đôi với chống'
+      },
+      {
+        when:'Tuần 7', title:'Đề thi 200 nghìn',
+        text:'Hai ngày trước kỳ thi giữa kỳ, một tài khoản lạ nhắn vào group lớp: “Có đề môn Xác suất, 200k, ai cần ib.” Vài người đã thả tim.',
+        options:[
+          {text:'Mua. Cả lớp mua mà mình không mua thì thiệt.', fx:{liem:-2, chinh:-2},
+           remark:'Điểm mua được không nói lên năng lực của bạn, và nó lấy đi phần công bằng của người học thật.'},
+          {text:'Không mua, ôn tiếp theo kế hoạch.', fx:{liem:1, chinh:1},
+           remark:'Giữ mình trong sạch là đúng. Nhưng cả lớp vẫn đang đứng trước một kỳ thi không công bằng.'},
+          {text:'Không mua, và gửi ảnh chụp cho giáo vụ khoa để khoa kiểm tra, đổi đề nếu cần.', fx:{liem:1, chinh:2, cong:2},
+           remark:'Vừa giữ mình, vừa giữ sự công bằng cho người khác. Đó là chí công vô tư trong phạm vi một lớp học.'}
+        ],
+        quote:'Có tài mà không có đức là người vô dụng, có đức mà không có tài thì làm việc gì cũng khó.', source:HCM,
+        explain:'Hồ Chí Minh coi đức là gốc nhưng luôn đặt đức đi cùng tài. Điểm số gian lận làm hỏng cả hai: không có tài thật, lại tập cho mình thói không trong sạch.',
+        link:'Vai trò của đạo đức: đức là gốc, đức đi cùng tài'
+      },
+      {
+        when:'Tuần 8', title:'Quỹ lớp trong tay',
+        text:'Bạn là lớp phó, đang giữ 3 triệu quỹ lớp. Cuối tháng bạn hết tiền ăn, còn một tuần nữa bố mẹ mới gửi.',
+        options:[
+          {text:'Không động vào quỹ. Rà lại chi tiêu, hỏi vay bạn thân hoặc báo bố mẹ, và từ tháng này công khai thu chi quỹ trong group lớp.', fx:{liem:2, kiem:1, cong:1},
+           remark:'Tách bạch tiền mình với tiền chung, rồi công khai cho mọi người cùng thấy. Đó là cách giữ Liêm bền nhất.'},
+          {text:'Mượn tạm 500 nghìn, đầu tháng trả. Không ai biết, cũng chẳng ai thiệt.', fx:{liem:-2, cong:-2},
+           remark:'Tiền chung không phải tiền của mình, dù chỉ “mượn tạm”. Một lần dễ dãi rất dễ thành thói quen.'},
+          {text:'Không động vào quỹ, nhưng sổ sách ghi sơ sài, ai hỏi mới đưa.', fx:{liem:1},
+           remark:'Bạn không lấy gì, nhưng thiếu minh bạch thì người khác khó tin. Liêm cần được nhìn thấy.'}
+        ],
+        quote:'Liêm là luôn luôn tôn trọng giữ gìn của công và của dân.', source:SRC49,
+        explain:'Liêm gắn chặt với của công. Hồ Chí Minh phê phán gay gắt việc lấy của công làm của tư, và coi tham ô, lãng phí, quan liêu là “giặc nội xâm”.',
+        link:'Chuẩn mực cần, kiệm, liêm, chính, chí công vô tư'
+      },
+      {
+        when:'Tuần 10', title:'Bài đăng “bóc phốt”',
+        text:'Trang confession của trường đăng bài “bóc phốt” một bạn cùng khoa, chưa rõ thật giả. Bình luận đang nổ, có người tag bạn vào để hóng.',
+        options:[
+          {text:'Chia sẻ về trang cá nhân kèm câu “hóng”.', fx:{chinh:-2},
+           remark:'Chia sẻ tin chưa kiểm chứng là góp tay làm tổn thương một người thật.'},
+          {text:'Không chia sẻ. Nhắn riêng hỏi thăm bạn ấy, và nhắc người tag mình đừng lan truyền khi chưa rõ.', fx:{chinh:2, cong:1},
+           remark:'Thẳng thắn với cái sai, ân cần với con người. Đó là sống có tình có nghĩa.'},
+          {text:'Lướt qua, không bình luận gì.', fx:{},
+           remark:'Không làm hại ai là tốt. Nhưng một lời hỏi thăm có thể đỡ cho người đang bị cả đám đông vây.'}
+        ],
+        quote:'Mỗi con người đều có thiện và ác ở trong lòng. Ta phải biết làm cho phần tốt ở trong mỗi con người nảy nở như hoa mùa Xuân và phần xấu bị mất dần đi.', source:'Hồ Chí Minh, <cite>Nâng cao đạo đức cách mạng, quét sạch chủ nghĩa cá nhân</cite> (1969)',
+        explain:'Thương yêu con người là chuẩn mực đạo đức mà Hồ Chí Minh đặc biệt coi trọng: nghiêm khắc với cái sai nhưng độ lượng với con người, tin rằng ai cũng có thể sửa mình.',
+        link:'Chuẩn mực thương yêu con người, sống có tình có nghĩa'
+      },
+      {
+        when:'Tuần 12', title:'Chuyến đi hay chuyến hàng?',
+        text:'Mưa lũ gây thiệt hại nặng ở miền Trung. Đoàn trường cần người đóng gói hàng cứu trợ vào cuối tuần, đúng hôm nhóm bạn đã hẹn đi Tam Đảo.',
+        options:[
+          {text:'Vẫn đi Tam Đảo. Đã hẹn rồi, việc cứu trợ có người khác lo.', fx:{cong:-1},
+           remark:'Nếu ai cũng nghĩ “có người khác lo” thì việc chung sẽ không ai lo.'},
+          {text:'Đăng ký tham gia, chụp ảnh check-in lấy điểm rèn luyện rồi về sớm đi chơi.', fx:{chinh:-1, cong:-1},
+           remark:'Làm việc tốt để lấy tiếng là việc tốt nửa vời. Chí công vô tư là làm vì việc chung, không vì cái lợi riêng.'},
+          {text:'Rủ cả nhóm dời chuyến đi, cùng đến đóng hàng và góp một phần tiền đi chơi vào quỹ ủng hộ.', fx:{cong:2, kiem:1},
+           remark:'Lo việc chung trước, vui chơi sau, lại còn kéo được cả nhóm cùng làm.'}
+        ],
+        quote:'Phải lo trước thiên hạ, vui sau thiên hạ.', source:'Hồ Chí Minh, mượn lời cổ nhân',
+        explain:'Chí công vô tư là đặt lợi ích chung lên trên lợi ích riêng. Nó gắn với chuẩn mực quan trọng nhất trong tư tưởng đạo đức Hồ Chí Minh: trung với nước, hiếu với dân, tức là sống và làm việc vì nhân dân.',
+        link:'Chuẩn mực trung với nước, hiếu với dân'
+      },
+      {
+        when:'Tuần 14', title:'Khách chuyển thừa',
+        text:'Bạn nhận thiết kế logo freelance với giá 1,5 triệu. Khách chuyển khoản 2 triệu, có vẻ do bấm nhầm, và chưa ai nhắc gì.',
+        options:[
+          {text:'Nhắn báo khách và chuyển lại 500 nghìn ngay.', fx:{liem:2, chinh:1},
+           remark:'Sòng phẳng từ những khoản nhỏ. Khách sẽ nhớ bạn vì điều này lâu hơn là vì cái logo.'},
+          {text:'Im lặng. Lỗi của khách, không phải của mình.', fx:{liem:-2},
+           remark:'Không phải lỗi của bạn, nhưng giữ lại là lấy thứ không thuộc về mình.'},
+          {text:'Giữ lại coi như tiền tip, làm thêm vài bản phác để bù.', fx:{liem:-1},
+           remark:'Tự quyết thay khách là chưa sòng phẳng. Muốn làm thêm để bù thì hỏi khách trước.'}
+        ],
+        quote:'Liêm là trong sạch, không tham lam.', source:SRC49,
+        explain:'Liêm không chỉ là không tham ô của công, mà còn là không tham của người khác, kể cả khi món lợi đến “tự nhiên” và không ai biết.',
+        link:'Chuẩn mực cần, kiệm, liêm, chính, chí công vô tư'
+      },
+      {
+        when:'Tuần 15', title:'Nhóm trưởng nộp muộn',
+        text:'Bạn là nhóm trưởng, tuần nào cũng nhắc cả nhóm nộp đúng hạn. Tuần này chính bạn nộp phần mình trễ hai ngày, và vài bạn bắt đầu trễ theo.',
+        options:[
+          {text:'Vẫn nhắc nhở như thường. Mình là nhóm trưởng, việc của mình là nhắc.', fx:{chinh:-1},
+           remark:'Lời nhắc của người không làm được sẽ mất dần trọng lượng.'},
+          {text:'Nhận lỗi trước nhóm, tự đặt hạn sớm hơn cho phần của mình từ tuần sau.', fx:{chinh:2, can:1},
+           remark:'Nhận lỗi không làm mất uy tín. Làm gương mới giữ được uy tín.'},
+          {text:'Giải thích tuần này lịch học dày quá, ai cũng hiểu mà.', fx:{chinh:-2},
+           remark:'Lý do có thể là thật, nhưng dùng nó để né lỗi thì cả nhóm sẽ học theo cách né đó.'}
+        ],
+        quote:'Một tấm gương sống còn có giá trị hơn một trăm bài diễn văn tuyên truyền.', source:'Hồ Chí Minh (1951)',
+        explain:'Nói đi đôi với làm, nêu gương về đạo đức là nguyên tắc hàng đầu để xây dựng đạo đức mới. Người đứng đầu, dù chỉ là một nhóm bài tập, dạy bằng việc làm nhiều hơn lời nói.',
+        link:'Nguyên tắc nói đi đôi với làm, nêu gương về đạo đức'
+      },
+      {
+        when:'Tuần 16', title:'Trượt một môn',
+        text:'Kết quả cuối kỳ: bạn trượt môn Cấu trúc dữ liệu, thiếu đúng 0,3 điểm. Kỳ sau phải học lại.',
+        options:[
+          {text:'Xin xem lại bài để biết mình sai ở đâu, lập lịch ôn và rủ một bạn học cùng cho kỳ sau.', fx:{can:2, chinh:1},
+           remark:'Nhìn thẳng vào thất bại rồi sửa từng chút. Tu dưỡng chính là như vậy.'},
+          {text:'Tại thầy chấm khó. Môn này vốn nổi tiếng “đánh trượt”.', fx:{chinh:-1},
+           remark:'Đổ cho hoàn cảnh thì dễ, nhưng không giúp kỳ sau khác đi.'},
+          {text:'Thôi, chắc mình không hợp ngành này.', fx:{can:-2},
+           remark:'Một môn trượt chưa nói lên con người bạn. Bỏ cuộc lúc này mới là thua thật.'}
+        ],
+        quote:Q_NGOC, source:S_NGOC,
+        explain:'Tu dưỡng đạo đức suốt đời là nguyên tắc thứ ba. Đạo đức không có sẵn, mà được rèn qua từng lần vấp ngã và tự sửa mình, giống hệt việc học.',
+        link:'Nguyên tắc tu dưỡng đạo đức suốt đời'
+      }
+    ],
+    notes:
+      '<p class="intro">Tóm tắt tư tưởng Hồ Chí Minh về đạo đức, dùng trong chủ đề “Học kỳ bốn đức”.</p>' +
+      '<h3>1. Vai trò của đạo đức</h3>' +
+      '<p>Hồ Chí Minh coi đạo đức là gốc, là nền tảng của người cách mạng. Đạo đức vừa là thước đo phẩm chất con người, vừa là sức mạnh cảm hóa, tạo nên sức hấp dẫn của chế độ mới. Đức phải đi cùng tài.' + W('Tuần 7') + '</p>' +
+      Q('Cũng như sông thì có nguồn mới có nước, không có nguồn thì sông cạn. Cây phải có gốc, không có gốc thì cây héo. Người cách mạng phải có đạo đức, không có đạo đức thì dù tài giỏi mấy cũng không lãnh đạo được nhân dân.', 'Hồ Chí Minh, <cite>Sửa đổi lối làm việc</cite> (1947)') +
+      '<h3>2. Các chuẩn mực đạo đức cách mạng</h3>' +
+      '<dl>' +
+        '<dt>Trung với nước, hiếu với dân' + W('Tuần 12') + '</dt>' +
+        '<dd>Chuẩn mực quan trọng nhất. Trung với nước là đặt lợi ích của Tổ quốc lên trên hết; hiếu với dân là gần dân, tin dân, hết lòng phục vụ nhân dân.</dd>' +
+        '<dt>Cần, kiệm, liêm, chính, chí công vô tư' + W('Tuần 1, 3, 7, 8, 14') + '</dt>' +
+        '<dd>Bốn đức gắn chặt với nhau: cần mà không kiệm thì như “cái thùng không có đáy”, làm ra bao nhiêu hao hết bấy nhiêu. Chí công vô tư là đặt việc chung lên trên lợi ích riêng.</dd>' +
+        '<dt>Thương yêu con người, sống có tình có nghĩa' + W('Tuần 10') + '</dt>' +
+        '<dd>Tình thương rộng lớn dành cho mọi người; nghiêm khắc với cái sai nhưng độ lượng với con người, giúp mỗi người phát huy phần tốt.</dd>' +
+        '<dt>Tinh thần quốc tế trong sáng</dt>' +
+        '<dd>Tôn trọng, đoàn kết với các dân tộc, kết hợp chủ nghĩa yêu nước với tinh thần quốc tế. Chuẩn mực này chưa có trong game, có thể dùng làm câu hỏi thảo luận thêm.</dd>' +
+      '</dl>' +
+      Q('Trời có bốn mùa: Xuân, Hạ, Thu, Đông. Đất có bốn phương: Đông, Tây, Nam, Bắc. Người có bốn đức: Cần, Kiệm, Liêm, Chính. Thiếu một mùa, thì không thành trời. Thiếu một phương, thì không thành đất. Thiếu một đức, thì không thành người.', SRC49) +
+      '<h3>3. Nguyên tắc xây dựng đạo đức mới</h3>' +
+      '<ol>' +
+        '<li><strong>Nói đi đôi với làm, phải nêu gương về đạo đức.</strong> Một tấm gương sống có giá trị hơn nhiều lời tuyên truyền.' + W('Tuần 15') + '</li>' +
+        '<li><strong>Xây đi đôi với chống.</strong> Xây dựng cái tốt gắn liền với chống cái xấu, trước hết là chủ nghĩa cá nhân; phê bình phải thật thà và có tình thương.' + W('Tuần 5') + '</li>' +
+        '<li><strong>Tu dưỡng đạo đức suốt đời.</strong> Đạo đức không tự có mà phải rèn luyện bền bỉ hằng ngày, “ngọc càng mài càng sáng, vàng càng luyện càng trong”.' + W('Tuần 16') + '</li>' +
+      '</ol>' +
+      '<h3>4. Vận dụng với sinh viên hôm nay</h3>' +
+      '<p>Với sinh viên, Cần là học chăm và đều; Kiệm là quản lý tiền và thời gian; Liêm là trung thực trong thi cử, sòng phẳng với tiền bạc; Chính là dám nói thẳng và dám nhận lỗi; Chí công vô tư là sẵn lòng góp sức cho lớp, cho trường, cho cộng đồng.</p>'
+  }
+  ];
+
+  /* ---------- Thêm chủ đề ---------- */
+  var DICHUC = 'Hồ Chí Minh, <cite>Di chúc</cite> (1969)';
+  var DKM = 'Hồ Chí Minh, <cite>Đường Kách mệnh</cite> (1927)';
+  var CDDT = 'Hồ Chí Minh, <cite>Con đường dẫn tôi đến chủ nghĩa Lênin</cite> (1960)';
+  var SDLLV = 'Hồ Chí Minh, <cite>Sửa đổi lối làm việc</cite> (1947)';
+  var Q_YEUNUOC = 'Lúc đầu, chính là chủ nghĩa yêu nước, chứ chưa phải chủ nghĩa cộng sản đã đưa tôi tin theo Lênin, tin theo Quốc tế thứ ba.';
+  var Q_RADI = 'Tôi muốn đi ra nước ngoài, xem nước Pháp và các nước khác. Sau khi xem xét họ làm như thế nào, tôi sẽ trở về giúp đồng bào chúng ta.';
+  var Q_VOSAN = 'Muốn cứu nước và giải phóng dân tộc không có con đường nào khác con đường cách mạng vô sản.';
+  var Q_TUGIUP = 'Muốn người ta giúp cho, thì trước mình phải tự giúp lấy mình đã.';
+  var Q_LUANCUONG = 'Luận cương của Lênin làm cho tôi rất cảm động, phấn khởi, sáng tỏ, tin tưởng biết bao! Tôi vui mừng đến phát khóc lên.';
+  var Q_DANGVUNG = 'Đảng có vững cách mệnh mới thành công, cũng như người cầm lái có vững thuyền mới chạy.';
+  var Q_KINHCAO = 'Việc cứu quốc là việc chung, ai là người Việt Nam đều phải kề vai gánh vác một phần trách nhiệm.';
+  var Q_CONGBANG = 'Không sợ thiếu, chỉ sợ không công bằng; không sợ nghèo, chỉ sợ lòng dân không yên.';
+  var Q_DANGIAU = 'Chủ nghĩa xã hội là làm sao cho dân giàu, nước mạnh.';
+  var Q_MOCMAC = 'Nói một cách tóm tắt, mộc mạc, chủ nghĩa xã hội trước hết nhằm làm cho nhân dân lao động thoát nạn bần cùng, làm cho mọi người có công ăn việc làm, được ấm no và sống một đời hạnh phúc.';
+  var Q_CONNGUOIXHCN = 'Muốn xây dựng chủ nghĩa xã hội, trước hết cần có những con người xã hội chủ nghĩa.';
+  var Q_LAMCHU = 'Chế độ ta là chế độ dân chủ, nghĩa là nhân dân làm chủ.';
+  var Q_THUNG = 'Cần mà không kiệm, thì làm chừng nào xào chừng ấy. Cũng như một cái thùng không có đáy; nước đổ vào chừng nào chảy ra hết chừng ấy.';
+  var Q_DCPHEBINH = 'Trong Đảng thực hành dân chủ rộng rãi, thường xuyên và nghiêm chỉnh tự phê bình và phê bình là cách tốt nhất để củng cố và phát triển sự đoàn kết và thống nhất của Đảng.';
+  var Q_GIAUGIEM = 'Một Đảng mà giấu giếm khuyết điểm của mình là một Đảng hỏng. Một Đảng có gan thừa nhận khuyết điểm của mình, vạch rõ những cái đó, vì đâu mà có khuyết điểm đó, xét rõ hoàn cảnh sinh ra khuyết điểm đó, rồi tìm kiếm mọi cách để sửa chữa khuyết điểm đó. Như thế là một Đảng tiến bộ, mạnh dạn, chắc chắn, chân chính.';
+  var Q_THUONGYEU = 'Phải có tình đồng chí thương yêu lẫn nhau.';
+  var Q_DAYTO = 'Mỗi đảng viên và cán bộ phải thật sự thấm nhuần đạo đức cách mạng, thật sự cần kiệm liêm chính, chí công vô tư. Phải giữ gìn Đảng ta thật trong sạch, phải xứng đáng là người lãnh đạo, là người đầy tớ thật trung thành của nhân dân.';
+  var Q_CONNGUOI_MAT = 'Đoàn kết là một truyền thống cực kỳ quý báu của Đảng và của dân ta. Các đồng chí từ Trung ương đến các chi bộ cần phải giữ gìn sự đoàn kết nhất trí của Đảng như giữ gìn con ngươi của mắt mình.';
+  var Q_PHATTAI = 'Đảng không phải là một tổ chức để làm quan phát tài. Nó phải làm tròn nhiệm vụ giải phóng dân tộc, làm cho Tổ quốc giàu mạnh, đồng bào sung sướng.';
+  var Q_GIUPBAN = 'Giúp bạn là tự giúp mình.';
+  var Q_TULUC = 'Một dân tộc không tự lực cánh sinh mà cứ ngồi chờ dân tộc khác giúp đỡ thì không xứng đáng được độc lập.';
+  var Q_DIBATBIEN = 'Dĩ bất biến, ứng vạn biến.';
+  var Q_HOCHANH = 'Học với hành phải đi đôi. Học mà không hành thì học vô ích. Hành mà không học thì hành không trôi chảy.';
+  var Q_LAMBAN = 'Việt Nam muốn làm bạn với tất cả mọi nước dân chủ và không gây thù oán với một ai.';
+  var Q_THEDUC = 'Mỗi một người dân yếu ớt, tức là cả nước yếu ớt, mỗi một người dân mạnh khỏe là cả nước mạnh khỏe.';
+  var Q_NONSONG = 'Non sông Việt Nam có trở nên tươi đẹp hay không, dân tộc Việt Nam có bước tới đài vinh quang để sánh vai với các cường quốc năm châu được hay không, chính là nhờ một phần lớn ở công học tập của các em.';
+  var Q_DAUCAN = 'Đâu cần thanh niên có, việc gì khó có thanh niên.';
+  var Q_CHUTUONGLAI = 'Thanh niên là người chủ tương lai của nước nhà. Thật vậy, nước nhà thịnh hay suy, yếu hay mạnh một phần lớn là do các thanh niên.';
+  var Q_MUAXUAN = 'Một năm khởi đầu từ mùa xuân. Một đời khởi đầu từ tuổi trẻ. Tuổi trẻ là mùa xuân của xã hội.';
+  var Q_BOIDUONG = 'Bồi dưỡng thế hệ cách mạng cho đời sau là một việc rất quan trọng và rất cần thiết.';
+
+  TOPICS = TOPICS.concat([
+  /* ===== HÀNH TRÌNH TÌM ĐƯỜNG ===== */
+  {
+    id:'hanhtrinh', title:'Hành trình tìm đường', label:'Cơ sở và quá trình hình thành tư tưởng',
+    blurb:'Bạn đi cùng Nguyễn Tất Thành – Nguyễn Ái Quốc qua sáu ngã rẽ lớn, 1911–1941.',
+    role:'Bạn là một thanh niên yêu nước đầu thế kỷ 20, đi cùng Nguyễn Tất Thành – Nguyễn Ái Quốc qua sáu ngã rẽ lớn. Ở mỗi ngã rẽ, hãy tự chọn, rồi xem Người đã chọn gì.',
+    closing:'Yêu nước là điểm xuất phát; con đường đúng là thứ phải đi tìm.',
+    meters:[{key:'truyenthong',name:'Truyền thống'},{key:'tinhhoa',name:'Tinh hoa nhân loại'},{key:'mac',name:'Mác – Lênin'},{key:'banlinh',name:'Bản lĩnh'}],
+    tips:{
+      truyenthong:'luôn lấy lợi ích của dân tộc làm điểm xuất phát cho mọi lựa chọn.',
+      tinhhoa:'mở rộng tầm nhìn, tìm hiểu tận nơi trước khi kết luận.',
+      mac:'nắm vững lý luận, nhưng vận dụng sáng tạo chứ không rập khuôn.',
+      banlinh:'dám đi con đường mới khi con đường cũ đã bế tắc, và kiên trì khi gặp thử thách.'
+    },
+    vquotes:{
+      truyenthong:{q:Q_YEUNUOC, s:CDDT},
+      tinhhoa:{q:Q_RADI, s:HCM},
+      mac:{q:Q_VOSAN, s:'Hồ Chí Minh (1960)'},
+      banlinh:{q:Q_TUGIUP, s:DKM},
+      all:{q:Q_LUANCUONG, s:CDDT}
+    },
+    scenes:[
+      {
+        when:'1911', title:'Đi đâu để tìm đường?',
+        text:'Đầu thế kỷ 20, các phong trào yêu nước lần lượt thất bại. Nhiều người sang Nhật cầu viện theo phong trào Đông Du. Bạn cũng muốn ra đi tìm đường cứu nước.',
+        options:[
+          {text:'Sang Nhật, nhờ một nước “đồng văn đồng chủng” giúp đánh Pháp.', fx:{truyenthong:1, banlinh:-1},
+           remark:'Lòng yêu nước rất đáng quý, nhưng trông vào một đế quốc khác để đuổi đế quốc này dễ thành “đuổi hổ cửa trước, rước beo cửa sau”.'},
+          {text:'Sang phương Tây, tận mắt tìm hiểu nước Pháp và các nước khác, xem họ làm thế nào rồi mới tính cách giúp đồng bào.', fx:{tinhhoa:2, banlinh:2, truyenthong:1},
+           remark:'Muốn đánh đuổi kẻ thù thì phải hiểu kẻ thù. Đi để học, để thấy tận mắt.'},
+          {text:'Ở lại trong nước, tiếp tục khởi nghĩa vũ trang theo lối cũ.', fx:{truyenthong:1},
+           remark:'Tinh thần quả cảm, nhưng những cuộc khởi nghĩa theo lối cũ đã liên tiếp thất bại vì thiếu một đường lối đúng.'}
+        ],
+        history:'Ngày 5/6/1911, lấy tên Văn Ba, Nguyễn Tất Thành làm phụ bếp trên tàu Đô đốc Latouche-Tréville, rời bến Nhà Rồng sang phương Tây. Người muốn tận mắt xem các nước làm thế nào, rồi trở về giúp đồng bào.',
+        quote:Q_RADI, source:HCM,
+        explain:'Tư tưởng Hồ Chí Minh bắt nguồn từ lòng yêu nước truyền thống, nhưng Người sớm nhận ra các con đường cũ đều bế tắc. Quyết định sang phương Tây thể hiện tư duy độc lập, muốn tìm hiểu tận gốc trước khi chọn đường.',
+        link:'Cơ sở thực tiễn và nhân tố chủ quan Hồ Chí Minh'
+      },
+      {
+        when:'1919', title:'Hội nghị Versailles',
+        text:'Các nước thắng trận họp ở Versailles sau Chiến tranh thế giới thứ nhất. Tổng thống Mỹ Wilson nói nhiều về quyền tự quyết của các dân tộc. Ở Paris, những người Việt yêu nước cân nhắc có nên lên tiếng.',
+        options:[
+          {text:'Im lặng chờ các cường quốc tự ban quyền cho thuộc địa.', fx:{banlinh:-1},
+           remark:'Quyền lợi không ai tự mang đến. Im lặng thì tiếng nói của dân tộc mình không ai nghe thấy.'},
+          {text:'Gửi bản yêu sách đòi các quyền tự do, dân chủ tối thiểu cho người Việt, và công bố rộng rãi.', fx:{truyenthong:1, tinhhoa:1, banlinh:2},
+           remark:'Dùng chính ngôn ngữ về quyền tự quyết của họ để đòi quyền cho dân tộc mình. Vừa có lý, vừa gây tiếng vang.'},
+          {text:'Đòi Pháp trao trả độc lập ngay, nếu không sẽ khởi nghĩa.', fx:{},
+           remark:'Mục tiêu đúng, nhưng lúc ấy chưa có lực lượng để biến lời đe dọa thành hiện thực.'}
+        ],
+        history:'Ngày 18/6/1919, thay mặt Hội những người An Nam yêu nước, Nguyễn Ái Quốc gửi tới Hội nghị Versailles bản Yêu sách của nhân dân An Nam gồm 8 điểm. Yêu sách không được đáp ứng, nhưng cái tên Nguyễn Ái Quốc bắt đầu được biết đến.',
+        quote:Q_TUGIUP, source:DKM,
+        explain:'Bài học Versailles cho thấy lời hứa về quyền tự quyết của các cường quốc chỉ là lời nói. Muốn được giải phóng, các dân tộc phải dựa vào sức mình là chính.',
+        link:'Quá trình hình thành: tìm thấy con đường cứu nước (1911–1920)'
+      },
+      {
+        when:'7/1920', title:'Luận cương của Lênin',
+        text:'Trên báo Nhân đạo (L’Humanité), Nguyễn Ái Quốc đọc bản Sơ thảo lần thứ nhất những luận cương về vấn đề dân tộc và vấn đề thuộc địa của Lênin. Nên nhìn nhận văn kiện này thế nào?',
+        options:[
+          {text:'Đọc cho biết, nhưng vẫn tin chỉ cần cải cách từng bước dưới chế độ thuộc địa.', fx:{mac:-1},
+           remark:'Cải cách trong khuôn khổ thuộc địa đã được thử, và không đem lại độc lập.'},
+          {text:'Nghiên cứu kỹ, thấy đây là con đường giải phóng dân tộc gắn với giải phóng giai cấp, và tìm cách vận dụng cho Việt Nam.', fx:{mac:2, banlinh:1, tinhhoa:1},
+           remark:'Tiếp thu lý luận mới, nhưng luôn đặt câu hỏi: áp dụng thế nào cho hoàn cảnh nước mình?'},
+          {text:'Tiếp thu nguyên văn, áp dụng y hệt mô hình của nước khác vào Việt Nam.', fx:{mac:1, banlinh:-2},
+           remark:'Lý luận đúng mà vận dụng rập khuôn thì vẫn có thể thất bại.'}
+        ],
+        history:'Tháng 7/1920, Nguyễn Ái Quốc đọc Luận cương của Lênin. Sau này Người kể lại đã xúc động, vui mừng đến phát khóc. Từ đây Người tìm thấy con đường cứu nước: con đường cách mạng vô sản.',
+        quote:Q_VOSAN, source:'Hồ Chí Minh (1960)',
+        explain:'Chủ nghĩa Mác – Lênin là cơ sở lý luận quan trọng nhất, quyết định bản chất tư tưởng Hồ Chí Minh. Nhưng Người tiếp thu nó bằng phương pháp sáng tạo, xuất phát từ thực tiễn Việt Nam.',
+        link:'Chủ nghĩa Mác – Lênin: cơ sở lý luận quyết định'
+      },
+      {
+        when:'12/1920', title:'Đại hội Tours',
+        text:'Đại hội Đảng Xã hội Pháp họp ở thành phố Tours, tranh luận nên ở lại Quốc tế thứ hai hay gia nhập Quốc tế thứ ba (Quốc tế Cộng sản). Nguyễn Ái Quốc dự Đại hội với tư cách đại biểu Đông Dương. Nên bỏ phiếu thế nào?',
+        options:[
+          {text:'Ở lại Quốc tế thứ hai cho an toàn, vì phần lớn lãnh đạo quen thuộc ở đó.', fx:{mac:-1},
+           remark:'Quốc tế thứ hai gần như không quan tâm đến số phận các dân tộc thuộc địa.'},
+          {text:'Tán thành gia nhập Quốc tế thứ ba, tổ chức thật sự ủng hộ giải phóng các dân tộc thuộc địa.', fx:{mac:2, truyenthong:1},
+           remark:'Chọn phía đứng về quyền lợi của dân tộc mình. Yêu nước dẫn đến lựa chọn này.'},
+          {text:'Bỏ phiếu trắng, chờ xem bên nào thắng.', fx:{banlinh:-1},
+           remark:'Ở ngã rẽ lịch sử, đứng ngoài cũng là một lựa chọn, và thường là lựa chọn yếu nhất.'}
+        ],
+        history:'Tại Đại hội Tours tháng 12/1920, Nguyễn Ái Quốc bỏ phiếu tán thành Quốc tế thứ ba và tham gia sáng lập Đảng Cộng sản Pháp, trở thành người cộng sản Việt Nam đầu tiên.',
+        quote:Q_YEUNUOC, source:CDDT,
+        explain:'Từ một người yêu nước, Nguyễn Ái Quốc trở thành người cộng sản. Chủ nghĩa yêu nước là điểm xuất phát, chủ nghĩa Mác – Lênin là con đường; hai điều đó kết hợp trong tư tưởng Hồ Chí Minh.',
+        link:'Truyền thống yêu nước kết hợp với chủ nghĩa Mác – Lênin'
+      },
+      {
+        when:'Đầu năm 1930', title:'Ba tổ chức cộng sản',
+        text:'Năm 1929, trong nước xuất hiện ba tổ chức cộng sản: Đông Dương Cộng sản Đảng, An Nam Cộng sản Đảng và Đông Dương Cộng sản Liên đoàn. Họ công kích lẫn nhau, phong trào có nguy cơ chia rẽ.',
+        options:[
+          {text:'Công nhận tổ chức mạnh nhất, buộc các nhóm còn lại tự giải tán.', fx:{banlinh:-1},
+           remark:'Áp đặt sẽ để lại bất mãn và chia rẽ về sau.'},
+          {text:'Triệu tập đại biểu các tổ chức, bàn bạc để hợp nhất thành một đảng duy nhất với cương lĩnh chung.', fx:{banlinh:2, mac:1, truyenthong:1, tinhhoa:1},
+           remark:'Đặt lợi ích chung của cách mạng lên trên lợi ích từng nhóm. Hợp nhất bằng thuyết phục, không bằng mệnh lệnh.'},
+          {text:'Để các tổ chức tự cạnh tranh, bên nào thắng thì theo.', fx:{truyenthong:-1},
+           remark:'Trong lúc các nhóm tranh giành nhau, kẻ thù là bên hưởng lợi.'}
+        ],
+        history:'Đầu năm 1930, Nguyễn Ái Quốc chủ trì Hội nghị hợp nhất các tổ chức cộng sản tại Hương Cảng (Trung Quốc), thành lập Đảng Cộng sản Việt Nam. Hội nghị thông qua Chánh cương vắn tắt và Sách lược vắn tắt do Người soạn thảo, Cương lĩnh chính trị đầu tiên của Đảng.',
+        quote:Q_DANGVUNG, source:DKM,
+        explain:'Việc thành lập Đảng là kết quả của cả quá trình chuẩn bị về tư tưởng, chính trị và tổ chức: lập Hội Việt Nam Cách mạng Thanh niên (1925), viết Đường Kách mệnh (1927). Những nội dung cơ bản về cách mạng Việt Nam hình thành trong giai đoạn này.',
+        link:'Quá trình hình thành: nội dung cơ bản về cách mạng Việt Nam (1921–1930)'
+      },
+      {
+        when:'Đầu năm 1941', title:'Về nước',
+        text:'Sau 30 năm xa Tổ quốc, Chiến tranh thế giới thứ hai đang lan rộng, thời cơ cách mạng đang đến gần. Trong nước địch khủng bố gắt gao; ở nước ngoài thì an toàn hơn.',
+        options:[
+          {text:'Ở lại nước ngoài, chỉ đạo từ xa cho an toàn.', fx:{banlinh:-1},
+           remark:'Chỉ đạo từ xa thì khó nắm được tình hình và khó chớp đúng thời cơ.'},
+          {text:'Về nước, chọn vùng núi biên giới làm căn cứ để trực tiếp lãnh đạo, đặt nhiệm vụ giải phóng dân tộc lên hàng đầu.', fx:{truyenthong:2, banlinh:1},
+           remark:'Về sát với phong trào, chuẩn bị lực lượng cho thời cơ sắp tới.'},
+          {text:'Về nước và phát động khởi nghĩa ngay ở các thành phố lớn.', fx:{},
+           remark:'Quyết tâm cao, nhưng khởi nghĩa khi lực lượng và thời cơ chưa chín thì dễ bị dìm trong máu.'}
+        ],
+        history:'Ngày 28/1/1941, Nguyễn Ái Quốc về nước, đặt căn cứ ở Pác Bó (Cao Bằng). Tháng 5/1941, Người chủ trì Hội nghị Trung ương 8, đặt nhiệm vụ giải phóng dân tộc lên hàng đầu và thành lập Mặt trận Việt Minh.',
+        quote:Q_KINHCAO, source:'Hồ Chí Minh, <cite>Kính cáo đồng bào</cite> (1941)',
+        explain:'Giai đoạn 1930–1941 là thời kỳ vượt qua thử thách, kiên trì giữ vững quan điểm đặt độc lập dân tộc lên hàng đầu. Khi trở về, Người trực tiếp đưa tư tưởng ấy vào thực tiễn, chuẩn bị cho Cách mạng Tháng Tám.',
+        link:'Quá trình hình thành: vượt qua thử thách, giữ vững đường lối (1930–1941)'
+      }
+    ],
+    notes:
+      '<p class="intro">Tóm tắt cơ sở và quá trình hình thành tư tưởng Hồ Chí Minh, dùng trong chủ đề “Hành trình tìm đường”.</p>' +
+      '<h3>1. Cơ sở thực tiễn</h3>' +
+      '<p>Cuối thế kỷ 19, đầu thế kỷ 20, Việt Nam là xã hội thuộc địa nửa phong kiến. Các phong trào yêu nước theo khuynh hướng phong kiến và tư sản lần lượt thất bại, đặt ra yêu cầu phải tìm con đường cứu nước mới. Trên thế giới, Cách mạng Tháng Mười Nga (1917) mở ra thời đại mới.' + W('1911') + '</p>' +
+      '<h3>2. Cơ sở lý luận</h3>' +
+      '<dl>' +
+        '<dt>Giá trị truyền thống dân tộc</dt><dd>Chủ nghĩa yêu nước là giá trị cốt lõi, là điểm xuất phát đưa Người đến với chủ nghĩa Mác – Lênin.' + W('12/1920') + '</dd>' +
+        '<dt>Tinh hoa văn hóa nhân loại</dt><dd>Phương Đông: những giá trị tích cực của Nho giáo, Phật giáo và các học thuyết khác. Phương Tây: tư tưởng tự do, bình đẳng, bác ái; Tuyên ngôn độc lập của Mỹ và Tuyên ngôn nhân quyền và dân quyền của Pháp.' + W('1911, 1919') + '</dd>' +
+        '<dt>Chủ nghĩa Mác – Lênin</dt><dd>Cơ sở lý luận quan trọng nhất, quyết định bản chất cách mạng và khoa học của tư tưởng Hồ Chí Minh.' + W('7/1920') + '</dd>' +
+      '</dl>' +
+      Q(Q_YEUNUOC, CDDT) +
+      '<h3>3. Nhân tố chủ quan Hồ Chí Minh</h3>' +
+      '<p>Tư duy độc lập, tự chủ, sáng tạo; khổ công học tập để chiếm lĩnh tri thức; tâm hồn của một nhà yêu nước chân chính, thương dân, sẵn sàng hy sinh vì độc lập của Tổ quốc.</p>' +
+      '<h3>4. Quá trình hình thành và phát triển</h3>' +
+      '<ol>' +
+        '<li><strong>Trước 1911:</strong> hình thành tư tưởng yêu nước và chí hướng cứu nước.</li>' +
+        '<li><strong>1911–1920:</strong> tìm thấy con đường cứu nước, giải phóng dân tộc.' + W('1911, 1919, 1920') + '</li>' +
+        '<li><strong>1921–1930:</strong> hình thành những nội dung cơ bản về cách mạng Việt Nam: Bản án chế độ thực dân Pháp, Đường Kách mệnh, Cương lĩnh chính trị đầu tiên.' + W('1930') + '</li>' +
+        '<li><strong>1930–1941:</strong> vượt qua thử thách, kiên trì giữ vững đường lối, đặt độc lập dân tộc lên hàng đầu.' + W('1941') + '</li>' +
+        '<li><strong>1941–1969:</strong> tiếp tục phát triển, soi đường cho sự nghiệp cách mạng.</li>' +
+      '</ol>'
+  },
+
+  /* ===== CHỦ NGHĨA XÃ HỘI ===== */
+  {
+    id:'xahoi', title:'Dân giàu, nước mạnh', label:'Chủ nghĩa xã hội và con đường quá độ',
+    blurb:'Bạn cùng nhóm bạn khởi nghiệp một hợp tác xã gốm ở làng nghề quê mình.',
+    role:'Bạn và nhóm bạn khởi nghiệp một hợp tác xã gốm ở làng nghề quê mình. Sáu quyết định trong năm đầu tiên.',
+    closing:'Chủ nghĩa xã hội là làm sao cho dân giàu, nước mạnh.',
+    meters:[{key:'amno',name:'Ấm no'},{key:'congbang',name:'Công bằng'},{key:'lamchu',name:'Làm chủ'},{key:'connguoi',name:'Con người'}],
+    tips:{
+      amno:'làm ăn có kế hoạch, dùng khoa học kỹ thuật để tăng năng suất, và biết tích lũy cho ngày mai.',
+      congbang:'phân phối theo lao động, không cào bằng và không bỏ ai lại phía sau.',
+      lamchu:'để người lao động cùng bàn và cùng quyết những việc lớn.',
+      connguoi:'đầu tư cho con người: đào tạo, giữ chữ tín và làm ăn tử tế.'
+    },
+    vquotes:{
+      amno:{q:Q_DANGIAU, s:HCM},
+      congbang:{q:Q_CONGBANG, s:HCM},
+      lamchu:{q:Q_LAMCHU, s:HCM},
+      connguoi:{q:Q_CONNGUOIXHCN, s:'Hồ Chí Minh (1961)'},
+      all:{q:Q_MOCMAC, s:HCM}
+    },
+    scenes:[
+      {
+        when:'Tháng 1', title:'Góp vốn thế nào?',
+        text:'Hợp tác xã mới thành lập, cần vốn mua lò nung điện. Có ba cách huy động.',
+        options:[
+          {text:'Nhận vốn của một người ngoài làng, đổi lại người đó nắm quyền quyết định mọi việc.', fx:{lamchu:-2, amno:1},
+           remark:'Có vốn ngay, nhưng xã viên thành người làm thuê trong chính hợp tác xã của mình.'},
+          {text:'Xã viên tự nguyện góp vốn theo khả năng, vay thêm vốn ưu đãi; việc lớn đều đưa ra đại hội xã viên biểu quyết.', fx:{lamchu:2, congbang:1, amno:1},
+           remark:'Tự nguyện, cùng có lợi, quản lý dân chủ. Đó là gốc của một hợp tác xã.'},
+          {text:'Bắt mọi hộ trong làng góp đều, ai không góp thì không được làm.', fx:{lamchu:-1, congbang:-1},
+           remark:'Hợp tác xã mà ép buộc thì chỉ còn là cái tên.'}
+        ],
+        quote:Q_LAMCHU, source:HCM,
+        explain:'Hồ Chí Minh coi chủ nghĩa xã hội là công trình của chính nhân dân lao động. Trong thời kỳ quá độ, Người chủ trương phát triển các hình thức kinh tế hợp tác trên nguyên tắc tự nguyện, cùng có lợi, quản lý dân chủ.',
+        link:'Đặc trưng: chế độ do nhân dân lao động làm chủ'
+      },
+      {
+        when:'Tháng 3', title:'Chia tiền đơn hàng đầu tiên',
+        text:'Đơn hàng đầu tiên xuất sang Nhật lãi 60 triệu. Có người làm nhiều, có người làm ít, có người chỉ góp vốn.',
+        options:[
+          {text:'Chia đều cho mọi xã viên cho vui vẻ.', fx:{congbang:-1},
+           remark:'Cào bằng thì người làm nhiều thiệt, lần sau ai cũng làm ít đi.'},
+          {text:'Họp xã viên thống nhất: chia theo công lao động là chính, trả lãi vốn góp hợp lý, trích một phần vào quỹ phát triển và quỹ phúc lợi.', fx:{congbang:2, amno:1, lamchu:1},
+           remark:'Làm nhiều hưởng nhiều, vẫn có phần cho ngày mai và cho người gặp khó.'},
+          {text:'Người góp vốn nhiều nhất lấy phần lớn, thợ chỉ nhận lương cố định.', fx:{congbang:-2},
+           remark:'Người trực tiếp làm ra sản phẩm lại hưởng ít nhất. Khó gọi đó là công bằng.'}
+        ],
+        quote:Q_CONGBANG, source:HCM,
+        explain:'Hồ Chí Minh chủ trương phân phối theo lao động: làm nhiều hưởng nhiều, làm ít hưởng ít, không làm thì không hưởng, đồng thời chăm lo phúc lợi chung. Công bằng không có nghĩa là cào bằng.',
+        link:'Đặc trưng: xã hội công bằng, hợp lý'
+      },
+      {
+        when:'Tháng 5', title:'Men gốm giá rẻ',
+        text:'Một nhà cung cấp chào bán men gốm rẻ hơn 40%, nhưng có hàm lượng chì vượt mức cho phép với đồ đựng thức ăn. Nhìn bằng mắt thường không ai phát hiện được.',
+        options:[
+          {text:'Dùng luôn, khách không biết, lãi tăng gấp đôi.', fx:{connguoi:-2},
+           remark:'Lãi trước mắt, nhưng hại sức khỏe người dùng và có thể làm sụp cả thương hiệu làng nghề.'},
+          {text:'Từ chối, giữ men đạt chuẩn, đầu tư học kỹ thuật pha men an toàn để hạ giá thành.', fx:{amno:2, connguoi:1},
+           remark:'Giàu bằng kỹ thuật và chữ tín thì mới giàu bền.'},
+          {text:'Chỉ dùng men rẻ cho hàng trang trí, ghi rõ “không dùng đựng thức ăn”.', fx:{amno:1},
+           remark:'Minh bạch và đúng quy định, dù chưa giải quyết được bài toán giá thành lâu dài.'}
+        ],
+        quote:Q_DANGIAU, source:HCM,
+        explain:'Dân giàu phải là giàu chính đáng. Hồ Chí Minh khuyến khích làm giàu bằng lao động, khoa học kỹ thuật và quản lý tốt, và phê phán lối làm ăn gian dối, hại người.',
+        link:'Đặc trưng: kinh tế phát triển dựa trên khoa học kỹ thuật'
+      },
+      {
+        when:'Tháng 7', title:'Người thợ bị tai nạn',
+        text:'Anh Tư, thợ vẽ gốm giỏi nhất làng, bị tai nạn không còn dùng được tay phải. Anh vẫn muốn làm việc. Có người đề nghị cho anh nghỉ và trả trợ cấp một lần.',
+        options:[
+          {text:'Trả trợ cấp một lần cho xong, hợp tác xã cần người làm được việc.', fx:{congbang:-1},
+           remark:'Đúng thủ tục, nhưng hợp tác xã mất một người thầy và anh Tư mất chỗ đứng.'},
+          {text:'Chuyển anh sang dạy nghề cho thợ trẻ và kiểm tra chất lượng, đồng thời hỗ trợ anh tập vẽ tay trái.', fx:{congbang:2, connguoi:1},
+           remark:'Không bỏ ai lại phía sau, mà còn giữ được tay nghề quý cho làng.'},
+          {text:'Giữ anh lại, trả lương nhưng không giao việc gì.', fx:{},
+           remark:'Có lòng tốt, nhưng người lao động cần được làm việc có ích chứ không cần được thương hại.'}
+        ],
+        quote:Q_MOCMAC, source:HCM,
+        explain:'Chủ nghĩa xã hội theo Hồ Chí Minh là xã hội vì con người: ai cũng có việc làm, được tôn trọng và được chăm lo khi gặp khó khăn.',
+        link:'Mục tiêu: ai cũng có việc làm, được ấm no và hạnh phúc'
+      },
+      {
+        when:'Tháng 9', title:'Thợ trẻ bỏ đi',
+        text:'Ba thợ trẻ xin nghỉ để lên thành phố chạy giao hàng vì thu nhập cao hơn. Nếu cứ thế, nghề gốm sẽ không còn người nối nghiệp.',
+        options:[
+          {text:'Kệ họ, người trẻ không yêu nghề thì giữ cũng vô ích.', fx:{connguoi:-1},
+           remark:'Có thể họ không hết yêu nghề, chỉ là nghề chưa cho họ một tương lai.'},
+          {text:'Mở lớp đào tạo có lương, có lộ trình lên thợ chính, cho thợ trẻ cùng thiết kế sản phẩm mới và thưởng theo sản phẩm.', fx:{connguoi:2, congbang:1, lamchu:1},
+           remark:'Đầu tư vào con người, cho người trẻ vừa thu nhập vừa tiếng nói.'},
+          {text:'Giữ chân bằng hợp đồng phạt thật nặng nếu nghỉ.', fx:{lamchu:-2},
+           remark:'Giữ người bằng sợ hãi thì giữ được thân, không giữ được lòng.'}
+        ],
+        quote:Q_CONNGUOIXHCN, source:'Hồ Chí Minh (1961)',
+        explain:'Con người vừa là mục tiêu, vừa là động lực của chủ nghĩa xã hội. Hồ Chí Minh coi việc đào tạo, bồi dưỡng con người, nhất là thế hệ trẻ, là điều kiện quyết định.',
+        link:'Động lực: con người và lợi ích của người lao động'
+      },
+      {
+        when:'Tháng 12', title:'Lãi cuối năm',
+        text:'Cuối năm hợp tác xã lãi 300 triệu. Có ý kiến chia hết cho xã viên ăn Tết, có ý kiến dồn hết vào mở rộng xưởng.',
+        options:[
+          {text:'Chia hết, Tết mà.', fx:{amno:-1},
+           remark:'Vui một cái Tết, nhưng năm sau lại bắt đầu từ con số không.'},
+          {text:'Đưa ra đại hội xã viên: chia một phần hợp lý để ăn Tết, trích quỹ mua máy mới và quỹ học bổng cho con em xã viên.', fx:{amno:2, lamchu:1, connguoi:1, congbang:1},
+           remark:'Lo cho hôm nay mà vẫn nghĩ đến ngày mai, và để chính xã viên quyết.'},
+          {text:'Ban quản trị tự quyết dồn hết vào mở rộng, xã viên chờ năm sau.', fx:{lamchu:-2, amno:1},
+           remark:'Tính toán có thể đúng, nhưng quyết thay người lao động là sai cách.'}
+        ],
+        quote:Q_THUNG, source:SRC49,
+        explain:'Con đường quá độ lên chủ nghĩa xã hội là lâu dài, phải làm dần từng bước, kết hợp cải thiện đời sống hôm nay với tích lũy cho ngày mai. Mọi quyết định lớn phải để người lao động cùng bàn.',
+        link:'Thời kỳ quá độ: lâu dài, từng bước vững chắc'
+      }
+    ],
+    notes:
+      '<p class="intro">Tóm tắt tư tưởng Hồ Chí Minh về chủ nghĩa xã hội và con đường quá độ, dùng trong chủ đề “Dân giàu, nước mạnh”.</p>' +
+      '<h3>1. Quan niệm về chủ nghĩa xã hội</h3>' +
+      '<p>Hồ Chí Minh tiếp cận chủ nghĩa xã hội từ nhiều góc độ, nhưng luôn diễn đạt mộc mạc, dễ hiểu, gắn với đời sống của nhân dân: làm cho dân giàu, nước mạnh, mọi người được ấm no, hạnh phúc, được học hành.' + W('Tháng 3, 7') + '</p>' +
+      Q(Q_MOCMAC, HCM) +
+      '<h3>2. Đặc trưng của xã hội xã hội chủ nghĩa</h3>' +
+      '<ol>' +
+        '<li>Chế độ chính trị do nhân dân làm chủ.' + W('Tháng 1') + '</li>' +
+        '<li>Nền kinh tế phát triển cao, dựa trên lực lượng sản xuất hiện đại và chế độ công hữu về các tư liệu sản xuất chủ yếu.' + W('Tháng 5') + '</li>' +
+        '<li>Xã hội phát triển cao về văn hóa, đạo đức; công bằng, hợp lý.' + W('Tháng 3') + '</li>' +
+        '<li>Là công trình tập thể của nhân dân, dưới sự lãnh đạo của Đảng.</li>' +
+      '</ol>' +
+      '<h3>3. Động lực và trở lực</h3>' +
+      '<p>Động lực quan trọng nhất là con người, là lợi ích của nhân dân; phải kết hợp lợi ích cá nhân, tập thể và xã hội. Trở lực là chủ nghĩa cá nhân, tham ô, lãng phí, quan liêu, bảo thủ.' + W('Tháng 9') + '</p>' +
+      Q(Q_CONNGUOIXHCN, 'Hồ Chí Minh (1961)') +
+      '<h3>4. Thời kỳ quá độ lên chủ nghĩa xã hội</h3>' +
+      '<p>Từ một nước nông nghiệp lạc hậu tiến lên chủ nghĩa xã hội không kinh qua giai đoạn phát triển tư bản chủ nghĩa là một quá trình lâu dài, khó khăn. Phải làm dần dần, vững chắc, không chủ quan nóng vội; thừa nhận nhiều hình thức sở hữu, nhiều thành phần kinh tế cùng phát triển.' + W('Tháng 12') + '</p>' +
+      '<p>Độc lập dân tộc là điều kiện tiên quyết để đi lên chủ nghĩa xã hội; chủ nghĩa xã hội là cơ sở bảo đảm vững chắc cho độc lập dân tộc.</p>'
+  },
+
+  /* ===== XÂY DỰNG ĐẢNG ===== */
+  {
+    id:'dang', title:'Bí thư chi đoàn', label:'Đảng Cộng sản Việt Nam và xây dựng tổ chức',
+    blurb:'Bạn là bí thư chi đoàn lớp, áp dụng các nguyên tắc tổ chức Hồ Chí Minh đặt ra.',
+    role:'Bạn vừa được bầu làm bí thư chi đoàn lớp. Những nguyên tắc Hồ Chí Minh đặt ra để xây dựng Đảng cũng là những nguyên tắc giúp một tổ chức như chi đoàn vững mạnh.',
+    closing:'Giữ gìn sự đoàn kết như giữ gìn con ngươi của mắt mình.',
+    meters:[{key:'danchu',name:'Dân chủ'},{key:'tuphebinh',name:'Tự phê bình'},{key:'kyluat',name:'Kỷ luật'},{key:'ganbo',name:'Gắn bó'}],
+    tips:{
+      danchu:'để mọi thành viên được bàn bạc trước khi quyết, và khi đã quyết thì cùng thực hiện.',
+      tuphebinh:'nhìn vào phần của mình trước khi chỉ ra lỗi của người khác.',
+      kyluat:'áp dụng quy định như nhau với mọi người, nghiêm mà có tình.',
+      ganbo:'lắng nghe và gần gũi các thành viên, không làm việc theo kiểu chạy chỉ tiêu.'
+    },
+    vquotes:{
+      danchu:{q:Q_DCPHEBINH, s:DICHUC},
+      tuphebinh:{q:Q_GIAUGIEM, s:SDLLV},
+      kyluat:{q:Q_THUONGYEU, s:DICHUC},
+      ganbo:{q:Q_PHATTAI, s:SDLLV},
+      all:{q:Q_DAYTO, s:DICHUC}
+    },
+    scenes:[
+      {
+        when:'Tháng 9', title:'Kế hoạch năm học',
+        text:'Chi đoàn cần nộp kế hoạch hoạt động cả năm cho Đoàn trường vào cuối tuần. Bạn đã có sẵn ý tưởng trong đầu.',
+        options:[
+          {text:'Tự viết và nộp luôn cho kịp hạn, họp chỉ để thông báo.', fx:{danchu:-2},
+           remark:'Nhanh, nhưng kế hoạch của một người thì khó thành việc của cả chi đoàn.'},
+          {text:'Gửi dự thảo cho cả lớp góp ý, họp chi đoàn thảo luận và biểu quyết; đã thông qua thì mọi người cùng thực hiện.', fx:{danchu:2, kyluat:1, tuphebinh:1},
+           remark:'Bàn bạc dân chủ trước, thống nhất hành động sau. Đó là tập trung dân chủ.'},
+          {text:'Để mỗi người tự đề xuất hoạt động mình thích, ai thích gì làm nấy.', fx:{kyluat:-2},
+           remark:'Dân chủ mà không có tập trung thì thành tùy tiện, chi đoàn sẽ tản mát.'}
+        ],
+        quote:Q_DCPHEBINH, source:DICHUC,
+        explain:'Tập trung dân chủ là nguyên tắc tổ chức cơ bản: mọi vấn đề được bàn bạc dân chủ, nhưng khi đã quyết thì thiểu số phục tùng đa số và mọi người thống nhất hành động. Thiếu dân chủ thì thành độc đoán, thiếu tập trung thì thành tùy tiện.',
+        link:'Nguyên tắc tập trung dân chủ'
+      },
+      {
+        when:'Tháng 10', title:'Đêm văn nghệ vắng khách',
+        text:'Đêm văn nghệ chi đoàn do bạn phụ trách vắng khán giả vì truyền thông quá muộn. Đoàn trường hỏi nguyên nhân.',
+        options:[
+          {text:'Báo cáo rằng do sinh viên bận thi, không ai có lỗi.', fx:{tuphebinh:-2},
+           remark:'Giấu khuyết điểm thì lần sau sẽ lặp lại đúng khuyết điểm ấy.'},
+          {text:'Nhận trách nhiệm của người phụ trách, cùng chi đoàn rút kinh nghiệm cụ thể và ghi lại cho lần sau.', fx:{tuphebinh:2, kyluat:1, ganbo:1},
+           remark:'Dám nhận, dám sửa. Người phụ trách tự phê bình trước thì mọi người mới dám nói thật.'},
+          {text:'Chỉ ra lỗi của ban truyền thông trong group chung.', fx:{tuphebinh:-1, ganbo:-1},
+           remark:'Phê bình người khác trước khi tự phê bình, lại phê bình công khai, chỉ làm cả nhóm co lại.'}
+        ],
+        quote:Q_GIAUGIEM, source:SDLLV,
+        explain:'Tự phê bình và phê bình là quy luật phát triển của Đảng, là vũ khí để rèn luyện đảng viên. Tự phê bình phải đi trước, và phê bình phải thật thà, có tình thương.',
+        link:'Nguyên tắc tự phê bình và phê bình'
+      },
+      {
+        when:'Tháng 11', title:'Đoàn viên vắng họp',
+        text:'Một đoàn viên vắng ba buổi sinh hoạt liền không báo. Có người đòi kỷ luật ngay, có người bảo bỏ qua.',
+        options:[
+          {text:'Kỷ luật khiển trách ngay trước chi đoàn để làm gương.', fx:{kyluat:1, ganbo:-2},
+           remark:'Nghiêm, nhưng kỷ luật khi chưa hiểu lý do thì dễ oan và dễ mất người.'},
+          {text:'Gặp riêng hỏi lý do trước. Nếu bạn có khó khăn thì cùng hỗ trợ; nếu không thì góp ý thẳng và áp dụng đúng quy định như với mọi người.', fx:{kyluat:2, ganbo:2, tuphebinh:1},
+           remark:'Nghiêm với cái sai, thương người mắc sai. Kỷ luật đi cùng tình đồng chí.'},
+          {text:'Bỏ qua, bạn bè cả, ai cũng bận.', fx:{kyluat:-2},
+           remark:'Bỏ qua một lần thì lần sau sẽ có thêm nhiều người vắng.'}
+        ],
+        quote:Q_THUONGYEU, source:DICHUC,
+        explain:'Hồ Chí Minh yêu cầu kỷ luật nghiêm minh nhưng tự giác, và kỷ luật luôn đi cùng tình thương. Nghiêm với cái sai, thương người mắc sai, và áp dụng như nhau với mọi người.',
+        link:'Nguyên tắc kỷ luật nghiêm minh, tự giác'
+      },
+      {
+        when:'Tháng 12', title:'Suất học bổng vượt khó',
+        text:'Đoàn trường giao chi đoàn giới thiệu một bạn nhận học bổng vượt khó. Bạn thân của bạn có nộp hồ sơ, nhưng một bạn khác có hoàn cảnh khó khăn hơn.',
+        options:[
+          {text:'Giới thiệu bạn thân, dù sao cũng đủ điều kiện.', fx:{kyluat:-1, ganbo:-2},
+           remark:'Dùng vị trí của mình để ưu ái người thân là mất lòng tin của cả chi đoàn.'},
+          {text:'Công khai tiêu chí, chi đoàn cùng xét và bỏ phiếu; bạn tự rút khỏi việc chấm vì có quan hệ thân thiết.', fx:{danchu:2, ganbo:1, kyluat:1},
+           remark:'Minh bạch và tránh xung đột lợi ích. Kết quả nào cũng được mọi người tin.'},
+          {text:'Chia đôi suất học bổng cho hai người.', fx:{kyluat:-1},
+           remark:'Tưởng là công bằng, nhưng trái quy định và không giúp đúng người cần nhất.'}
+        ],
+        quote:Q_DAYTO, source:DICHUC,
+        explain:'Hồ Chí Minh yêu cầu cán bộ, đảng viên không dùng vị trí của mình để mưu lợi riêng hay ưu ái người thân. Tổ chức có trong sạch thì mới được quần chúng tin.',
+        link:'Xây dựng đội ngũ cán bộ có đức, có tài; chống chủ nghĩa cá nhân'
+      },
+      {
+        when:'Tháng 2', title:'Hai nhóm trong lớp',
+        text:'Lớp chia thành hai nhóm chơi riêng, bắt đầu nói xấu nhau sau lưng. Nhiều bạn ngại đến sinh hoạt chung.',
+        options:[
+          {text:'Không phải việc của chi đoàn, chuyện riêng các bạn.', fx:{ganbo:-1},
+           remark:'Chi đoàn mà không lo được sự đoàn kết của lớp thì sinh hoạt chỉ còn là hình thức.'},
+          {text:'Gặp đại diện hai nhóm, tổ chức một hoạt động cần cả hai nhóm phối hợp, và thống nhất nguyên tắc góp ý trực tiếp thay vì nói sau lưng.', fx:{ganbo:2, tuphebinh:1},
+           remark:'Đoàn kết bằng việc chung và bằng phê bình thẳng thắn, chứ không bằng im lặng.'},
+          {text:'Đứng về nhóm đông hơn để chi đoàn yên ổn.', fx:{ganbo:-2, danchu:-1},
+           remark:'Người đứng đầu mà chọn phe thì chia rẽ sẽ thành chính thức.'}
+        ],
+        quote:Q_CONNGUOI_MAT, source:DICHUC,
+        explain:'Đoàn kết, thống nhất trong tổ chức là điều Hồ Chí Minh nhắc đến đầu tiên khi nói về Đảng trong Di chúc. Đoàn kết dựa trên mục tiêu chung, được giữ bằng tự phê bình, phê bình thẳng thắn và tình thương.',
+        link:'Nguyên tắc đoàn kết, thống nhất trong Đảng'
+      },
+      {
+        when:'Tháng 4', title:'Chỉ tiêu không ai muốn nhận',
+        text:'Đoàn trường giao mỗi chi đoàn cử 5 bạn thi tìm hiểu lịch sử. Không ai muốn đi vì trùng lịch thi giữa kỳ.',
+        options:[
+          {text:'Điền đại 5 cái tên cho đủ chỉ tiêu.', fx:{ganbo:-1, kyluat:-2},
+           remark:'Đủ chỉ tiêu trên giấy, nhưng đó là báo cáo sai và làm việc theo kiểu hình thức.'},
+          {text:'Hỏi ý kiến lớp, đề xuất với Đoàn trường đổi sang thi trực tuyến ngoài giờ, và tự mình đăng ký đầu tiên.', fx:{ganbo:2, danchu:1, kyluat:1},
+           remark:'Phản ánh đúng tâm tư đoàn viên lên trên, và tự mình làm gương.'},
+          {text:'Ép năm bạn có điểm rèn luyện thấp phải đi.', fx:{ganbo:-2},
+           remark:'Dùng quyền để ép thì được việc hôm nay, mất lòng người lâu dài.'}
+        ],
+        quote:Q_PHATTAI, source:SDLLV,
+        explain:'Hồ Chí Minh yêu cầu tổ chức phải liên hệ mật thiết với quần chúng, phê phán bệnh quan liêu, hình thức, chạy theo thành tích. Người lãnh đạo phải lắng nghe và làm gương trước.',
+        link:'Nguyên tắc liên hệ mật thiết với nhân dân'
+      }
+    ],
+    notes:
+      '<p class="intro">Tóm tắt tư tưởng Hồ Chí Minh về Đảng Cộng sản Việt Nam, dùng trong chủ đề “Bí thư chi đoàn”.</p>' +
+      '<h3>1. Tính tất yếu và vai trò lãnh đạo của Đảng</h3>' +
+      '<p>Đảng Cộng sản Việt Nam ra đời là sự kết hợp chủ nghĩa Mác – Lênin với phong trào công nhân và phong trào yêu nước. Đảng là nhân tố quyết định thắng lợi của cách mạng.</p>' +
+      Q(Q_DANGVUNG, DKM) +
+      '<h3>2. Đảng là đạo đức, là văn minh</h3>' +
+      '<p>Đảng không có lợi ích nào khác ngoài lợi ích của Tổ quốc, của nhân dân. Mỗi cán bộ, đảng viên phải có đạo đức cách mạng, vừa là người lãnh đạo, vừa là người đầy tớ trung thành của nhân dân.' + W('Tháng 12') + '</p>' +
+      Q(Q_PHATTAI, SDLLV) +
+      '<h3>3. Nguyên tắc tổ chức và sinh hoạt Đảng</h3>' +
+      '<ol>' +
+        '<li><strong>Tập trung dân chủ.</strong>' + W('Tháng 9') + '</li>' +
+        '<li><strong>Tự phê bình và phê bình.</strong>' + W('Tháng 10') + '</li>' +
+        '<li><strong>Kỷ luật nghiêm minh, tự giác.</strong>' + W('Tháng 11') + '</li>' +
+        '<li><strong>Đoàn kết, thống nhất trong Đảng.</strong>' + W('Tháng 2') + '</li>' +
+        '<li><strong>Liên hệ mật thiết với nhân dân.</strong>' + W('Tháng 4') + '</li>' +
+        '<li><strong>Đoàn kết quốc tế.</strong></li>' +
+      '</ol>' +
+      '<h3>4. Xây dựng đội ngũ cán bộ, đảng viên</h3>' +
+      '<p>Cán bộ là cái gốc của mọi công việc. Người cán bộ phải vừa có đức vừa có tài, trong đó đức là gốc; phải kiên quyết chống chủ nghĩa cá nhân.</p>' +
+      Q(Q_DAYTO, DICHUC)
+  },
+
+  /* ===== ĐOÀN KẾT QUỐC TẾ ===== */
+  {
+    id:'quocte', title:'Thêm bạn, bớt thù', label:'Đoàn kết quốc tế',
+    blurb:'Bạn là trưởng ban đối ngoại của hội sinh viên, phụ trách chương trình giao lưu quốc tế.',
+    role:'Bạn là trưởng ban đối ngoại của hội sinh viên, phụ trách một chương trình giao lưu thanh niên các nước. Sáu tình huống trong một năm.',
+    closing:'Thêm bạn, bớt thù.',
+    meters:[{key:'tuchu',name:'Tự chủ'},{key:'huunghi',name:'Hữu nghị'},{key:'chinhnghia',name:'Chính nghĩa'},{key:'hochoi',name:'Học hỏi'}],
+    tips:{
+      tuchu:'hợp tác rộng rãi nhưng tự quyết những điều cốt lõi, và dựa vào sức mình là chính.',
+      huunghi:'chủ động làm bạn, tôn trọng và giúp đỡ bạn bè quốc tế.',
+      chinhnghia:'bảo vệ sự thật bằng lý lẽ và chứng cứ, bình tĩnh và có tình.',
+      hochoi:'học cái hay của các nước, rồi vận dụng cho hợp với mình.'
+    },
+    vquotes:{
+      tuchu:{q:Q_TULUC, s:HCM},
+      huunghi:{q:Q_GIUPBAN, s:HCM},
+      chinhnghia:{q:Q_DIBATBIEN, s:'Hồ Chí Minh, dặn cụ Huỳnh Thúc Kháng (1946)'},
+      hochoi:{q:Q_HOCHANH, s:HCM},
+      all:{q:Q_LAMBAN, s:'Hồ Chí Minh (1947)'}
+    },
+    scenes:[
+      {
+        when:'Tháng 9', title:'Đoàn bạn Lào đến trường',
+        text:'Một đoàn sinh viên Lào sang giao lưu ba ngày. Kinh phí ít, lịch lại dày.',
+        options:[
+          {text:'Tổ chức một buổi gặp mặt chụp ảnh, còn lại để đoàn tự đi tham quan.', fx:{huunghi:-1},
+           remark:'Có ảnh đẹp nhưng không có tình bạn nào được hình thành.'},
+          {text:'Ghép mỗi bạn Lào với một bạn Việt làm “bạn đồng hành”, cùng học vài tiết, nấu một bữa cơm hai nước và dạy nhau vài câu tiếng.', fx:{huunghi:2, hochoi:1},
+           remark:'Tình hữu nghị bắt đầu từ những việc rất nhỏ làm cùng nhau.'},
+          {text:'Tổ chức thật hoành tráng ở khách sạn để có ảnh đăng báo.', fx:{},
+           remark:'Tốn kém mà vẫn xa cách. Hữu nghị không đo bằng độ hoành tráng.'}
+        ],
+        quote:Q_GIUPBAN, source:HCM,
+        explain:'Hồ Chí Minh đặc biệt coi trọng đoàn kết với các nước láng giềng Lào và Campuchia, xây dựng quan hệ hữu nghị thủy chung trên cơ sở tôn trọng và giúp đỡ lẫn nhau.',
+        link:'Đoàn kết với các dân tộc láng giềng'
+      },
+      {
+        when:'Tháng 10', title:'Nhà tài trợ ra điều kiện',
+        text:'Một công ty nước ngoài muốn tài trợ toàn bộ chương trình, với điều kiện được sửa nội dung các bài thuyết trình theo ý họ.',
+        options:[
+          {text:'Nhận, có tiền là có chương trình.', fx:{tuchu:-2},
+           remark:'Chương trình vẫn diễn ra, nhưng không còn là tiếng nói của các bạn nữa.'},
+          {text:'Đàm phán: nhận tài trợ ở mức hợp lý đổi lấy quảng bá logo, nhưng nội dung do ban tổ chức tự quyết; nếu không được thì tìm nguồn khác, kể cả tự quyên góp.', fx:{tuchu:2, huunghi:1},
+           remark:'Hợp tác rộng mở nhưng giữ quyền tự quyết. Có lý, có tình, có giới hạn rõ ràng.'},
+          {text:'Từ chối mọi tài trợ nước ngoài cho chắc.', fx:{tuchu:1, huunghi:-1, hochoi:-1},
+           remark:'Tự chủ không có nghĩa là đóng cửa. Khước từ mọi hợp tác cũng là tự làm mình yếu đi.'}
+        ],
+        quote:Q_TULUC, source:HCM,
+        explain:'Độc lập, tự chủ, tự lực tự cường là nguyên tắc hàng đầu trong quan hệ quốc tế theo Hồ Chí Minh. Tranh thủ sự giúp đỡ của bạn bè, nhưng dựa vào sức mình là chính.',
+        link:'Nguyên tắc: độc lập, tự chủ, tự lực tự cường'
+      },
+      {
+        when:'Tháng 11', title:'Tranh cãi trong nhóm chat',
+        text:'Trong nhóm chat của chương trình, một bạn nước ngoài chia sẻ bài viết sai lệch về lịch sử Việt Nam. Vài bạn Việt bắt đầu chửi lại.',
+        options:[
+          {text:'Chửi lại cho bõ tức, bảo vệ đất nước mà.', fx:{chinhnghia:-1, huunghi:-2},
+           remark:'Có lý mà nói thiếu tình thì chính mình thành người sai.'},
+          {text:'Nhắc mọi người bình tĩnh, gửi tư liệu đáng tin cậy, mời bạn ấy trao đổi trực tiếp và hỏi vì sao bạn nghĩ vậy.', fx:{chinhnghia:2, huunghi:1, hochoi:1, tuchu:1},
+           remark:'Vững về sự thật, mềm về cách nói. Người ta đổi ý vì được thuyết phục, không vì bị chửi.'},
+          {text:'Xóa bạn ấy khỏi nhóm ngay, không cần giải thích.', fx:{huunghi:-1},
+           remark:'Xóa được một tin nhắn, không xóa được một cách hiểu sai.'}
+        ],
+        quote:Q_DIBATBIEN, source:'Hồ Chí Minh, dặn cụ Huỳnh Thúc Kháng (1946)',
+        explain:'Hồ Chí Minh kiên định về nguyên tắc nhưng mềm dẻo về cách làm: bảo vệ chính nghĩa bằng lý lẽ và chứng cứ, phân biệt con người với quan điểm sai, để thêm bạn chứ không thêm thù.',
+        link:'Phương châm: kiên định nguyên tắc, mềm dẻo sách lược'
+      },
+      {
+        when:'Tháng 12', title:'Động đất ở nước láng giềng',
+        text:'Một trận động đất lớn xảy ra ở một nước trong khu vực. Nhiều sinh viên nước đó đang học ở trường bạn chưa liên lạc được với gia đình.',
+        options:[
+          {text:'Đăng một bài chia buồn lên fanpage là đủ.', fx:{},
+           remark:'Lời chia buồn là thật, nhưng các bạn ấy đang cần nhiều hơn thế.'},
+          {text:'Lập nhóm hỗ trợ các bạn sinh viên nước đó: liên lạc, chỗ ở, tư vấn; tổ chức quyên góp minh bạch gửi qua kênh chính thức.', fx:{huunghi:2, chinhnghia:1},
+           remark:'Giúp đúng lúc, đúng việc, đúng người. Tình bạn quốc tế được thử thách những lúc như thế này.'},
+          {text:'Việc nước người ta, lo việc mình trước.', fx:{huunghi:-2},
+           remark:'Hôm nay là họ, mai có thể là mình.'}
+        ],
+        quote:Q_TNDL, source:'Hồ Chí Minh, <cite>Tuyên ngôn độc lập</cite> (1945)',
+        explain:'Hồ Chí Minh đề cao tinh thần quốc tế trong sáng: yêu nước mình đồng thời thương yêu, giúp đỡ nhân dân các nước, nhất là khi họ gặp khó khăn.',
+        link:'Chuẩn mực tinh thần quốc tế trong sáng'
+      },
+      {
+        when:'Tháng 3', title:'Học mô hình của trường bạn',
+        text:'Trường đối tác ở Singapore có mô hình câu lạc bộ khởi nghiệp rất thành công. Hội sinh viên muốn áp dụng.',
+        options:[
+          {text:'Sao chép nguyên quy chế, tên gọi, cả cách chấm điểm của họ.', fx:{hochoi:1, tuchu:-1},
+           remark:'Học được hình thức, nhưng điều kiện của họ không giống mình.'},
+          {text:'Cử người sang học, chọn những gì hợp với sinh viên trường mình, điều chỉnh và thử nghiệm nhỏ trước khi làm lớn.', fx:{hochoi:2, tuchu:2},
+           remark:'Học có chọn lọc, vận dụng có sáng tạo.'},
+          {text:'Không cần học ai, tự mình mày mò là được.', fx:{hochoi:-2},
+           remark:'Tự lực không phải là tự cô lập. Bỏ qua kinh nghiệm của người khác là đi đường vòng.'}
+        ],
+        quote:Q_HOCHANH, source:HCM,
+        explain:'Hồ Chí Minh chủ trương kết hợp sức mạnh dân tộc với sức mạnh thời đại: chủ động học hỏi kinh nghiệm các nước, nhưng luôn vận dụng sáng tạo cho phù hợp với điều kiện của mình.',
+        link:'Kết hợp sức mạnh dân tộc với sức mạnh thời đại'
+      },
+      {
+        when:'Tháng 5', title:'Câu hỏi về chiến tranh',
+        text:'Một bạn sinh viên Mỹ trong chương trình ngập ngừng hỏi: người Việt Nam có còn ghét người Mỹ vì chiến tranh không?',
+        options:[
+          {text:'Né câu hỏi cho đỡ khó xử.', fx:{huunghi:-1},
+           remark:'Bỏ lỡ một cơ hội để hai người trẻ hiểu nhau hơn.'},
+          {text:'Trả lời thẳng thắn: người Việt nhớ lịch sử nhưng phân biệt nhân dân với chính sách chiến tranh, và hai nước nay là đối tác. Rủ bạn cùng đi thăm một bảo tàng rồi trao đổi thêm.', fx:{chinhnghia:2, huunghi:2, hochoi:1},
+           remark:'Không quên lịch sử, không nuôi thù hận. Đó là cách người Việt khép lại quá khứ để làm bạn.'},
+          {text:'Nói rằng chiến tranh là lỗi của nước bạn, bạn nên xin lỗi.', fx:{huunghi:-2},
+           remark:'Lịch sử cần được nói đúng, nhưng đổ lên vai một người trẻ hôm nay thì không công bằng.'}
+        ],
+        quote:Q_LAMBAN, source:'Hồ Chí Minh (1947)',
+        explain:'Hồ Chí Minh luôn phân biệt nhân dân các nước với những thế lực gây chiến tranh, và chủ trương làm bạn với tất cả các nước. Hiểu lịch sử để không lặp lại, chứ không để nuôi thù hận.',
+        link:'Phương châm: thêm bạn, bớt thù'
+      }
+    ],
+    notes:
+      '<p class="intro">Tóm tắt tư tưởng Hồ Chí Minh về đoàn kết quốc tế, dùng trong chủ đề “Thêm bạn, bớt thù”.</p>' +
+      '<h3>1. Vai trò của đoàn kết quốc tế</h3>' +
+      '<p>Đoàn kết quốc tế nhằm kết hợp sức mạnh dân tộc với sức mạnh thời đại, tạo sức mạnh tổng hợp cho cách mạng; đồng thời góp phần cùng nhân dân thế giới thực hiện các mục tiêu hòa bình, độc lập dân tộc, dân chủ và tiến bộ xã hội.' + W('Tháng 3') + '</p>' +
+      '<h3>2. Lực lượng đoàn kết quốc tế</h3>' +
+      '<p>Phong trào cộng sản và công nhân quốc tế, phong trào giải phóng dân tộc, và các lực lượng tiến bộ, những người yêu chuộng hòa bình trên thế giới.' + W('Tháng 9, 12') + '</p>' +
+      '<h3>3. Nguyên tắc đoàn kết quốc tế</h3>' +
+      '<ol>' +
+        '<li><strong>Đoàn kết trên cơ sở thống nhất mục tiêu và lợi ích, có lý, có tình.</strong>' + W('Tháng 11') + '</li>' +
+        '<li><strong>Đoàn kết trên cơ sở độc lập, tự chủ, tự lực tự cường.</strong>' + W('Tháng 10') + '</li>' +
+      '</ol>' +
+      Q(Q_TULUC, HCM) +
+      '<h3>4. Phương châm</h3>' +
+      '<p>Thêm bạn, bớt thù; kiên định về nguyên tắc, mềm dẻo về sách lược (“dĩ bất biến, ứng vạn biến”); phân biệt nhân dân các nước với các thế lực gây chiến tranh.' + W('Tháng 5') + '</p>' +
+      Q(Q_LAMBAN, 'Hồ Chí Minh (1947)')
+  },
+
+  /* ===== THANH NIÊN ===== */
+  {
+    id:'thanhnien', title:'Tuổi trẻ là mùa xuân', label:'Thanh niên, giáo dục và con người',
+    blurb:'Bạn là sinh viên, đi qua bốn năm đại học với những lựa chọn của tuổi trẻ.',
+    role:'Bạn là một sinh viên, đi qua bốn năm đại học với những lựa chọn của tuổi trẻ: học gì, rèn luyện ra sao, dấn thân đến đâu.',
+    closing:'Tuổi trẻ là mùa xuân của xã hội.',
+    meters:[{key:'hoctap',name:'Học tập'},{key:'renluyen',name:'Rèn luyện'},{key:'xungkich',name:'Xung kích'},{key:'conghien',name:'Cống hiến'}],
+    tips:{
+      hoctap:'học để làm được việc thật, học đi đôi với hành và học suốt đời.',
+      renluyen:'giữ sức khỏe, giờ giấc và bản lĩnh; tuổi trẻ cần được rèn chứ không chỉ được dùng.',
+      xungkich:'dám nhận việc khó và dám nhận trách nhiệm.',
+      conghien:'nghĩ xem những gì mình học được có thể giúp ai, ở đâu.'
+    },
+    vquotes:{
+      hoctap:{q:Q_NONSONG, s:'Hồ Chí Minh, <cite>Thư gửi các học sinh</cite> (1945)'},
+      renluyen:{q:Q_THEDUC, s:'Hồ Chí Minh, <cite>Sức khỏe và thể dục</cite> (1946)'},
+      xungkich:{q:Q_DAUCAN, s:HCM},
+      conghien:{q:Q_CHUTUONGLAI, s:'Hồ Chí Minh (1946)'},
+      all:{q:Q_MUAXUAN, s:'Hồ Chí Minh, <cite>Thư gửi các bạn thanh niên</cite> (1946)'}
+    },
+    scenes:[
+      {
+        when:'Năm nhất', title:'Một tuần không ra khỏi phòng',
+        text:'Học kỳ đầu, bạn thức khuya liên tục, cả tuần gần như không vận động. Lớp có câu lạc bộ chạy bộ buổi sáng đang tuyển người.',
+        options:[
+          {text:'Còn trẻ, cần gì tập, cà phê là đủ tỉnh.', fx:{renluyen:-2},
+           remark:'Sức trẻ là vốn, nhưng tiêu vốn mà không bồi đắp thì cũng có ngày cạn.'},
+          {text:'Tham gia câu lạc bộ chạy ba buổi mỗi tuần, đặt giờ đi ngủ trước 12 giờ đêm.', fx:{renluyen:2, hoctap:1},
+           remark:'Khỏe hơn thì học cũng tỉnh hơn. Rèn thân thể cũng là rèn ý chí.'},
+          {text:'Để khi nào rảnh thì tập.', fx:{},
+           remark:'Với sinh viên, “khi nào rảnh” thường là không bao giờ.'}
+        ],
+        quote:Q_THEDUC, source:'Hồ Chí Minh, <cite>Sức khỏe và thể dục</cite> (1946)',
+        explain:'Hồ Chí Minh coi sức khỏe của mỗi người là sức mạnh của cả nước. Ngay năm 1946, giữa bộn bề việc nước, Người kêu gọi toàn dân tập thể dục và chính Người ngày nào cũng tập.',
+        link:'Tư tưởng Hồ Chí Minh về con người phát triển toàn diện'
+      },
+      {
+        when:'Cuối năm nhất', title:'Chọn đề tài đồ án',
+        text:'Có hai hướng đề tài: một đề tài dễ, có sẵn mẫu trên mạng, chắc điểm cao; hoặc làm ứng dụng thật cho một hợp tác xã rau sạch, khó hơn và có thể điểm thấp hơn.',
+        options:[
+          {text:'Chọn đề tài dễ, đi theo mẫu cho chắc điểm.', fx:{hoctap:-1},
+           remark:'Điểm cao nhưng học được ít. Bảng điểm không thay được năng lực.'},
+          {text:'Làm ứng dụng thật, xin giảng viên hướng dẫn thêm, chấp nhận vất vả để học được việc thật.', fx:{hoctap:2, conghien:1, renluyen:1},
+           remark:'Học đi đôi với hành. Cái vất vả hôm nay là tay nghề của ngày mai.'},
+          {text:'Chọn đề tài khó, nhưng thuê người làm hộ.', fx:{hoctap:-2},
+           remark:'Đề tài đẹp trên giấy, còn kiến thức vẫn nằm ở người khác.'}
+        ],
+        quote:Q_NONSONG, source:'Hồ Chí Minh, <cite>Thư gửi các học sinh</cite> (1945)',
+        explain:'Hồ Chí Minh luôn nhấn mạnh học phải đi đôi với hành, học để làm việc chứ không để lấy bằng. Việc học của thế hệ trẻ gắn liền với tương lai của đất nước.',
+        link:'Giáo dục: học đi đôi với hành, lý luận gắn với thực tiễn'
+      },
+      {
+        when:'Hè năm nhất', title:'Mùa hè xanh',
+        text:'Mùa hè này bạn có thể đi thực tập ngắn hạn, hoặc tham gia chiến dịch tình nguyện ở một xã vùng cao.',
+        options:[
+          {text:'Chỉ chọn những gì giúp đẹp CV, tình nguyện thì bỏ qua.', fx:{xungkich:-1},
+           remark:'Thực tập rất cần, nhưng nhìn mọi việc chỉ qua lăng kính CV thì tuổi trẻ sẽ hẹp đi.'},
+          {text:'Tham gia chiến dịch tình nguyện và mang kỹ năng chuyên ngành về giúp xã: dạy tin học cho học sinh, số hóa sổ sách cho trạm y tế.', fx:{xungkich:2, conghien:2, hoctap:1},
+           remark:'Dấn thân mà vẫn đúng sở trường. Vừa giúp được người, vừa trưởng thành nhanh.'},
+          {text:'Đi tình nguyện nhưng chủ yếu để chụp ảnh và lấy điểm rèn luyện.', fx:{xungkich:-1, conghien:-1},
+           remark:'Có mặt mà không có tâm thì người dân sẽ nhận ra ngay.'}
+        ],
+        quote:Q_DAUCAN, source:HCM,
+        explain:'Hồ Chí Minh đặt niềm tin rất lớn vào thanh niên, lực lượng xung kích ở những nơi khó khăn nhất. Dấn thân vì cộng đồng cũng là cách người trẻ trưởng thành nhanh nhất.',
+        link:'Vai trò của thanh niên: lực lượng xung kích'
+      },
+      {
+        when:'Đầu năm hai', title:'Bầu lớp trưởng',
+        text:'Lớp bầu lớp trưởng mới. Nhiều bạn đề cử bạn vì bạn có năng lực, nhưng bạn ngại mất thời gian.',
+        options:[
+          {text:'Từ chối, để người khác lo cho khỏe.', fx:{xungkich:-2},
+           remark:'Nếu người có năng lực đều né, việc chung sẽ rơi vào tay người không muốn làm.'},
+          {text:'Nhận, đưa ra kế hoạch cụ thể và mời những bạn giỏi ở các mảng khác cùng làm.', fx:{xungkich:2, conghien:1, renluyen:1},
+           remark:'Dám nhận việc và biết chia việc. Đó là cách người trẻ học làm người lãnh đạo.'},
+          {text:'Nhận cho có chức danh ghi vào CV, việc thì giao hết cho lớp phó.', fx:{xungkich:-1, conghien:-2},
+           remark:'Chức danh không làm nên người lãnh đạo; việc làm mới làm nên.'}
+        ],
+        quote:Q_MUAXUAN, source:'Hồ Chí Minh, <cite>Thư gửi các bạn thanh niên</cite> (1946)',
+        explain:'Tuổi trẻ là quãng đời để dám nhận trách nhiệm và rèn năng lực. Hồ Chí Minh mong thanh niên hăng hái, dám nghĩ dám làm, nhưng làm vì việc chung chứ không vì danh.',
+        link:'Thanh niên: dám nghĩ, dám làm, dám chịu trách nhiệm'
+      },
+      {
+        when:'Năm ba', title:'Mấy em nhỏ trong xóm trọ',
+        text:'Trong xóm trọ có mấy em nhỏ, bố mẹ đi làm đến tối, không ai kèm học. Bạn có thể dạy các em vào buổi tối.',
+        options:[
+          {text:'Không phải việc của mình, lo học đã.', fx:{conghien:-1},
+           remark:'Việc học của mình quan trọng, nhưng hai buổi tối mỗi tuần có thể thay đổi cả năm học của một đứa trẻ.'},
+          {text:'Mở lớp kèm miễn phí hai buổi tối mỗi tuần, rủ bạn cùng phòng thay phiên.', fx:{conghien:2, hoctap:1, xungkich:1},
+           remark:'Dạy lại cũng là học lại. Người trẻ hôm nay dìu dắt người trẻ hơn.'},
+          {text:'Nhận dạy nhưng thu phí như trung tâm.', fx:{},
+           remark:'Dạy thêm có phí không có gì sai, nhưng các em ở đây lại chính là những em không có điều kiện.'}
+        ],
+        quote:Q_BOIDUONG, source:DICHUC,
+        explain:'Trong Di chúc, Hồ Chí Minh dặn phải chăm lo giáo dục đạo đức cách mạng cho đoàn viên, thanh niên và bồi dưỡng thế hệ sau. Người trẻ hôm nay cũng là người dìu dắt thế hệ trẻ hơn.',
+        link:'Bồi dưỡng thế hệ cách mạng cho đời sau'
+      },
+      {
+        when:'Năm cuối', title:'Học bổng du học',
+        text:'Bạn nhận được học bổng thạc sĩ ở nước ngoài. Gia đình khuyên đi rồi ở lại luôn bên đó.',
+        options:[
+          {text:'Đi học, rồi cắt đứt mọi liên hệ với việc trong nước.', fx:{conghien:-1},
+           remark:'Ở đâu là quyền của bạn, nhưng quay lưng hẳn thì những gì bạn học được không còn chảy về đâu cả.'},
+          {text:'Đi học hết sức, giữ kết nối với cộng đồng trong nước và tính đường đóng góp cho đất nước, dù sau này làm việc ở đâu.', fx:{hoctap:2, conghien:2, renluyen:1},
+           remark:'Đi xa để học rộng, và luôn có một con đường nối về quê hương.'},
+          {text:'Từ chối học bổng vì sợ “mất gốc”.', fx:{hoctap:-2},
+           remark:'Sợ mất gốc thì hãy giữ gốc, chứ đừng khép cửa với tri thức.'}
+        ],
+        quote:Q_CHUTUONGLAI, source:'Hồ Chí Minh (1946)',
+        explain:'Chính Hồ Chí Minh đã bôn ba 30 năm ở nước ngoài để học hỏi rồi trở về phụng sự dân tộc. Đi xa để học không mâu thuẫn với yêu nước; điều quan trọng là những gì học được có đóng góp cho đất nước hay không.',
+        link:'Thanh niên là người chủ tương lai của nước nhà'
+      }
+    ],
+    notes:
+      '<p class="intro">Tóm tắt tư tưởng Hồ Chí Minh về thanh niên, giáo dục và con người, dùng trong chủ đề “Tuổi trẻ là mùa xuân”.</p>' +
+      '<h3>1. Vị trí, vai trò của thanh niên</h3>' +
+      '<p>Thanh niên là người chủ tương lai của nước nhà, là lực lượng xung kích trong xây dựng và bảo vệ Tổ quốc.' + W('Hè năm nhất, Năm cuối') + '</p>' +
+      Q(Q_MUAXUAN, 'Hồ Chí Minh, <cite>Thư gửi các bạn thanh niên</cite> (1946)') +
+      '<h3>2. Quan điểm về giáo dục</h3>' +
+      '<p>Học để làm việc, làm người, làm cán bộ; học phải đi đôi với hành, lý luận gắn với thực tiễn; học ở mọi nơi, mọi lúc và học suốt đời.' + W('Cuối năm nhất') + '</p>' +
+      Q(Q_NONSONG, 'Hồ Chí Minh, <cite>Thư gửi các học sinh</cite> (1945)') +
+      '<h3>3. Con người phát triển toàn diện</h3>' +
+      '<p>Con người vừa là mục tiêu, vừa là động lực của cách mạng. Xây dựng con người phải toàn diện: đạo đức, trí tuệ, sức khỏe, lối sống.' + W('Năm nhất') + '</p>' +
+      '<h3>4. Lời dặn trong Di chúc</h3>' +
+      Q('Đoàn viên và thanh niên ta nói chung là tốt, mọi việc đều hăng hái xung phong, không ngại khó khăn, có chí tiến thủ. Đảng cần phải chăm lo giáo dục đạo đức cách mạng cho họ, đào tạo họ thành những người thừa kế xây dựng chủ nghĩa xã hội vừa “hồng” vừa “chuyên”.', DICHUC) +
+      '<p>Bồi dưỡng thế hệ cách mạng cho đời sau là một việc rất quan trọng và rất cần thiết.' + W('Năm ba') + '</p>'
+  }
+  ]);
+
+  var ORDER = ['hanhtrinh','doclap','xahoi','dang','nhanuoc','doanket','quocte','vanhoa','daoduc','thanhnien'];
+  TOPICS = ORDER.map(function(id){ return TOPICS.filter(function(t){ return t.id === id; })[0]; });
+
+  /* ---------- Dòng thời gian ---------- */
+  var TIMELINE = [
+    {y:'1890', d:'19/5/1890', t:'Ra đời ở quê hương Nam Đàn', x:'Sinh tại làng Hoàng Trù, xã Kim Liên, huyện Nam Đàn, tỉnh Nghệ An, với tên Nguyễn Sinh Cung. Quê nội là làng Kim Liên, còn gọi là làng Sen.', k:'hanhtrinh'},
+    {y:'1908', d:'1908', t:'Tham gia phong trào chống thuế', x:'Tham gia cuộc biểu tình chống thuế của nông dân Trung Kỳ ở Huế, sau đó bị buộc thôi học ở trường Quốc học Huế.', k:'hanhtrinh'},
+    {y:'1911', d:'5/6/1911', t:'Ra đi tìm đường cứu nước', x:'Lấy tên Văn Ba, làm phụ bếp trên tàu Đô đốc Latouche-Tréville, rời bến Nhà Rồng sang phương Tây.', k:'hanhtrinh'},
+    {y:'1919', d:'18/6/1919', t:'Bản Yêu sách của nhân dân An Nam', x:'Thay mặt Hội những người An Nam yêu nước gửi bản yêu sách 8 điểm tới Hội nghị Versailles, ký tên Nguyễn Ái Quốc.', k:'hanhtrinh'},
+    {y:'1920', d:'7 và 12/1920', t:'Đến với chủ nghĩa Lênin', x:'Tháng 7 đọc Luận cương của Lênin về vấn đề dân tộc và thuộc địa. Tháng 12 bỏ phiếu tán thành Quốc tế thứ ba tại Đại hội Tours, trở thành người cộng sản Việt Nam đầu tiên.', k:'hanhtrinh'},
+    {y:'1923', d:'1923–1924', t:'Sang Liên Xô', x:'Sang Liên Xô học tập và làm việc tại Quốc tế Cộng sản, dự Đại hội V của Quốc tế Cộng sản năm 1924.', k:'quocte'},
+    {y:'1925', d:'1925', t:'Bản án chế độ thực dân Pháp', x:'Tác phẩm Bản án chế độ thực dân Pháp được xuất bản tại Paris. Tháng 6, Người thành lập Hội Việt Nam Cách mạng Thanh niên tại Quảng Châu (Trung Quốc).', k:'dang'},
+    {y:'1927', d:'1927', t:'Đường Kách mệnh', x:'Tập bài giảng cho các lớp huấn luyện cán bộ được in thành sách Đường Kách mệnh, trình bày con đường cách mạng Việt Nam.', k:'dang'},
+    {y:'1930', d:'Đầu năm 1930', t:'Thành lập Đảng Cộng sản Việt Nam', x:'Chủ trì Hội nghị hợp nhất các tổ chức cộng sản tại Hương Cảng, thành lập Đảng Cộng sản Việt Nam và thông qua Cương lĩnh chính trị đầu tiên.', k:'dang'},
+    {y:'1941', d:'28/1/1941', t:'Trở về Tổ quốc', x:'Về nước sau 30 năm, đặt căn cứ ở Pác Bó (Cao Bằng). Tháng 5, chủ trì Hội nghị Trung ương 8 và thành lập Mặt trận Việt Minh.', k:'doanket'},
+    {y:'1942', d:'1942–1943', t:'Nhật ký trong tù', x:'Bị chính quyền Tưởng Giới Thạch bắt giam ở Quảng Tây (Trung Quốc). Trong tù, Người viết tập thơ Nhật ký trong tù.', k:'vanhoa'},
+    {y:'1945', d:'2/9/1945', t:'Tuyên ngôn độc lập', x:'Đọc Tuyên ngôn độc lập tại Quảng trường Ba Đình, khai sinh nước Việt Nam Dân chủ Cộng hòa.', k:'doclap'},
+    {y:'1946', d:'1946', t:'Năm đầu của nước Việt Nam mới', x:'6/1 Tổng tuyển cử đầu tiên. 6/3 ký Hiệp định Sơ bộ. 9/11 Quốc hội thông qua bản Hiến pháp đầu tiên. 19/12 Người ra Lời kêu gọi toàn quốc kháng chiến.', k:'nhanuoc'},
+    {y:'1954', d:'1954', t:'Điện Biên Phủ và Hiệp định Genève', x:'Ngày 7/5 chiến thắng Điện Biên Phủ. Ngày 21/7 Hiệp định Genève được ký kết, miền Bắc hoàn toàn giải phóng.', k:'quocte'},
+    {y:'1958', d:'5/1958', t:'Về ở ngôi nhà sàn', x:'Chuyển vào ở ngôi nhà sàn bên ao cá trong khu Phủ Chủ tịch, nơi Người sống và làm việc giản dị trong những năm cuối đời.', k:'daoduc'},
+    {y:'1965', d:'10/5/1965', t:'Bắt đầu viết Di chúc', x:'Bắt đầu viết bản Di chúc, và tiếp tục bổ sung, sửa chữa trong những năm sau.', k:'thanhnien'},
+    {y:'1966', d:'17/7/1966', t:'Không có gì quý hơn độc lập, tự do', x:'Ra Lời kêu gọi đồng bào và chiến sĩ cả nước, khẳng định chân lý “Không có gì quý hơn độc lập, tự do”.', k:'doclap'},
+    {y:'1969', d:'2/9/1969', t:'Người đi xa', x:'Chủ tịch Hồ Chí Minh qua đời tại Hà Nội, để lại bản Di chúc cho toàn Đảng, toàn dân.', k:'dang'},
+    {y:'1987', d:'1987', t:'UNESCO tôn vinh', x:'UNESCO thông qua nghị quyết tôn vinh Chủ tịch Hồ Chí Minh, Anh hùng giải phóng dân tộc, Nhà văn hóa kiệt xuất của Việt Nam, nhân dịp kỷ niệm 100 năm ngày sinh của Người (1990).', k:'vanhoa'}
+  ];
+
+  /* ---------- Engine ---------- */
+  /* Vary where the strongest option sits (A/B/C) so answers do not follow a pattern.
+     Deterministic, so the whole class always sees the same letters. */
+  var ROT = [2,0,1,0,2,1];
+  TOPICS.forEach(function(t, k){
+    if(t.id === 'daoduc') return;
+    t.scenes.forEach(function(s, i){
+      var r = ROT[(i + k) % ROT.length];
+      s.options = s.options.slice(r).concat(s.options.slice(0, r));
+    });
+  });
+
+  var START = 5, MAX = 10, LETTERS = ['A','B','C'];
+  var STORE = 'lam-theo-loi-bac-v1';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function $(s){ return document.querySelector(s); }
+
+  var bar = $('#bar'), home = $('#home'), play = $('#play'), result = $('#result'), timeline = $('#timeline');
+  var choicesEl = $('#choices'), feedback = $('#feedback'), meters = $('#meters');
+  var progress = $('#progress'), notes = $('#notes');
+  var state = null, answered = false, noteIndex = 0;
+
+  var results = {};
+  try { results = JSON.parse(localStorage.getItem(STORE) || '{}') || {}; } catch(e){ results = {}; }
+  function saveResults(){ try { localStorage.setItem(STORE, JSON.stringify(results)); } catch(e){} }
+
+  function topic(){ return TOPICS[state.t]; }
+  function clamp(n){ return Math.max(0, Math.min(MAX, n)); }
+  function fmt(n){ return (n > 0 ? '+' : '−') + Math.abs(n); }
+  function num(n){ var r = Math.round(n * 10) / 10; return (r % 1 === 0 ? String(r) : r.toFixed(1)).replace('.', ','); }
+  function scrollTop(){ window.scrollTo({top:0, behavior: reduce ? 'auto' : 'smooth'}); }
+  function show(which){
+    home.hidden = which !== 'home';
+    play.hidden = which !== 'play';
+    result.hidden = which !== 'result';
+    timeline.hidden = which !== 'timeline';
+    bar.hidden = which === 'home';
+    document.dispatchEvent(new CustomEvent('exhibit-view', {detail:which}));
+  }
+  function rankOf(avg){
+    if(avg >= 9) return 'Xuất sắc';
+    if(avg >= 8) return 'Tốt';
+    if(avg >= 6.5) return 'Khá';
+    if(avg >= 5) return 'Trung bình';
+    return 'Cần rèn luyện thêm';
+  }
+
+  function chips(fx, list){
+    var hit = list.filter(function(m){ return fx[m.key]; });
+    if(!hit.length) return '<span class="chip zero">Không đổi</span>';
+    return hit.map(function(m){
+      var d = fx[m.key];
+      return '<span class="chip ' + (d > 0 ? 'up' : 'down') + '">' + fmt(d) + ' ' + m.name + '</span>';
+    }).join('');
+  }
+
+  function buildMeters(el, list){
+    el.innerHTML = list.map(function(m){
+      var cells = '';
+      for(var i = 0; i < MAX; i++) cells += '<span class="cell"></span>';
+      return '<div class="meter" data-key="' + m.key + '">' +
+        '<span class="meter-name">' + m.name + '</span>' +
+        '<span class="meter-val"><span class="num">5</span><span class="flash" aria-hidden="true"></span></span>' +
+        '<div class="cells" role="meter" aria-label="' + m.name + '" aria-valuemin="0" aria-valuemax="10" aria-valuenow="5">' + cells + '</div>' +
+      '</div>';
+    }).join('');
+  }
+  function paintMeters(el, fx){
+    topic().meters.forEach(function(m){
+      var row = el.querySelector('[data-key="' + m.key + '"]');
+      var val = state.scores[m.key];
+      row.querySelectorAll('.cell').forEach(function(c, i){ c.classList.toggle('on', i < val); });
+      row.querySelector('.cells').setAttribute('aria-valuenow', val);
+      row.querySelector('.num').textContent = val;
+      var fl = row.querySelector('.flash');
+      if(fx && fx[m.key]){ fl.textContent = fmt(fx[m.key]); fl.className = 'flash ' + (fx[m.key] > 0 ? 'up' : 'down'); }
+      else { fl.textContent = ''; fl.className = 'flash'; }
+    });
+  }
+
+  function renderHome(){
+    $('#toc').innerHTML = TOPICS.map(function(t, k){
+      var r = results[t.id];
+      return '<li><button type="button" class="toc-row" data-topic="' + k + '">' +
+        '<span class="toc-num" aria-hidden="true">' + String(k + 1).padStart(2, '0') + '</span>' +
+        '<span class="toc-main">' +
+          '<span class="toc-line"><span class="toc-title">' + t.title + '</span><span class="toc-dots" aria-hidden="true"></span><span class="toc-count">' + t.scenes.length + ' tình huống</span></span>' +
+          '<span class="toc-label">' + t.label + '</span>' +
+          '<span class="toc-role">' + t.blurb + '</span>' +
+        '</span>' +
+        '<span class="toc-status">' + (r != null ? '<span class="sr">Điểm lần chơi gần nhất: </span>' + num(r) : '') + '</span>' +
+      '</button></li>';
+    }).join('');
+  }
+
+  function renderProgress(){
+    var html = '', n = topic().scenes.length;
+    for(var i = 0; i < n; i++) html += '<span class="' + (i < state.i ? 'done' : (i === state.i ? 'now' : '')) + '"></span>';
+    progress.innerHTML = html;
+  }
+
+  function renderScene(){
+    var t = topic(), s = t.scenes[state.i];
+    answered = false;
+    $('#when').textContent = s.when;
+    $('#count').textContent = 'Tình huống ' + (state.i + 1) + '/' + t.scenes.length;
+    var role = $('#role');
+    role.textContent = t.role;
+    role.hidden = state.i !== 0;
+    $('#scene-title').textContent = s.title;
+    $('#situation').textContent = s.text;
+    renderProgress();
+    choicesEl.innerHTML = s.options.map(function(o, idx){
+      return '<li><button type="button" class="choice" data-idx="' + idx + '">' +
+        '<span class="letter" aria-hidden="true">' + LETTERS[idx] + '</span>' +
+        '<span class="choice-text"><span class="sr">Lựa chọn ' + LETTERS[idx] + ': </span>' + o.text + '</span>' +
+      '</button></li>';
+    }).join('');
+    feedback.innerHTML = '';
+    paintMeters(meters, null);
+  }
+
+  function startTopic(k){
+    var t = TOPICS[k];
+    state = {t:k, i:0, scores:{}, picks:[]};
+    t.meters.forEach(function(m){ state.scores[m.key] = START; });
+    $('#brand').textContent = t.title;
+    buildMeters(meters, t.meters);
+    show('play');
+    renderScene();
+    scrollTop();
+    $('#scene-title').focus({preventScroll:true});
+  }
+
+  function choose(idx){
+    if(answered) return;
+    answered = true;
+    var t = topic(), s = t.scenes[state.i], o = s.options[idx];
+    t.meters.forEach(function(m){ if(o.fx[m.key]) state.scores[m.key] = clamp(state.scores[m.key] + o.fx[m.key]); });
+    state.picks.push(idx);
+    choicesEl.querySelectorAll('.choice').forEach(function(b, i){
+      b.disabled = true;
+      b.classList.toggle('picked', i === idx);
+    });
+    paintMeters(meters, o.fx);
+
+    var last = state.i === t.scenes.length - 1;
+    feedback.innerHTML =
+      '<div class="fb-top"><p class="picked-line">Bạn chọn ' + LETTERS[idx] + '.</p>' + chips(o.fx, t.meters) + '</div>' +
+      '<p class="remark">' + o.remark + '</p>' +
+      (s.history ? '<div class="history"><p class="history-label">Lịch sử đã chọn</p><p>' + s.history + '</p></div>' : '') +
+      '<blockquote class="quote"><p>“' + s.quote + '”</p><footer>' + s.source + '</footer></blockquote>' +
+      '<p class="explain">' + s.explain + '</p>' +
+      '<p class="link"><strong>Liên hệ lý thuyết:</strong> ' + s.link + '</p>' +
+      '<button type="button" class="btn btn-primary" id="next">' + (last ? 'Xem phiếu đánh giá' : 'Tình huống tiếp theo') + '</button>';
+    var nextBtn = $('#next');
+    nextBtn.addEventListener('click', next);
+    nextBtn.focus({preventScroll:true});
+    feedback.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block:'start'});
+  }
+
+  function next(){
+    if(state.i < topic().scenes.length - 1){
+      state.i++;
+      renderScene();
+      scrollTop();
+      $('#scene-title').focus({preventScroll:true});
+    } else {
+      showResult();
+    }
+  }
+
+  function showResult(){
+    var t = topic();
+    show('result');
+    var total = 0, best = t.meters[0], weak = t.meters[0];
+    t.meters.forEach(function(m){
+      var sc = state.scores[m.key];
+      total += sc;
+      if(sc > state.scores[best.key]) best = m;
+      if(sc < state.scores[weak.key]) weak = m;
+    });
+    var avg = total / t.meters.length;
+    var minScore = state.scores[weak.key];
+    results[t.id] = Math.round(avg * 10) / 10;
+    saveResults();
+
+    $('#result-title').textContent = 'Phiếu đánh giá: ' + t.title;
+    $('#grade-num').textContent = num(avg);
+    document.querySelector('.grade').classList.toggle('star', avg >= 8);
+    $('#rank').textContent = 'Xếp loại: ' + rankOf(avg);
+
+    var rm = $('#result-meters');
+    buildMeters(rm, t.meters);
+    paintMeters(rm, null);
+
+    var verdict, vq;
+    if(minScore >= MAX){
+      verdict = 'Trọn vẹn mọi mục. Bài khó hơn là giữ được như vậy ngoài đời thật, mỗi ngày. ' + t.closing;
+      vq = t.vquotes.all;
+    } else if(minScore >= 8){
+      verdict = 'Một lượt chơi rất vững. Chỗ còn có thể mài thêm là ' + weak.name + ': ' + t.tips[weak.key] + ' ' + t.closing;
+      vq = t.vquotes[weak.key];
+    } else {
+      verdict = 'Bạn giữ ' + best.name + ' vững nhất. Điều cần rèn thêm là ' + weak.name + ': ' + t.tips[weak.key] + ' ' + t.closing;
+      vq = t.vquotes[weak.key];
+    }
+    $('#verdict').textContent = verdict;
+    $('#verdict-quote').innerHTML = '<p>“' + vq.q + '”</p><footer>' + vq.s + '</footer>';
+
+    $('#review').innerHTML = state.picks.map(function(idx, i){
+      var s = t.scenes[i], o = s.options[idx];
+      return '<li><span class="wk">' + s.when + '</span><div>' +
+        '<span class="t">' + s.title + '</span>' +
+        '<span class="c">' + LETTERS[idx] + '. ' + o.text + '</span>' +
+        '<span class="chips">' + chips(o.fx, t.meters) + '</span>' +
+      '</div></li>';
+    }).join('');
+
+    var nt = TOPICS[(state.t + 1) % TOPICS.length];
+    $('#next-topic').textContent = 'Chủ đề tiếp theo: ' + nt.title;
+
+    var ring = $('#ring');
+    ring.classList.remove('draw');
+    ring.getBoundingClientRect();
+    ring.classList.add('draw');
+
+    scrollTop();
+    $('#result-title').focus({preventScroll:true});
+  }
+
+  function goHome(){
+    renderHome();
+    show('home');
+    $('#hoc-va-lam').scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block:'start'});
+  }
+
+  /* ---------- Timeline ---------- */
+  function topicIndex(id){ for(var i = 0; i < TOPICS.length; i++){ if(TOPICS[i].id === id) return i; } return -1; }
+  var TL_PHOTOS = {
+    '1919':{image:'young',caption:'Nguyễn Ái Quốc tại Marseille, 1921 — ảnh minh họa giai đoạn hoạt động ở Pháp.'},
+    '1930':{image:'congress',caption:'Đại hội II của Đảng, tháng 2/1951 — ảnh minh họa chủ đề về Đảng.'},
+    '1945':{image:'declaration',caption:'Bản Tuyên ngôn độc lập — Trung tâm Lưu trữ quốc gia III.'},
+    '1958':{image:'house',caption:'Ngôi nhà sàn ở Hà Nội — ảnh chụp năm 2003.'}
+  };
+  function openTimeline(){
+    $('#tl').innerHTML = TIMELINE.map(function(e){
+      var k = topicIndex(e.k), photo = TL_PHOTOS[e.y];
+      return '<li><div class="tl-head"><span class="tl-year">' + e.y + '</span>' + (e.d !== e.y ? '<span class="tl-date">' + e.d + '</span>' : '') + '</div>' +
+        '<span class="tl-title">' + e.t + '</span>' +
+        '<p class="tl-text">' + e.x + '</p>' +
+        (photo ? '<figure class="tl-photo"><img loading="lazy" src="assets/images/' + photo.image + '.jpg" alt="' + photo.caption + '"><figcaption>' + photo.caption + '</figcaption></figure>' : '') +
+        (k >= 0 ? '<button type="button" class="btn btn-quiet tl-go" data-topic="' + k + '">Chơi chủ đề: ' + TOPICS[k].title + '</button>' : '') +
+      '</li>';
+    }).join('');
+    $('#brand').textContent = 'Dòng thời gian';
+    show('timeline');
+    scrollTop();
+    $('#tl-heading').focus({preventScroll:true});
+  }
+
+  /* ---------- Notes ---------- */
+  function renderNoteTabs(){
+    $('#note-tabs').innerHTML = TOPICS.map(function(t, k){
+      return '<button type="button" class="note-tab" data-note="' + k + '" aria-pressed="' + (k === noteIndex) + '">' + t.label + '</button>';
+    }).join('');
+  }
+  function showNote(k){
+    noteIndex = k;
+    renderNoteTabs();
+    $('#notes-content').innerHTML = TOPICS[k].notes;
+    notes.scrollTop = 0;
+  }
+  function openNotes(){
+    showNote(state && home.hidden ? state.t : noteIndex);
+    if(typeof notes.showModal === 'function') notes.showModal();
+    else notes.setAttribute('open', '');
+  }
+
+  document.addEventListener('exhibit-topic', function(e){ var k = topicIndex(e.detail); if(k >= 0) startTopic(k); });
+  document.addEventListener('exhibit-home', goHome);
+
+  /* ---------- Events ---------- */
+  $('#toc').addEventListener('click', function(e){
+    var b = e.target.closest('.toc-row');
+    if(b) startTopic(Number(b.dataset.topic));
+  });
+  choicesEl.addEventListener('click', function(e){
+    var b = e.target.closest('.choice');
+    if(b && !b.disabled) choose(Number(b.dataset.idx));
+  });
+  $('#home-btn').addEventListener('click', goHome);
+  $('#open-timeline').addEventListener('click', openTimeline);
+  $('#tl-home').addEventListener('click', goHome);
+  $('#tl').addEventListener('click', function(e){
+    var b = e.target.closest('.tl-go');
+    if(b) startTopic(Number(b.dataset.topic));
+  });
+  $('#to-home').addEventListener('click', goHome);
+  $('#restart').addEventListener('click', function(){ startTopic(state.t); });
+  $('#next-topic').addEventListener('click', function(){ startTopic((state.t + 1) % TOPICS.length); });
+  document.querySelectorAll('[data-open-notes]').forEach(function(b){ b.addEventListener('click', openNotes); });
+  $('#note-tabs').addEventListener('click', function(e){
+    var b = e.target.closest('.note-tab');
+    if(b) showNote(Number(b.dataset.note));
+  });
+  $('#close-notes').addEventListener('click', function(){ notes.close(); });
+  notes.addEventListener('click', function(e){ if(e.target === notes) notes.close(); });
+
+  document.addEventListener('keydown', function(e){
+    if(notes.open || $('#asset-dialog').open || $('#source-dialog').open || !$('#music-panel').hidden || play.hidden || e.ctrlKey || e.metaKey || e.altKey) return;
+    var k = (e.key || '').toLowerCase();
+    var map = {'1':0, '2':1, '3':2, 'a':0, 'b':1, 'c':2};
+    if(!answered && Object.prototype.hasOwnProperty.call(map, k)){
+      e.preventDefault();
+      choose(map[k]);
+      return;
+    }
+    if(answered && (k === 'enter' || k === 'arrowright')){
+      if(k === 'enter' && e.target instanceof HTMLButtonElement) return;
+      e.preventDefault();
+      next();
+    }
+  });
+
+  function currentTheme(){ return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'; }
+  function paintThemeButtons(){
+    var dark = currentTheme() === 'dark';
+    document.querySelectorAll('[data-theme-toggle]').forEach(function(b){
+      b.textContent = dark ? 'Nền sáng' : 'Nền tối';
+      b.setAttribute('aria-pressed', String(dark));
+    });
+  }
+  document.querySelectorAll('[data-theme-toggle]').forEach(function(b){
+    b.addEventListener('click', function(){
+      var next = currentTheme() === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('lam-theo-loi-bac-theme', next); } catch(e){}
+      paintThemeButtons();
+    });
+  });
+  paintThemeButtons();
+
+  renderHome();
+  show('home');
+
+})();
+</script>
+</body>
+</html>
