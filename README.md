@@ -24,7 +24,8 @@ Có thể mở trực tiếp `lam-theo-loi-bac.html` để đọc và chơi. Nê
 - `assets/experience.css`: giao diện giấy ngà, đỏ trầm, bố cục máy tính/điện thoại và hiệu ứng.
 - `assets/experience.js`: xuất hiện khi cuộn, parallax, thanh tiến độ, xem ảnh lớn, nguồn tư liệu và nhạc.
 - `assets/heritage.css` và `assets/heritage.js`: nền ảnh thật, cờ Đảng/cờ Tổ quốc và ảnh lịch sử theo từng chủ đề.
-- `assets/sounds.css` và `assets/sounds.js`: tiếng lật giấy khi cuộn và tiếng chạm khi bấm nút, tổng hợp bằng Web Audio, dùng được khi không có Internet.
+- `assets/sounds.css` và `assets/sounds.js`: tiếng giấy nhẹ khi cuộn và tiếng lật trang thu âm thật khi bấm nút, phát bằng Web Audio.
+- `assets/audio/`: mẫu lật trang của OwlStorm / Owlish Media từ Freesound (CC0), kèm thông tin nguồn. Tệp được lưu trong dự án.
 - `assets/images/`: ảnh tư liệu và ảnh nền, gồm nguồn Báo Nhân Dân, TTXVN, các bảo tàng và VOV.
 - `assets/sources.json`: nguồn, tác giả và thông tin quyền ảnh của từng tư liệu. Có thể đọc ngay trong website qua “Nguồn ảnh & âm nhạc”.
 

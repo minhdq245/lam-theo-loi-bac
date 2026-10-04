@@ -1,10 +1,23 @@
-/* Hiệu ứng âm thanh ngắn, tổng hợp tại chỗ; không cần tải tệp âm thanh. */
+/* Tiếng lật trang thu âm cho nút; tiếng giấy nhẹ tổng hợp cho thao tác cuộn. */
 (function () {
   'use strict';
   var Audio = window.AudioContext || window.webkitAudioContext;
   var toggle = document.getElementById('sound-toggle');
   if (!Audio || !toggle) return;
-  var enabled = true, context, master, paper, ready = Promise.resolve();
+  var enabled = true, context, master, paper, turnBuffer, turnVoice, turnScale = 1;
+  var ready = Promise.resolve(), sampleReady = Promise.resolve();
+  var pageTurn = {
+    local:'assets/audio/page-turn.mp3',
+    title:'Lật trang giấy · Page Turn (1)',
+    source:'https://freesound.org/people/OwlStorm/sounds/151220/',
+    artist:'Ashe Kirk / Owlish Media (OwlStorm)',
+    license:'https://creativecommons.org/publicdomain/zero/1.0/'
+  };
+  // Tải trước mẫu nhỏ; AudioContext vẫn chỉ mở sau tương tác.
+  var sampleBytes = fetch(pageTurn.local).then(function (response) {
+    if (!response.ok) throw new Error('Audio unavailable');
+    return response.arrayBuffer();
+  }).catch(function () { return null; });
   var lastClick = -Infinity, lastPaper = -Infinity;
   var scrollIntent = 0, previousY = window.scrollY, distance = 0, direction = 0;
   try { enabled = localStorage.getItem('loi-bac-sounds') !== 'off'; } catch (error) {}
@@ -23,6 +36,19 @@
         master = context.createGain();
         master.gain.value = 0.28;
         master.connect(context.destination);
+        sampleReady = sampleBytes.then(function (bytes) {
+          return bytes ? context.decodeAudioData(bytes) : null;
+        }).then(function (buffer) {
+          turnBuffer = buffer;
+          if (!buffer) return;
+          var peak = 0;
+          for (var channel = 0; channel < buffer.numberOfChannels; channel++) {
+            var samples = buffer.getChannelData(channel);
+            for (var n = 0; n < samples.length; n++) peak = Math.max(peak, Math.abs(samples[n]));
+          }
+          // Mẫu thu khá nhỏ: cân mức để nghe rõ ở cùng âm lượng hiệu ứng hiện có.
+          turnScale = Math.min(10, 0.4 / Math.max(0.001, peak));
+        }).catch(function () {});
         paper = context.createBuffer(1, Math.ceil(context.sampleRate * 0.23), context.sampleRate);
         var data = paper.getChannelData(0);
         for (var i = 0; i < data.length; i++) data[i] = Math.random() * 2 - 1;
@@ -39,18 +65,37 @@
       nodes.forEach(function (node) { node.disconnect(); });
     };
   }
-  function tap(kind) {
+  function turnPage(kind) {
+    if (!turnBuffer) { rustle(); return; }
     var now = context.currentTime;
-    var oscillator = context.createOscillator(), envelope = context.createGain();
-    oscillator.type = 'triangle';
-    oscillator.frequency.setValueAtTime(kind === 'choice' ? 640 : 820, now);
-    oscillator.frequency.exponentialRampToValueAtTime(kind === 'choice' ? 380 : 470, now + 0.07);
+    // Làm nhỏ tiếng trước khi có thao tác nhanh kế tiếp, tránh nhiều trang chồng tiếng.
+    if (turnVoice) {
+      turnVoice.envelope.gain.cancelScheduledValues(now);
+      turnVoice.envelope.gain.setTargetAtTime(0, now, 0.012);
+      turnVoice.source.stop(now + 0.04);
+    }
+    var source = context.createBufferSource(), envelope = context.createGain();
+    source.buffer = turnBuffer;
+    var level = (kind === 'choice' ? 0.42 : 0.5) * turnScale;
+    var duration = turnBuffer.duration;
     envelope.gain.setValueAtTime(0, now);
-    envelope.gain.linearRampToValueAtTime(0.16, now + 0.006);
-    envelope.gain.exponentialRampToValueAtTime(0.0001, now + 0.105);
-    oscillator.connect(envelope); envelope.connect(master);
-    oscillator.start(now); oscillator.stop(now + 0.12);
-    dispose(oscillator, [envelope]);
+    envelope.gain.linearRampToValueAtTime(level, now + 0.008);
+    envelope.gain.setValueAtTime(level, now + Math.max(0.008, duration - 0.025));
+    envelope.gain.linearRampToValueAtTime(0, now + duration);
+    source.connect(envelope); envelope.connect(master);
+    turnVoice = {source:source, envelope:envelope};
+    source.onended = function () {
+      source.disconnect(); envelope.disconnect();
+      if (turnVoice && turnVoice.source === source) turnVoice = null;
+    };
+    source.start(now);
+  }
+  function waitForSample() {
+    if (turnBuffer) return Promise.resolve();
+    return new Promise(function (resolve) {
+      var timeout = setTimeout(resolve, 180);
+      sampleReady.then(function () { clearTimeout(timeout); resolve(); });
+    });
   }
   function rustle() {
     var now = context.currentTime;
@@ -75,8 +120,11 @@
         if (now - lastPaper < 550) return;
         lastPaper = now; rustle();
       } else {
-        if (now - lastClick < 65) return;
-        lastClick = now; tap(kind);
+        if (now - lastClick < 100) return;
+        lastClick = now;
+        waitForSample().then(function () {
+          if (enabled && context.state === 'running' && !document.hidden) turnPage(kind);
+        });
       }
     });
   }
@@ -135,5 +183,13 @@
     if (document.hidden) context.suspend().catch(function () {});
     else if (enabled) activate();
   });
+  var sourceList = document.getElementById('sources-list');
+  if (sourceList) {
+    var credit = document.createElement('li'), link = document.createElement('a'), text = document.createElement('small'), license = document.createElement('a');
+    link.textContent = pageTurn.title; link.href = pageTurn.source; link.target = '_blank'; link.rel = 'noopener noreferrer';
+    text.textContent = 'Thu âm: ' + pageTurn.artist + ' · Freesound · ';
+    license.textContent = 'CC0 1.0'; license.href = pageTurn.license; license.target = '_blank'; license.rel = 'noopener noreferrer';
+    text.appendChild(license); credit.append(link, text); sourceList.appendChild(credit);
+  }
   updateControl();
 })();
