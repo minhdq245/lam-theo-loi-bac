@@ -263,9 +263,11 @@ dialog.notes::backdrop{background:rgba(40,10,10,.55)}
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/experience.css">
 <link rel="stylesheet" href="assets/heritage.css">
+<link rel="stylesheet" href="assets/sounds.css">
 <link rel="preload" as="image" href="assets/images/vn-flags.avif">
 <script defer src="assets/experience.js"></script>
 <script defer src="assets/heritage.js"></script>
+<script defer src="assets/sounds.js"></script>
 </head>
 <body class="ruled">
 <div class="study-backdrop" aria-hidden="true"></div>
@@ -518,6 +520,7 @@ dialog.notes::backdrop{background:rgba(40,10,10,.55)}
 </div>
 
 
+<button class="sound-toggle" id="sound-toggle" type="button" hidden aria-label="Âm thanh hiệu ứng" aria-pressed="true" title="Tắt âm thanh khi cuộn và bấm nút"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M11 4 6 8H3v8h3l5 4V4Z"/><g class="sound-waves"><path d="M15 8a6 6 0 0 1 0 8M18 5a10 10 0 0 1 0 14"/></g></svg><span class="sound-label">Âm thanh</span><span class="sound-state">Bật</span></button>
 <button class="music-launcher" id="music-launcher" type="button" aria-expanded="false" aria-controls="music-panel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 18V5l11-2v13M9 8l11-2"/><ellipse cx="6" cy="18" rx="3" ry="2"/><ellipse cx="17" cy="16" rx="3" ry="2"/></svg><span>Giai điệu về Bác</span></button>
 <aside class="music-panel" id="music-panel" hidden aria-labelledby="music-title">
   <div class="music-panel-head"><h2 id="music-title">Giai điệu về Người</h2><button class="icon-btn" type="button" id="close-music" aria-label="Đóng và dừng nhạc">×</button></div>
@@ -2165,6 +2168,7 @@ dialog.notes::backdrop{background:rgba(40,10,10,.55)}
 
   function choose(idx){
     if(answered) return;
+    document.dispatchEvent(new CustomEvent('exhibit-sound', {detail:'choice'}));
     answered = true;
     var t = topic(), s = t.scenes[state.i], o = s.options[idx];
     t.meters.forEach(function(m){ if(o.fx[m.key]) state.scores[m.key] = clamp(state.scores[m.key] + o.fx[m.key]); });
@@ -2191,6 +2195,7 @@ dialog.notes::backdrop{background:rgba(40,10,10,.55)}
   }
 
   function next(){
+    document.dispatchEvent(new CustomEvent('exhibit-sound', {detail:'next'}));
     if(state.i < topic().scenes.length - 1){
       state.i++;
       renderScene();

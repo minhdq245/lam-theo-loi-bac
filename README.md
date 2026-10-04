@@ -24,10 +24,13 @@ Có thể mở trực tiếp `lam-theo-loi-bac.html` để đọc và chơi. Nê
 - `assets/experience.css`: giao diện giấy ngà, đỏ trầm, bố cục máy tính/điện thoại và hiệu ứng.
 - `assets/experience.js`: xuất hiện khi cuộn, parallax, thanh tiến độ, xem ảnh lớn, nguồn tư liệu và nhạc.
 - `assets/heritage.css` và `assets/heritage.js`: nền ảnh thật, cờ Đảng/cờ Tổ quốc và ảnh lịch sử theo từng chủ đề.
+- `assets/sounds.css` và `assets/sounds.js`: tiếng lật giấy khi cuộn và tiếng chạm khi bấm nút, tổng hợp bằng Web Audio, dùng được khi không có Internet.
 - `assets/images/`: ảnh tư liệu và ảnh nền, gồm nguồn Báo Nhân Dân, TTXVN, các bảo tàng và VOV.
 - `assets/sources.json`: nguồn, tác giả và thông tin quyền ảnh của từng tư liệu. Có thể đọc ngay trong website qua “Nguồn ảnh & âm nhạc”.
 
 Nhạc chỉ tải khi mở “Giai điệu về Bác”; chọn ca khúc và bấm phát trong video. Đóng khung nhạc để dừng. Trình phát có liên kết mở YouTube trực tiếp khi nhúng không khả dụng.
+
+Hiệu ứng âm thanh mặc định bật, bắt đầu sau tương tác đầu tiên. Bấm nút loa ở góc dưới trái để bật/tắt; lựa chọn được lưu trên trình duyệt và không điều khiển nhạc YouTube. Tiếng cuộn có khoảng nghỉ và chỉ phát khi người xem cuộn, tránh phát dồn dập khi trang tự di chuyển. Âm thanh tạm dừng khi chuyển sang tab khác.
 
 Website hỗ trợ nền sáng/tối, lưu điểm trên trình duyệt, thao tác bàn phím, chú thích ảnh và tùy chọn giảm chuyển động của hệ điều hành. Khi di chuyển hoặc chia sẻ dự án, giữ nguyên thư mục `assets` bên cạnh file HTML.
 

@@ -1,0 +1,11 @@
+.sound-toggle { position:fixed; left:26px; bottom:24px; z-index:42; display:flex; align-items:center; gap:9px; border:1px solid var(--grid-strong); border-radius:30px; padding:10px 14px; background:var(--paper); color:var(--ink-soft); box-shadow:0 4px 20px #30221518; font:10px var(--sans); cursor:pointer; }
+.sound-toggle svg { width:18px; height:18px; flex-shrink:0; color:var(--purple); }
+.sound-toggle[aria-pressed="false"] .sound-waves { display:none; }
+.sound-state { color:var(--purple); }
+.sound-toggle:hover { background:var(--grid); }
+.sound-toggle:focus-visible { outline:2px solid var(--purple); outline-offset:3px; }
+@media (max-width:600px) {
+ .sound-toggle { left:16px; bottom:16px; width:40px; height:40px; justify-content:center; padding:10px; }
+ .sound-toggle .sound-label,.sound-toggle .sound-state { display:none; }
+ .sound-toggle[aria-pressed="false"] { opacity:.65; }
+}
