@@ -262,15 +262,19 @@ dialog.notes::backdrop{background:rgba(40,10,10,.55)}
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/experience.css">
+<link rel="stylesheet" href="assets/heritage.css">
+<link rel="preload" as="image" href="assets/images/vn-flags.avif">
 <script defer src="assets/experience.js"></script>
+<script defer src="assets/heritage.js"></script>
 </head>
 <body class="ruled">
+<div class="study-backdrop" aria-hidden="true"></div>
 <div class="reading-progress" aria-hidden="true"></div>
 
 <div class="page">
 
   <nav class="site-nav" aria-label="Điều hướng chính">
-    <a class="site-brand" href="#dau-trang"><span class="brand-seal" aria-hidden="true">★</span><span class="brand-type">LÀM THEO LỜI BÁC<small>TƯ TƯỞNG HỒ CHÍ MINH</small></span></a>
+    <a class="site-brand" href="#dau-trang"><span class="national-emblems"><img src="assets/party-flag.svg" alt="Cờ Đảng Cộng sản Việt Nam" width="33" height="22"><img src="assets/national-flag.svg" alt="Cờ Tổ quốc Việt Nam" width="33" height="22"></span><span class="brand-type">LÀM THEO LỜI BÁC<small>TƯ TƯỞNG HỒ CHÍ MINH</small></span></a>
     <div class="nav-links"><a href="#hanh-trinh">Hành trình</a><a href="#hoc-va-lam">Học & thực hành</a><a href="#tu-lieu">Góc tư liệu</a></div>
     <div class="nav-tools"><button class="icon-btn" type="button" data-theme-toggle aria-label="Chuyển nền sáng hoặc tối">Nền tối</button><button class="icon-btn" type="button" data-open-notes aria-label="Mở sổ tay lý thuyết"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 5v15M12 5C8 3 5 3 2 4v15c3-1 6-1 10 1 4-2 7-2 10-1V4c-3-1-6-1-10 1Z"/></svg></button></div>
   </nav>
@@ -289,6 +293,7 @@ dialog.notes::backdrop{background:rgba(40,10,10,.55)}
     <!-- HOME -->
     <section id="home" aria-labelledby="hero-title">
       <div class="hero" id="dau-trang">
+        <button class="hero-photo-source" type="button" data-asset="vn-flags">Ảnh nền: Minh Duy / Báo Nhân Dân ↗</button>
         <div class="hero-copy" data-reveal>
           <p class="eyebrow">Không gian học tập · Tư tưởng Hồ Chí Minh</p>
           <h1 class="hero-title" id="hero-title">Làm theo<br>lời <em>Bác.</em></h1>
@@ -300,22 +305,12 @@ dialog.notes::backdrop{background:rgba(40,10,10,.55)}
           <p class="hero-footnote">Một hành trình để hiểu, để nhớ, để làm theo.</p>
         </div>
         <div class="hero-art" data-reveal style="--delay:160ms">
-          <div class="hero-orbit" aria-hidden="true"></div>
-          <span class="hero-watermark" aria-hidden="true">1890</span>
           <div data-parallax="-0.08">
             <figure class="paper-photo portrait-paper">
               <button type="button" class="photo-open" data-asset="portrait" aria-label="Mở ảnh tư liệu"><img src="assets/images/portrait.jpg" alt="Chân dung Chủ tịch Hồ Chí Minh" width="1200" height="1602" fetchpriority="high"></button>
               <figcaption>Chủ tịch Hồ Chí Minh<small>1890 — 1969 · ẢNH TƯ LIỆU</small></figcaption>
             </figure>
           </div>
-          <div data-parallax="0.07">
-            <figure class="paper-photo hero-postcard">
-              <button type="button" class="photo-open" data-asset="congress" aria-label="Mở ảnh tư liệu"><img src="assets/images/congress.jpg" alt="Chủ tịch Hồ Chí Minh trình bày báo cáo tại Đại hội II của Đảng, năm 1951" width="600" height="400"></button>
-              <figcaption>Một lòng vì nước, vì dân.<small>ĐẠI HỘI II CỦA ĐẢNG · 1951</small></figcaption>
-            </figure>
-          </div>
-          <div class="archive-stamp" aria-hidden="true">NHỮNG TRANG SỬ<strong>★</strong>NHỮNG BÀI HỌC</div>
-          <div class="pinned-note" aria-hidden="true">Học từ lịch sử.<br>Sống với hôm nay.</div>
         </div>
       </div>
       <div class="hero-bottom" data-reveal>
@@ -341,7 +336,6 @@ dialog.notes::backdrop{background:rgba(40,10,10,.55)}
                 <figcaption>Nguyễn Ái Quốc, Marseille, 1921<small>ẢNH: AGENCE MEURISSE · BNF / GALLICA</small></figcaption>
               </figure>
             </div>
-            <div class="corner-note" aria-hidden="true">Một chuyến đi.<br>Một khát vọng.<br>Một con đường.</div>
           </div>
           <div class="chapter-copy" data-reveal>
             <span class="chapter-no">TRANG 01 · 1911 — 1920</span>
@@ -357,12 +351,11 @@ dialog.notes::backdrop{background:rgba(40,10,10,.55)}
             <span class="chapter-year" aria-hidden="true">1930</span>
             <div data-parallax="0.06" style="width:100%;display:flex;justify-content:center">
               <figure class="paper-photo party-paper">
-                <button type="button" class="photo-open" data-asset="congress" aria-label="Mở ảnh tư liệu"><img src="assets/images/congress.jpg" alt="Hồ Chí Minh trình bày báo cáo chính trị tại Đại hội II của Đảng, Tuyên Quang, tháng 2 năm 1951" width="600" height="400" loading="lazy"></button>
-                <span class="party-corner" aria-hidden="true">☭</span>
-                <figcaption>Đại hội II của Đảng, tháng 2/1951<small>TUYÊN QUANG · ẢNH TƯ LIỆU</small></figcaption>
+                <button type="button" class="photo-open" data-asset="vn-party" aria-label="Mở ảnh tư liệu"><img src="assets/images/vn-party.jpg" alt="Chủ tịch Hồ Chí Minh và Trường Chinh trao đổi văn kiện Đại hội II của Đảng, tháng 2 năm 1951" width="600" height="400" loading="lazy"></button>
+                <span class="party-corner" aria-hidden="true"><img src="assets/party-flag.svg" alt="" width="57" height="38"></span>
+                <figcaption>Chuẩn bị văn kiện Đại hội II, 1951<small>ẢNH: TTXVN · TRIỂN LÃM BÁO NHÂN DÂN</small></figcaption>
               </figure>
             </div>
-            <div class="corner-note" aria-hidden="true">Đạo đức là gốc.<br>Nhân dân là<br>trung tâm.</div>
           </div>
           <div class="chapter-copy" data-reveal>
             <span class="chapter-no">TRANG 02 · ĐẢNG & NHÂN DÂN</span>
@@ -382,7 +375,6 @@ dialog.notes::backdrop{background:rgba(40,10,10,.55)}
                 <figcaption>Tuyên ngôn độc lập · 2/9/1945<small>TRUNG TÂM LƯU TRỮ QUỐC GIA III · PHÔNG PHỦ THỦ TƯỚNG</small></figcaption>
               </figure>
             </div>
-            <div class="corner-note" aria-hidden="true">Độc lập.<br>Tự do.<br>Hạnh phúc.</div>
           </div>
           <div class="chapter-copy" data-reveal>
             <span class="chapter-no">TRANG 03 · MÙA THU 1945</span>
@@ -402,7 +394,6 @@ dialog.notes::backdrop{background:rgba(40,10,10,.55)}
                 <figcaption>Bác Hồ với thiếu nhi<small>THẬP NIÊN 1950 · ẢNH TƯ LIỆU</small></figcaption>
               </figure>
             </div>
-            <div class="corner-note" aria-hidden="true">Bắt đầu từ<br>những việc nhỏ,<br>mỗi ngày.</div>
           </div>
           <div class="chapter-copy" data-reveal>
             <span class="chapter-no">TRANG 04 · TỪ BÀI HỌC ĐẾN CUỘC SỐNG</span>
@@ -421,6 +412,7 @@ dialog.notes::backdrop{background:rgba(40,10,10,.55)}
         <span class="quote-mark" aria-hidden="true">“</span>
         <blockquote>Tôi chỉ có một sự ham muốn, ham muốn tột bậc, là làm sao cho nước ta được hoàn toàn độc lập, dân ta được hoàn toàn tự do, đồng bào ai cũng có cơm ăn áo mặc, ai cũng được học hành.</blockquote>
         <figcaption class="quote-attribution">CHỦ TỊCH HỒ CHÍ MINH<br>Trả lời các nhà báo nước ngoài, năm 1946</figcaption>
+<button class="photo-background-source" type="button" data-asset="vn-badinh">Ảnh nền: Lăng Chủ tịch Hồ Chí Minh · Trọng Phú / VOV ↗</button>
       </figure>
 
       <section class="learning-section home-return-target" id="hoc-va-lam" aria-labelledby="learning-heading">
@@ -436,9 +428,9 @@ dialog.notes::backdrop{background:rgba(40,10,10,.55)}
       <section class="memory-section" id="tu-lieu" aria-labelledby="memory-heading">
         <div class="memory-head" data-reveal><p class="eyebrow">03 / Góc tư liệu</p><h2 class="section-heading" id="memory-heading">Ở lại trong <em>những điều bình dị.</em></h2><p>Nhìn gần hơn một bức ảnh, để hiểu thêm một câu chuyện.<br>Chạm vào ảnh để mở lớn và xem nguồn tư liệu.</p></div>
         <div class="memory-gallery">
-          <div data-reveal><figure class="paper-photo"><button type="button" class="photo-open" data-asset="house" aria-label="Mở ảnh nhà sàn Bác Hồ"><img src="assets/images/house.jpg" alt="Ngôi nhà sàn của Chủ tịch Hồ Chí Minh tại Hà Nội, ảnh chụp năm 2003" width="600" height="400" loading="lazy"></button><figcaption>Không gian trong nhà sàn<small>HÀ NỘI · ẢNH CHỤP NĂM 2003</small></figcaption><button class="photo-credit text-link" type="button" data-asset="house">Xem ảnh & nguồn ↗</button></figure></div>
-          <div data-reveal style="--delay:100ms"><figure class="paper-photo"><button type="button" class="photo-open" data-asset="children" aria-label="Mở ảnh Bác Hồ với thiếu nhi"><img src="assets/images/children.jpg" alt="Bác Hồ cùng các em thiếu nhi" width="600" height="400" loading="lazy"></button><figcaption>Niềm vui bên những mầm xanh<small>BÁC HỒ VỚI THIẾU NHI · ẢNH TƯ LIỆU</small></figcaption><button class="photo-credit text-link" type="button" data-asset="children">Xem ảnh & nguồn ↗</button></figure></div>
-          <div data-reveal style="--delay:200ms"><figure class="paper-photo"><button type="button" class="photo-open" data-asset="young" aria-label="Mở ảnh Nguyễn Ái Quốc năm 1921"><img src="assets/images/young.jpg" alt="Ảnh Nguyễn Ái Quốc do Agence Meurisse chụp tại Pháp năm 1921" width="600" height="800" loading="lazy" style="object-position:center 25%"></button><figcaption>Dấu chân trên hành trình xa<small>NGUYỄN ÁI QUỐC · PHÁP, 1921</small></figcaption><button class="photo-credit text-link" type="button" data-asset="young">Xem ảnh & nguồn ↗</button></figure></div>
+          <div data-reveal style="--delay:0ms"><figure class="paper-photo"><button type="button" class="photo-open" data-asset="vn-planting" aria-label="Mở ảnh tư liệu"><img src="assets/images/vn-planting.png" alt="Bác Hồ trồng cây cùng nhân dân Vật Lại, 16/2/1969" width="360" height="273" loading="lazy"></button><figcaption>Bác Hồ trồng cây cùng nhân dân Vật Lại, 16/2/1969<small>Bảo tàng Hồ Chí Minh · BÁO NHÂN DÂN</small></figcaption><button class="photo-credit text-link" type="button" data-asset="vn-planting">Xem ảnh & nguồn ↗</button></figure></div>
+          <div data-reveal style="--delay:100ms"><figure class="paper-photo"><button type="button" class="photo-open" data-asset="vn-culture" aria-label="Mở ảnh tư liệu"><img src="assets/images/vn-culture.png" alt="Chủ tịch Hồ Chí Minh chỉ huy dàn nhạc chơi Kết đoàn" width="360" height="273" loading="lazy"></button><figcaption>Chủ tịch Hồ Chí Minh chỉ huy dàn nhạc chơi Kết đoàn<small>Bảo tàng Lịch sử quốc gia · BÁO NHÂN DÂN</small></figcaption><button class="photo-credit text-link" type="button" data-asset="vn-culture">Xem ảnh & nguồn ↗</button></figure></div>
+          <div data-reveal style="--delay:200ms"><figure class="paper-photo"><button type="button" class="photo-open" data-asset="vn-constitution" aria-label="Mở ảnh tư liệu"><img src="assets/images/vn-constitution.png" alt="Hồ Chí Minh ký Sắc lệnh công bố Hiến pháp, 1/1/1960" width="360" height="273" loading="lazy"></button><figcaption>Hồ Chí Minh ký Sắc lệnh công bố Hiến pháp, 1/1/1960<small>TTXVN · BÁO NHÂN DÂN</small></figcaption><button class="photo-credit text-link" type="button" data-asset="vn-constitution">Xem ảnh & nguồn ↗</button></figure></div>
         </div>
       </section>
       <footer class="site-footer">
@@ -450,6 +442,11 @@ dialog.notes::backdrop{background:rgba(40,10,10,.55)}
 
     <!-- PLAY -->
     <section id="play" hidden aria-labelledby="scene-title">
+      <div class="study-banner">
+        <span class="national-emblems"><img src="assets/party-flag.svg" alt="Cờ Đảng Cộng sản Việt Nam" width="33" height="22"><img src="assets/national-flag.svg" alt="Cờ Tổ quốc Việt Nam" width="33" height="22"></span>
+        <div><p class="eyebrow">HỌC TƯ TƯỞNG · THỰC HÀNH QUA LỰA CHỌN</p><h2 id="study-heading">Hành trình tìm đường</h2><p id="study-caption">Theo dấu chân Người, hiểu bài học hôm nay.</p></div>
+        <button class="study-source" type="button" data-asset="vn-flags">Ảnh nền: Hà Nội trong sắc cờ<br>Minh Duy / Báo Nhân Dân ↗</button>
+      </div>
       <div class="play-grid">
         <article class="scene">
           <div class="scene-head">
@@ -467,6 +464,13 @@ dialog.notes::backdrop{background:rgba(40,10,10,.55)}
           <h2 class="panel-title" id="meters-title">Sổ theo dõi</h2>
           <p class="panel-note">Mỗi mục bắt đầu ở 5/10.</p>
           <div class="meters" id="meters"></div>
+          <figure class="topic-archive">
+            <p class="archive-eyebrow">Một lát cắt lịch sử</p>
+            <button type="button" class="photo-open" data-asset="vn-nharong" aria-label="Mở ảnh tư liệu của chủ đề"><img id="topic-archive-image" src="assets/images/vn-nharong.jpg" alt="Bến Nhà Rồng đầu thế kỷ XX" width="360" height="273"></button>
+            <figcaption id="topic-archive-caption">Bến Nhà Rồng đầu thế kỷ XX</figcaption>
+            <span class="archive-source" id="topic-archive-source">Ảnh tư liệu · Báo Nhân Dân</span>
+            <button type="button" class="text-link" data-asset="vn-nharong">Xem ảnh & nguồn ↗</button>
+          </figure>
         </aside>
       </div>
     </section>
@@ -526,7 +530,7 @@ dialog.notes::backdrop{background:rgba(40,10,10,.55)}
 <dialog class="asset-dialog" id="asset-dialog" aria-labelledby="asset-title"><div class="asset-dialog-head"><h2 id="asset-title"></h2><button class="icon-btn" type="button" data-close-dialog aria-label="Đóng ảnh">×</button></div><img id="asset-image" alt=""><p id="asset-credit"></p><a id="asset-source" href="https://commons.wikimedia.org" target="_blank" rel="noopener noreferrer">Xem tư liệu gốc & giấy phép ↗</a></dialog>
 <dialog class="asset-dialog" id="source-dialog" aria-labelledby="source-title"><div class="asset-dialog-head"><h2 id="source-title">Nguồn ảnh & âm nhạc</h2><button class="icon-btn" type="button" data-close-dialog aria-label="Đóng nguồn tư liệu">×</button></div><p>Ảnh được lưu cùng dự án, chú thích theo nguồn tư liệu. Hiệu ứng sepia và khung giấy dùng để trình bày. Ca khúc dùng trình phát nhúng từ kênh Trọng Tấn Official; cần kết nối Internet.</p><ol class="sources-list" id="sources-list"></ol><p>Lý thuyết và trích dẫn: xem ghi chú trong Sổ tay lý thuyết; đối chiếu với giáo trình môn học và <cite>Hồ Chí Minh Toàn tập</cite>, NXB Chính trị quốc gia Sự thật, 2011.</p></dialog>
 
-<script>window.EXHIBIT_ASSETS={"portrait": {"title": "File:Ho Chi Minh - 1946 Portrait.jpg", "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Ho_Chi_Minh_-_1946_Portrait.jpg/1280px-Ho_Chi_Minh_-_1946_Portrait.jpg", "source": "https://commons.wikimedia.org/wiki/File:Ho_Chi_Minh_-_1946_Portrait.jpg", "license": "Public domain", "artist": "Không rõ tác giả", "description": "Portrait of Ho Chi Minh, also known as Nguyen Ai Quoc", "local": "assets/images/portrait.jpg"}, "young": {"title": "File:Nguyen Aïn Nuä'C (Ho-Chi-Minh), délégué indochinois, Congrès communiste de Marseille, 1921, Meurisse, BNF Gallica.jpg", "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Nguyen_Aïn_Nuä'C_(Ho-Chi-Minh),_délégué_indochinois,_Congrès_communiste_de_Marseille,_1921,_Meurisse,_BNF_Gallica.jpg/1280px-Nguyen_Aïn_Nuä'C_(Ho-Chi-Minh),_délégué_indochinois,_Congrès_communiste_de_Marseille,_1921,_Meurisse,_BNF_Gallica.jpg", "source": "https://commons.wikimedia.org/wiki/File:Nguyen_A%C3%AFn_Nu%C3%A4%27C_(Ho-Chi-Minh),_d%C3%A9l%C3%A9gu%C3%A9_indochinois,_Congr%C3%A8s_communiste_de_Marseille,_1921,_Meurisse,_BNF_Gallica.jpg", "license": "Public domain", "artist": "Agence de presse Meurisse", "description": "<a href=\"https://en.wikipedia.org/wiki/Ho_Chi_Minh\" class=\"extiw\" title=\"en:Ho Chi Minh\">Ho Chi Minh<\/a>, here named <i>Nguyen Ai Quoc<\/i> (1890 - 1969), indochinese delegate to the French Communist Congress in Marseilles, 1921.", "local": "assets/images/young.jpg"}, "congress": {"title": "File:ICP 1951b, II Party Congress.jpg", "url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/ICP_1951b,_II_Party_Congress.jpg", "source": "https://commons.wikimedia.org/wiki/File:ICP_1951b,_II_Party_Congress.jpg", "license": "Public domain", "artist": "Không rõ tác giả", "description": "Hồ Chí Minh delivers a political report at the Second Congress of the Indochinese Communist Party, Tuyên Quang, February 1951", "local": "assets/images/congress.jpg"}, "children": {"title": "File:Ho-chi-Minh with children (10).jpg", "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Ho-chi-Minh_with_children_(10).jpg", "source": "https://commons.wikimedia.org/wiki/File:Ho-chi-Minh_with_children_(10).jpg", "license": "Public domain", "artist": "Musée Annam", "description": "Hồ-chí-Minh giao-lưu thiếu-nhi thập-niên 1950.", "local": "assets/images/children.jpg"}, "house": {"title": "File:2003, Ho Chi Minh's house on a rainy day.jpg", "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/2003,_Ho_Chi_Minh's_house_on_a_rainy_day.jpg", "source": "https://commons.wikimedia.org/wiki/File:2003,_Ho_Chi_Minh%27s_house_on_a_rainy_day.jpg", "license": "CC0", "artist": "Syced", "description": "2003, Ho Chi Minh's house on a rainy day <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"//commons.wikimedia.org/wiki/File:2003,_Ho_Chi_Minh%27s_house_on_a_rainy_day.jpg#ooui-php-4\" title=\"Edit this at Structured Data on Commons\"><img alt=\"Edit this at Structured Data on Commons\" src=\"https://thumb.wikimedia.org/wikiped", "local": "assets/images/house.jpg"}, "declaration": {"title": "File:Bản Tuyên ngôn độc lập của nước Việt Nam Dân chủ Cộng hòa. - Trung tâm Lưu trữ quốc gia III. Phông Phủ Thủ tướng, hồ sơ 586, tờ số 1 – 3.jpg", "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Bản_Tuyên_ngôn_độc_lập_của_nước_Việt_Nam_Dân_chủ_Cộng_hòa._-_Trung_tâm_Lưu_trữ_quốc_gia_III._Phông_Phủ_Thủ_tướng,_hồ_sơ_586,_tờ_số_1_–_3.jpg/1280px-thumbnail.jpg", "source": "https://commons.wikimedia.org/wiki/File:B%E1%BA%A3n_Tuy%C3%AAn_ng%C3%B4n_%C4%91%E1%BB%99c_l%E1%BA%ADp_c%E1%BB%A7a_n%C6%B0%E1%BB%9Bc_Vi%E1%BB%87t_Nam_D%C3%A2n_ch%E1%BB%A7_C%E1%BB%99ng_h%C3%B2a._-_Trung_t%C3%A2m_L%C6%B0u_tr%E1%BB%AF_qu%E1%BB%91c_gia_III._Ph%C3%B4ng_Ph%E1%BB%A7_Th%E1%BB%A7_t%C6%B0%E1%BB%9Bng,_h%E1%BB%93_s%C6%A1_586,_t%E1%BB%9D_s%E1%BB%91_1_%E2%80%93_3.jpg", "license": "Public domain", "artist": "Chính phủ Việt Nam / Trung tâm Lưu trữ quốc gia III", "description": "A file from the Cục Văn thư và Lưu trữ nhà nước related to the August Revolution at the end of World War II (two).", "local": "assets/images/declaration.jpg"}};</script>
+<script>window.EXHIBIT_ASSETS={"portrait": {"title": "File:Ho Chi Minh - 1946 Portrait.jpg", "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Ho_Chi_Minh_-_1946_Portrait.jpg/1280px-Ho_Chi_Minh_-_1946_Portrait.jpg", "source": "https://commons.wikimedia.org/wiki/File:Ho_Chi_Minh_-_1946_Portrait.jpg", "license": "Public domain", "artist": "Không rõ tác giả", "description": "Portrait of Ho Chi Minh, also known as Nguyen Ai Quoc", "local": "assets/images/portrait.jpg"}, "young": {"title": "File:Nguyen Aïn Nuä'C (Ho-Chi-Minh), délégué indochinois, Congrès communiste de Marseille, 1921, Meurisse, BNF Gallica.jpg", "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Nguyen_Aïn_Nuä'C_(Ho-Chi-Minh),_délégué_indochinois,_Congrès_communiste_de_Marseille,_1921,_Meurisse,_BNF_Gallica.jpg/1280px-Nguyen_Aïn_Nuä'C_(Ho-Chi-Minh),_délégué_indochinois,_Congrès_communiste_de_Marseille,_1921,_Meurisse,_BNF_Gallica.jpg", "source": "https://commons.wikimedia.org/wiki/File:Nguyen_A%C3%AFn_Nu%C3%A4%27C_(Ho-Chi-Minh),_d%C3%A9l%C3%A9gu%C3%A9_indochinois,_Congr%C3%A8s_communiste_de_Marseille,_1921,_Meurisse,_BNF_Gallica.jpg", "license": "Public domain", "artist": "Agence de presse Meurisse", "description": "<a href=\"https://en.wikipedia.org/wiki/Ho_Chi_Minh\" class=\"extiw\" title=\"en:Ho Chi Minh\">Ho Chi Minh<\/a>, here named <i>Nguyen Ai Quoc<\/i> (1890 - 1969), indochinese delegate to the French Communist Congress in Marseilles, 1921.", "local": "assets/images/young.jpg"}, "congress": {"title": "File:ICP 1951b, II Party Congress.jpg", "url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/ICP_1951b,_II_Party_Congress.jpg", "source": "https://commons.wikimedia.org/wiki/File:ICP_1951b,_II_Party_Congress.jpg", "license": "Public domain", "artist": "Không rõ tác giả", "description": "Hồ Chí Minh delivers a political report at the Second Congress of the Indochinese Communist Party, Tuyên Quang, February 1951", "local": "assets/images/congress.jpg"}, "children": {"title": "File:Ho-chi-Minh with children (10).jpg", "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Ho-chi-Minh_with_children_(10).jpg", "source": "https://commons.wikimedia.org/wiki/File:Ho-chi-Minh_with_children_(10).jpg", "license": "Public domain", "artist": "Musée Annam", "description": "Hồ-chí-Minh giao-lưu thiếu-nhi thập-niên 1950.", "local": "assets/images/children.jpg"}, "house": {"title": "File:2003, Ho Chi Minh's house on a rainy day.jpg", "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/2003,_Ho_Chi_Minh's_house_on_a_rainy_day.jpg", "source": "https://commons.wikimedia.org/wiki/File:2003,_Ho_Chi_Minh%27s_house_on_a_rainy_day.jpg", "license": "CC0", "artist": "Syced", "description": "2003, Ho Chi Minh's house on a rainy day <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"//commons.wikimedia.org/wiki/File:2003,_Ho_Chi_Minh%27s_house_on_a_rainy_day.jpg#ooui-php-4\" title=\"Edit this at Structured Data on Commons\"><img alt=\"Edit this at Structured Data on Commons\" src=\"https://thumb.wikimedia.org/wikiped", "local": "assets/images/house.jpg"}, "declaration": {"title": "File:Bản Tuyên ngôn độc lập của nước Việt Nam Dân chủ Cộng hòa. - Trung tâm Lưu trữ quốc gia III. Phông Phủ Thủ tướng, hồ sơ 586, tờ số 1 – 3.jpg", "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Bản_Tuyên_ngôn_độc_lập_của_nước_Việt_Nam_Dân_chủ_Cộng_hòa._-_Trung_tâm_Lưu_trữ_quốc_gia_III._Phông_Phủ_Thủ_tướng,_hồ_sơ_586,_tờ_số_1_–_3.jpg/1280px-thumbnail.jpg", "source": "https://commons.wikimedia.org/wiki/File:B%E1%BA%A3n_Tuy%C3%AAn_ng%C3%B4n_%C4%91%E1%BB%99c_l%E1%BA%ADp_c%E1%BB%A7a_n%C6%B0%E1%BB%9Bc_Vi%E1%BB%87t_Nam_D%C3%A2n_ch%E1%BB%A7_C%E1%BB%99ng_h%C3%B2a._-_Trung_t%C3%A2m_L%C6%B0u_tr%E1%BB%AF_qu%E1%BB%91c_gia_III._Ph%C3%B4ng_Ph%E1%BB%A7_Th%E1%BB%A7_t%C6%B0%E1%BB%9Bng,_h%E1%BB%93_s%C6%A1_586,_t%E1%BB%9D_s%E1%BB%91_1_%E2%80%93_3.jpg", "license": "Public domain", "artist": "Chính phủ Việt Nam / Trung tâm Lưu trữ quốc gia III", "description": "A file from the Cục Văn thư và Lưu trữ nhà nước related to the August Revolution at the end of World War II (two).", "local": "assets/images/declaration.jpg"}, "vn-nharong": {"title": "Bến Nhà Rồng đầu thế kỷ XX", "caption": "Bến Nhà Rồng đầu thế kỷ XX", "url": "https://dangcongsan.nhandan.vn/codang/images/img-hcm-2.jpg", "source": "https://dangcongsan.nhandan.vn/", "publisher": "Báo Nhân Dân", "artist": "Ảnh tư liệu", "license": "Quyền ảnh thuộc đơn vị cung cấp; xem nguồn gốc", "local": "assets/images/vn-nharong.jpg"}, "vn-portrait": {"title": "Chân dung Chủ tịch Hồ Chí Minh, 1946", "caption": "Chân dung Chủ tịch Hồ Chí Minh, 1946", "url": "https://dangcongsan.nhandan.vn/codang/images/img-hcm-33.jpg", "source": "https://dangcongsan.nhandan.vn/", "publisher": "Báo Nhân Dân", "artist": "Bảo tàng Hồ Chí Minh", "license": "Quyền ảnh thuộc đơn vị cung cấp; xem nguồn gốc", "local": "assets/images/vn-portrait.jpg"}, "vn-badinh1945": {"title": "Quảng trường Ba Đình, sáng 2/9/1945", "caption": "Quảng trường Ba Đình, sáng 2/9/1945", "url": "https://dangcongsan.nhandan.vn/codang/images/img-hcm-31.png", "source": "https://dangcongsan.nhandan.vn/", "publisher": "Báo Nhân Dân", "artist": "Ảnh tư liệu", "license": "Quyền ảnh thuộc đơn vị cung cấp; xem nguồn gốc", "local": "assets/images/vn-badinh1945.png"}, "vn-party": {"title": "Hồ Chí Minh và Trường Chinh trao đổi văn kiện Đại hội II, 2/1951", "caption": "Hồ Chí Minh và Trường Chinh trao đổi văn kiện Đại hội II, 2/1951", "url": "https://dangcongsan.nhandan.vn/codang/images/img-tc-2.jpg", "source": "https://dangcongsan.nhandan.vn/", "publisher": "Báo Nhân Dân", "artist": "TTXVN", "license": "Quyền ảnh thuộc đơn vị cung cấp; xem nguồn gốc", "local": "assets/images/vn-party.jpg"}, "vn-production": {"title": "Bác Hồ cùng cán bộ tăng gia sản xuất trong kháng chiến", "caption": "Bác Hồ cùng cán bộ tăng gia sản xuất trong kháng chiến", "url": "https://dangcongsan.nhandan.vn/codang/images/img-hcm-58.jpg", "source": "https://dangcongsan.nhandan.vn/", "publisher": "Báo Nhân Dân", "artist": "Ảnh tư liệu", "license": "Quyền ảnh thuộc đơn vị cung cấp; xem nguồn gốc", "local": "assets/images/vn-production.jpg"}, "vn-constitution": {"title": "Hồ Chí Minh ký Sắc lệnh công bố Hiến pháp, 1/1/1960", "caption": "Hồ Chí Minh ký Sắc lệnh công bố Hiến pháp, 1/1/1960", "url": "https://dangcongsan.nhandan.vn/codang/images/img-hcm-64.png", "source": "https://dangcongsan.nhandan.vn/", "publisher": "Báo Nhân Dân", "artist": "TTXVN", "license": "Quyền ảnh thuộc đơn vị cung cấp; xem nguồn gốc", "local": "assets/images/vn-constitution.png"}, "vn-geneva": {"title": "Hội nghị Genève, 1954", "caption": "Hội nghị Genève, 1954", "url": "https://dangcongsan.nhandan.vn/codang/images/img-hcm-55.jpg", "source": "https://dangcongsan.nhandan.vn/", "publisher": "Báo Nhân Dân", "artist": "Ảnh tư liệu", "license": "Quyền ảnh thuộc đơn vị cung cấp; xem nguồn gốc", "local": "assets/images/vn-geneva.jpg"}, "vn-culture": {"title": "Chủ tịch Hồ Chí Minh chỉ huy dàn nhạc chơi Kết đoàn", "caption": "Chủ tịch Hồ Chí Minh chỉ huy dàn nhạc chơi Kết đoàn", "url": "https://dangcongsan.nhandan.vn/codang/images/img-hcm-66.png", "source": "https://dangcongsan.nhandan.vn/", "publisher": "Báo Nhân Dân", "artist": "Bảo tàng Lịch sử quốc gia", "license": "Quyền ảnh thuộc đơn vị cung cấp; xem nguồn gốc", "local": "assets/images/vn-culture.png"}, "vn-planting": {"title": "Bác Hồ trồng cây cùng nhân dân Vật Lại, 16/2/1969", "caption": "Bác Hồ trồng cây cùng nhân dân Vật Lại, 16/2/1969", "url": "https://dangcongsan.nhandan.vn/codang/images/img-hcm-74.png", "source": "https://dangcongsan.nhandan.vn/", "publisher": "Báo Nhân Dân", "artist": "Bảo tàng Hồ Chí Minh", "license": "Quyền ảnh thuộc đơn vị cung cấp; xem nguồn gốc", "local": "assets/images/vn-planting.png"}, "vn-flags": {"title": "Cờ Đảng và cờ Tổ quốc trên đường phố Hà Nội", "caption": "Cờ Đảng và cờ Tổ quốc trên đường phố Hà Nội", "url": "https://cdn.nhandan.vn/images/eOPUc9eZAtQx_mWOiBRaBYswcOvO12eIQclNIHCnpRMobjnj_7dTBJe3XKAoEjeCcpJS2VwOFrj9oqPe20ZXcQ/ha-noi-co-hoa-2-9-minh-duy-14.jpg.avif", "source": "https://nhandan.vn/ha-noi-ruc-ro-sac-do-co-hoa-chao-don-ngay-tet-doc-lap-post985121.html", "publisher": "Báo Nhân Dân", "artist": "Minh Duy / Báo Nhân Dân", "license": "Quyền ảnh thuộc đơn vị cung cấp; xem nguồn gốc", "local": "assets/images/vn-flags.avif"}, "party-flag": {"title": "Cờ Đảng Cộng sản Việt Nam", "publisher": "Wikimedia Commons", "artist": "Eureka287, Lasse Havelund; cập nhật Sshu94", "license": "CC BY-SA 3.0", "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Party_of_Vietnam.svg", "local": "assets/party-flag.svg"}, "national-flag": {"title": "Quốc kỳ Việt Nam", "publisher": "Wikimedia Commons", "artist": "Wikimedia Commons", "license": "Public domain", "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Vietnam.svg", "local": "assets/national-flag.svg"}, "vn-badinh": {"title": "Lăng Chủ tịch Hồ Chí Minh, sáng Quốc khánh 2/9/2026", "caption": "Lăng Chủ tịch Hồ Chí Minh, sáng Quốc khánh 2/9/2026", "publisher": "VOV", "artist": "Trọng Phú / VOV", "license": "Quyền ảnh thuộc đơn vị cung cấp; xem nguồn gốc", "source": "https://vov.vn/chinh-tri/thieng-lieng-le-thuong-co-ngay-quoc-khanh-29-tai-quang-truong-ba-dinh-post1329274.vov", "local": "assets/images/vn-badinh.jpg"}};</script>
 
 <!-- NOTES -->
 <dialog class="notes ruled" id="notes" aria-labelledby="notes-title">
@@ -2151,6 +2155,7 @@ dialog.notes::backdrop{background:rgba(40,10,10,.55)}
     state = {t:k, i:0, scores:{}, picks:[]};
     t.meters.forEach(function(m){ state.scores[m.key] = START; });
     $('#brand').textContent = t.title;
+    document.dispatchEvent(new CustomEvent('exhibit-context', {detail:{id:t.id,title:t.title,label:t.label}}));
     buildMeters(meters, t.meters);
     show('play');
     renderScene();

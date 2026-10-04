@@ -52,5 +52,130 @@
     "artist": "Chính phủ Việt Nam / Trung tâm Lưu trữ quốc gia III",
     "description": "A file from the Cục Văn thư và Lưu trữ nhà nước related to the August Revolution at the end of World War II (two).",
     "local": "assets/images/declaration.jpg"
+  },
+  "vn-nharong": {
+    "title": "Bến Nhà Rồng đầu thế kỷ XX",
+    "caption": "Bến Nhà Rồng đầu thế kỷ XX",
+    "url": "https://dangcongsan.nhandan.vn/codang/images/img-hcm-2.jpg",
+    "source": "https://dangcongsan.nhandan.vn/",
+    "publisher": "Báo Nhân Dân",
+    "artist": "Ảnh tư liệu",
+    "license": "Quyền ảnh thuộc đơn vị cung cấp; xem nguồn gốc",
+    "local": "assets/images/vn-nharong.jpg"
+  },
+  "vn-portrait": {
+    "title": "Chân dung Chủ tịch Hồ Chí Minh, 1946",
+    "caption": "Chân dung Chủ tịch Hồ Chí Minh, 1946",
+    "url": "https://dangcongsan.nhandan.vn/codang/images/img-hcm-33.jpg",
+    "source": "https://dangcongsan.nhandan.vn/",
+    "publisher": "Báo Nhân Dân",
+    "artist": "Bảo tàng Hồ Chí Minh",
+    "license": "Quyền ảnh thuộc đơn vị cung cấp; xem nguồn gốc",
+    "local": "assets/images/vn-portrait.jpg"
+  },
+  "vn-badinh1945": {
+    "title": "Quảng trường Ba Đình, sáng 2/9/1945",
+    "caption": "Quảng trường Ba Đình, sáng 2/9/1945",
+    "url": "https://dangcongsan.nhandan.vn/codang/images/img-hcm-31.png",
+    "source": "https://dangcongsan.nhandan.vn/",
+    "publisher": "Báo Nhân Dân",
+    "artist": "Ảnh tư liệu",
+    "license": "Quyền ảnh thuộc đơn vị cung cấp; xem nguồn gốc",
+    "local": "assets/images/vn-badinh1945.png"
+  },
+  "vn-party": {
+    "title": "Hồ Chí Minh và Trường Chinh trao đổi văn kiện Đại hội II, 2/1951",
+    "caption": "Hồ Chí Minh và Trường Chinh trao đổi văn kiện Đại hội II, 2/1951",
+    "url": "https://dangcongsan.nhandan.vn/codang/images/img-tc-2.jpg",
+    "source": "https://dangcongsan.nhandan.vn/",
+    "publisher": "Báo Nhân Dân",
+    "artist": "TTXVN",
+    "license": "Quyền ảnh thuộc đơn vị cung cấp; xem nguồn gốc",
+    "local": "assets/images/vn-party.jpg"
+  },
+  "vn-production": {
+    "title": "Bác Hồ cùng cán bộ tăng gia sản xuất trong kháng chiến",
+    "caption": "Bác Hồ cùng cán bộ tăng gia sản xuất trong kháng chiến",
+    "url": "https://dangcongsan.nhandan.vn/codang/images/img-hcm-58.jpg",
+    "source": "https://dangcongsan.nhandan.vn/",
+    "publisher": "Báo Nhân Dân",
+    "artist": "Ảnh tư liệu",
+    "license": "Quyền ảnh thuộc đơn vị cung cấp; xem nguồn gốc",
+    "local": "assets/images/vn-production.jpg"
+  },
+  "vn-constitution": {
+    "title": "Hồ Chí Minh ký Sắc lệnh công bố Hiến pháp, 1/1/1960",
+    "caption": "Hồ Chí Minh ký Sắc lệnh công bố Hiến pháp, 1/1/1960",
+    "url": "https://dangcongsan.nhandan.vn/codang/images/img-hcm-64.png",
+    "source": "https://dangcongsan.nhandan.vn/",
+    "publisher": "Báo Nhân Dân",
+    "artist": "TTXVN",
+    "license": "Quyền ảnh thuộc đơn vị cung cấp; xem nguồn gốc",
+    "local": "assets/images/vn-constitution.png"
+  },
+  "vn-geneva": {
+    "title": "Hội nghị Genève, 1954",
+    "caption": "Hội nghị Genève, 1954",
+    "url": "https://dangcongsan.nhandan.vn/codang/images/img-hcm-55.jpg",
+    "source": "https://dangcongsan.nhandan.vn/",
+    "publisher": "Báo Nhân Dân",
+    "artist": "Ảnh tư liệu",
+    "license": "Quyền ảnh thuộc đơn vị cung cấp; xem nguồn gốc",
+    "local": "assets/images/vn-geneva.jpg"
+  },
+  "vn-culture": {
+    "title": "Chủ tịch Hồ Chí Minh chỉ huy dàn nhạc chơi Kết đoàn",
+    "caption": "Chủ tịch Hồ Chí Minh chỉ huy dàn nhạc chơi Kết đoàn",
+    "url": "https://dangcongsan.nhandan.vn/codang/images/img-hcm-66.png",
+    "source": "https://dangcongsan.nhandan.vn/",
+    "publisher": "Báo Nhân Dân",
+    "artist": "Bảo tàng Lịch sử quốc gia",
+    "license": "Quyền ảnh thuộc đơn vị cung cấp; xem nguồn gốc",
+    "local": "assets/images/vn-culture.png"
+  },
+  "vn-planting": {
+    "title": "Bác Hồ trồng cây cùng nhân dân Vật Lại, 16/2/1969",
+    "caption": "Bác Hồ trồng cây cùng nhân dân Vật Lại, 16/2/1969",
+    "url": "https://dangcongsan.nhandan.vn/codang/images/img-hcm-74.png",
+    "source": "https://dangcongsan.nhandan.vn/",
+    "publisher": "Báo Nhân Dân",
+    "artist": "Bảo tàng Hồ Chí Minh",
+    "license": "Quyền ảnh thuộc đơn vị cung cấp; xem nguồn gốc",
+    "local": "assets/images/vn-planting.png"
+  },
+  "vn-flags": {
+    "title": "Cờ Đảng và cờ Tổ quốc trên đường phố Hà Nội",
+    "caption": "Cờ Đảng và cờ Tổ quốc trên đường phố Hà Nội",
+    "url": "https://cdn.nhandan.vn/images/eOPUc9eZAtQx_mWOiBRaBYswcOvO12eIQclNIHCnpRMobjnj_7dTBJe3XKAoEjeCcpJS2VwOFrj9oqPe20ZXcQ/ha-noi-co-hoa-2-9-minh-duy-14.jpg.avif",
+    "source": "https://nhandan.vn/ha-noi-ruc-ro-sac-do-co-hoa-chao-don-ngay-tet-doc-lap-post985121.html",
+    "publisher": "Báo Nhân Dân",
+    "artist": "Minh Duy / Báo Nhân Dân",
+    "license": "Quyền ảnh thuộc đơn vị cung cấp; xem nguồn gốc",
+    "local": "assets/images/vn-flags.avif"
+  },
+  "party-flag": {
+    "title": "Cờ Đảng Cộng sản Việt Nam",
+    "publisher": "Wikimedia Commons",
+    "artist": "Eureka287, Lasse Havelund; cập nhật Sshu94",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Communist_Party_of_Vietnam.svg",
+    "local": "assets/party-flag.svg"
+  },
+  "national-flag": {
+    "title": "Quốc kỳ Việt Nam",
+    "publisher": "Wikimedia Commons",
+    "artist": "Wikimedia Commons",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Vietnam.svg",
+    "local": "assets/national-flag.svg"
+  },
+  "vn-badinh": {
+    "title": "Lăng Chủ tịch Hồ Chí Minh, sáng Quốc khánh 2/9/2026",
+    "caption": "Lăng Chủ tịch Hồ Chí Minh, sáng Quốc khánh 2/9/2026",
+    "publisher": "VOV",
+    "artist": "Trọng Phú / VOV",
+    "license": "Quyền ảnh thuộc đơn vị cung cấp; xem nguồn gốc",
+    "source": "https://vov.vn/chinh-tri/thieng-lieng-le-thuong-co-ngay-quoc-khanh-29-tai-quang-truong-ba-dinh-post1329274.vov",
+    "local": "assets/images/vn-badinh.jpg"
   }
 }

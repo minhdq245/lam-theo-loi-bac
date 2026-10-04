@@ -1,0 +1,137 @@
+/* Ảnh tư liệu Việt Nam, cờ Đảng và cờ Tổ quốc. */
+.national-emblems { display:flex; gap:5px; align-items:center; flex-shrink:0; }
+.national-emblems img { width:33px; height:22px; display:block; box-shadow:0 1px 3px #0002; }
+.site-brand { gap:10px; }
+.hero { isolation:isolate; position:relative; margin:0 -64px; padding:65px 64px 45px; min-height:660px; overflow:hidden; background:#541d1c; color:#fff8e9; grid-template-columns:1.2fr .8fr; }
+.hero::before { content:""; position:absolute; inset:0; z-index:-2; background:url('images/vn-flags.avif') center 42%/cover; animation:heritage-breathe 24s ease-in-out infinite alternate; }
+.hero::after { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,#301917ed 0%,#491c18cc 44%,#401b1750 100%),linear-gradient(0deg,#341b19aa,transparent 55%); }
+.hero .eyebrow { color:#efd8a0; }
+.hero-title { font-size:clamp(62px,6.6vw,88px); line-height:1.12; color:#fff8e9; }
+.hero-title em { color:#f1c875; }
+.hero-description { color:#f0e5d4; max-width:460px; font-size:14px; }
+.hero .text-link { color:#fff3d9; }
+.hero .exhibit-btn { background:#f0d399; border-color:#f0d399; color:#481e1b; }
+.hero .exhibit-btn:hover { background:#fff3d9; border-color:#fff3d9; }
+.hero-footnote { font-family:var(--exhibit-serif); font-size:16px; font-style:italic; font-weight:400; color:#e7d5b6; transform:none; }
+.hero-art { height:470px; width:100%; margin:0; }
+.hero-art .portrait-paper { --turn:0deg; width:300px; max-width:90%; left:auto; right:10px; top:15px; margin:0; padding:10px 10px 15px; background:#faf3e5; box-shadow:0 20px 60px #160d0c77; border:1px solid #e2cc9a; }
+.hero-art .portrait-paper img { height:350px; object-position:center 25%; filter:grayscale(1); }
+.hero-art .portrait-paper figcaption { max-width:none; font:18px var(--exhibit-serif); color:#4d3525; padding:13px 5px 0; }
+.hero-art .portrait-paper figcaption small { font:8px var(--sans); letter-spacing:1.4px; margin-top:7px; }
+.hero-photo-source { position:absolute; bottom:15px; right:24px; color:#f0e6d5; font:8px var(--sans); letter-spacing:.4px; border:0; background:#271b19a8; padding:6px 9px; cursor:pointer; z-index:5; }
+.hero-orbit,.hero-watermark,.hero-postcard,.archive-stamp,.pinned-note,.corner-note { display:none!important; }
+.hero-bottom { padding:30px 0; }
+.chapter-art .paper-photo,.chapter.reversed .paper-photo,.memory-gallery .paper-photo,.memory-gallery>div:nth-child(n) .paper-photo { --turn:0deg; margin-top:0; box-shadow:0 8px 28px #30221712; border:1px solid var(--grid-strong); }
+.chapter-art .young-photo { margin-right:0; }
+.paper-photo::before,.paper-photo::after { display:none; }
+.paper-photo figcaption { font-family:var(--exhibit-serif); font-size:16px; }
+.party-paper .party-corner { width:57px; height:38px; padding:0; background:none; }
+.party-paper .party-corner img { width:100%; height:100%; filter:none; object-fit:contain; }
+.chapter-year { opacity:.13; }
+.belief-band { background:linear-gradient(#3d1a18d4,#371815e0),url('images/vn-badinh.jpg') center 40%/cover; padding-top:90px; padding-bottom:90px; }
+.belief-band::before { content:none; }
+.belief-band .photo-background-source { display:inline-block; margin-top:24px; font:9px var(--sans); color:#e8d8b8; background:none; border:0; cursor:pointer; text-decoration:underline; text-underline-offset:4px; }
+.memory-gallery img { filter:none; object-fit:contain; background:#e5dccd; }
+.memory-gallery figcaption { font-size:16px; line-height:1.6; }
+.toc-row { padding:22px 18px 22px 122px; min-height:168px; }
+.topic-thumbnail { position:absolute; left:16px; top:23px; width:91px; height:118px; object-fit:cover; filter:grayscale(1); border:1px solid var(--grid-strong); }
+.toc-row:hover .topic-thumbnail { filter:grayscale(.3); }
+.study-backdrop { display:none; position:fixed; inset:0; pointer-events:none; z-index:0; background:linear-gradient(90deg,#301715d9,#421c1899),url('images/vn-badinh.jpg') center/cover; }
+body.studying { background:#421e1b; }
+.studying .page { position:relative; z-index:1; }
+.studying .study-backdrop { display:block; }
+.studying[data-study-topic="dang"] .study-backdrop { background-image:linear-gradient(90deg,#301715d9,#421c1899),url('images/vn-flags.avif'); }
+.studying .site-nav { background:var(--paper); margin:0 -64px; padding:0 64px; border-bottom:0; }
+.studying .bar { color:#f6ecda; border-color:#ddc8a040; padding:22px 0; margin-bottom:22px; }
+.studying .bar .btn-quiet { color:#f6ecda; }
+.studying .bar .brand { color:#f6ecda; }
+.study-banner { display:flex; gap:20px; align-items:center; padding:0 0 25px; color:#fff3de; }
+.study-banner .national-emblems img { width:51px; height:34px; }
+.study-banner .eyebrow { font:8px var(--sans); color:#e4c281; letter-spacing:1.8px; margin:0 0 7px; }
+.study-banner h2 { font:400 24px/1.5 var(--exhibit-serif); margin:0; color:#fff3de; }
+.study-banner p:last-child { font:11px/1.7 var(--sans); margin:5px 0 0; color:#e4d6c3; }
+.study-banner .study-source { margin-left:auto; align-self:end; color:#e4d6c3; background:none; border:0; font:9px/1.7 var(--sans); text-align:right; cursor:pointer; flex-shrink:0; }
+.studying .play-grid { grid-template-columns:minmax(0,1fr) 280px; gap:24px; align-items:start; }
+.studying .scene { padding:32px; border:1px solid var(--grid-strong); border-top:4px solid #bc863b; border-radius:3px; box-shadow:0 18px 40px #170b0a33; }
+.studying .meters-panel { top:24px; padding:22px; border-radius:3px; box-shadow:0 18px 40px #170b0a25; }
+.topic-archive { margin:25px -22px -22px; padding:20px; border-top:1px solid var(--grid-strong); }
+.archive-eyebrow { font:8px var(--sans); text-transform:uppercase; letter-spacing:1.7px; color:var(--purple); margin:0 0 12px; }
+.topic-archive .photo-open { display:block; width:100%; border:0; padding:0; background:var(--grid); cursor:zoom-in; }
+.topic-archive img { display:block; width:100%; max-height:205px; object-fit:contain; }
+.topic-archive figcaption { font:12px/1.75 var(--exhibit-serif); margin-top:12px; }
+.topic-archive .archive-source { display:block; font:8px/1.7 var(--sans); color:var(--ink-soft); margin-top:8px; }
+.topic-archive .text-link { font:9px var(--sans); margin-top:12px; padding:0; }
+.studying #result,.studying #timeline { padding:35px; border-top:4px solid #bc863b; border-radius:3px; box-shadow:0 18px 40px #170b0a33; }
+.studying #timeline .tl { margin-left:auto; margin-right:auto; }
+@keyframes heritage-breathe { from { transform:scale(1); } to { transform:scale(1.055); } }
+@media (max-width:1100px) {
+ .hero { margin-left:-35px; margin-right:-35px; padding-left:35px; padding-right:35px; }
+ .hero-title { font-size:64px; }
+ .hero-art .portrait-paper { right:0; width:265px; }
+ .hero-art .portrait-paper img { height:325px; }
+ .studying .site-nav { margin-left:-35px; margin-right:-35px; padding:0 35px; }
+ .studying .play-grid { grid-template-columns:minmax(0,1fr) 255px; gap:18px; }
+ .studying .scene { padding:25px; }
+}
+@media (max-width:900px) {
+ .hero { margin:0 -24px; padding:48px 24px 50px; grid-template-columns:1fr 1fr; gap:22px; min-height:560px; }
+ .hero-title { font-size:58px; }
+ .hero-description br { display:none; }
+ .hero .hero-art { height:380px; width:100%; margin:0; }
+ .hero-art .portrait-paper { width:230px; max-width:100%; top:25px; }
+ .hero-art .portrait-paper img { height:275px; }
+ .hero-art .portrait-paper figcaption { font-size:15px; }
+ .hero-actions { flex-wrap:wrap; gap:20px; }
+ .hero .eyebrow { font-size:7px; }
+ .studying .site-nav { margin:0 -24px; padding:0 24px; }
+ .study-banner { flex-wrap:wrap; gap:14px; }
+ .study-banner h2 { font-size:21px; }
+ .study-banner .study-source { margin-left:0; text-align:left; flex-basis:100%; font-size:8px; }
+ .studying .play-grid { grid-template-columns:1fr; }
+ .studying .meters-panel { position:static; }
+ .topic-archive { display:grid; grid-template-columns:140px 1fr; gap:0 18px; }
+ .topic-archive .archive-eyebrow { grid-column:1/-1; }
+ .topic-archive .photo-open { grid-column:1; grid-row:2/5; align-self:start; }
+ .topic-archive figcaption { margin-top:0; }
+ .toc-row { min-height:158px; }
+}
+@media (max-width:600px) {
+ .hero { grid-template-columns:1fr; padding-bottom:40px; gap:0; }
+ .hero::before { background-position:65% center; }
+ .hero::after { background:linear-gradient(0deg,#321815db,#401a16b5 65%,#351917e6); }
+ .hero-title { font-size:61px; }
+ .hero-description { font-size:13px; }
+ .hero .hero-art { height:355px; margin:20px 0 5px; }
+ .hero-art .portrait-paper { width:220px; left:50%; right:auto; transform:translateX(-50%); top:0; }
+ .hero-art .portrait-paper img { height:265px; }
+ .hero-photo-source { right:12px; bottom:9px; max-width:calc(100% - 24px); font-size:7px; }
+ .hero-footnote { font-size:14px; margin:25px 0 0; }
+ .national-emblems img { width:25px; height:17px; }
+ .site-brand { gap:7px; }
+ .studying .scene { padding:22px 17px; }
+ .studying #result,.studying #timeline { padding:25px 18px; }
+ .studying .bar { flex-wrap:wrap; }
+ .bar .brand { font-size:17px; }
+ .study-banner .national-emblems img { width:34px; height:23px; }
+ .study-banner h2 { font-size:18px; }
+ .study-banner { align-items:start; }
+ .study-banner>div:nth-child(2) { flex:1; min-width:0; }
+ .study-banner p:last-child { font-size:9px; }
+ .topic-thumbnail { width:68px; height:95px; left:12px; top:20px; }
+ .toc-row { padding:20px 12px 20px 93px; grid-template-columns:23px minmax(0,1fr) auto; gap:9px; }
+ .toc-title { font-size:16px; }
+ .toc-num { font-size:20px; }
+ .toc-role { font-size:10px; }
+ .toc-count { font-size:7px; }
+ .topic-archive { grid-template-columns:110px 1fr; gap:0 12px; }
+}
+@media (max-width:380px) {
+ .hero { margin-left:-18px; margin-right:-18px; padding-left:18px; padding-right:18px; }
+ .studying .site-nav { margin-left:-18px; margin-right:-18px; padding:0 18px; }
+ .brand-type { font-size:9px; letter-spacing:.6px; }
+ .brand-type small { font-size:6px; }
+ .hero-title { font-size:54px; }
+ .toc-row { padding-left:84px; }
+ .topic-thumbnail { width:61px; }
+}
+@media (prefers-reduced-motion:reduce) { .hero::before { animation:none; } }

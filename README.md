@@ -23,9 +23,12 @@ Có thể mở trực tiếp `lam-theo-loi-bac.html` để đọc và chơi. Nê
 - `lam-theo-loi-bac.html`: nội dung, bộ máy trò chơi, dòng thời gian, lý thuyết và cấu trúc trang.
 - `assets/experience.css`: giao diện giấy ngà, đỏ trầm, bố cục máy tính/điện thoại và hiệu ứng.
 - `assets/experience.js`: xuất hiện khi cuộn, parallax, thanh tiến độ, xem ảnh lớn, nguồn tư liệu và nhạc.
-- `assets/images/`: sáu ảnh tư liệu, dùng lại ở các chương và dòng thời gian.
-- `assets/sources.json`: nguồn và giấy phép từng ảnh. Có thể đọc ngay trong website qua “Nguồn ảnh & âm nhạc”.
+- `assets/heritage.css` và `assets/heritage.js`: nền ảnh thật, cờ Đảng/cờ Tổ quốc và ảnh lịch sử theo từng chủ đề.
+- `assets/images/`: ảnh tư liệu và ảnh nền, gồm nguồn Báo Nhân Dân, TTXVN, các bảo tàng và VOV.
+- `assets/sources.json`: nguồn, tác giả và thông tin quyền ảnh của từng tư liệu. Có thể đọc ngay trong website qua “Nguồn ảnh & âm nhạc”.
 
 Nhạc chỉ tải khi mở “Giai điệu về Bác”; chọn ca khúc và bấm phát trong video. Đóng khung nhạc để dừng. Trình phát có liên kết mở YouTube trực tiếp khi nhúng không khả dụng.
 
 Website hỗ trợ nền sáng/tối, lưu điểm trên trình duyệt, thao tác bàn phím, chú thích ảnh và tùy chọn giảm chuyển động của hệ điều hành. Khi di chuyển hoặc chia sẻ dự án, giữ nguyên thư mục `assets` bên cạnh file HTML.
+
+Ảnh từ các báo Việt Nam được ghi nguồn gốc và đơn vị cung cấp trong mục nguồn tư liệu; không được gán giấy phép mở. Quốc kỳ và cờ Đảng dùng SVG theo mẫu Wikimedia Commons; cờ Đảng được ghi công và liên kết CC BY-SA 3.0.

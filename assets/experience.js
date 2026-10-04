@@ -110,17 +110,20 @@
   var captions={house:'Ngôi nhà sàn của Bác · Hà Nội, 2003',children:'Chủ tịch Hồ Chí Minh với thiếu nhi · thập niên 1950',young:'Nguyễn Ái Quốc tại Marseille · 1921',portrait:'Chân dung Chủ tịch Hồ Chí Minh',congress:'Đại hội II của Đảng · tháng 2/1951',declaration:'Bản Tuyên ngôn độc lập · Trung tâm Lưu trữ quốc gia III'};
   function openAsset(id){
     var asset=assets[id];if(!asset)return;
-    document.getElementById('asset-title').textContent=captions[id]||id;
-    var img=document.getElementById('asset-image');img.src=asset.local;img.alt=captions[id]||id;
-    document.getElementById('asset-credit').textContent='Nguồn: Wikimedia Commons. '+(asset.artist?'Tác giả: '+asset.artist+'. ':'')+'Giấy phép: '+asset.license+'.';
+    document.getElementById('asset-title').textContent=asset.caption||captions[id]||asset.title||id;
+    var img=document.getElementById('asset-image');img.src=asset.local;img.alt=asset.caption||captions[id]||asset.title||id;
+    document.getElementById('asset-credit').textContent='Nguồn: '+(asset.publisher||'Wikimedia Commons')+'. '+(asset.artist?'Ảnh / tư liệu: '+asset.artist+'. ':'')+asset.license+'.';
     document.getElementById('asset-source').href=asset.source;
     assetDialog.showModal();
   }
   var sourceList=document.getElementById('sources-list');
   Object.keys(assets).forEach(function(id){
     var asset=assets[id],li=document.createElement('li'),a=document.createElement('a'),small=document.createElement('small');
-    a.textContent=captions[id]||id;a.href=asset.source;a.target='_blank';a.rel='noopener noreferrer';
-    small.textContent=(asset.artist?'Tác giả: '+asset.artist+' · ':'')+asset.license+' · Ảnh được chuyển sắc sepia trong giao diện.';
+    a.textContent=asset.caption||captions[id]||asset.title||id;a.href=asset.source;a.target='_blank';a.rel='noopener noreferrer';
+    small.textContent=(asset.publisher||'Wikimedia Commons')+' · '+(asset.artist?'Ảnh / tư liệu: '+asset.artist+' · ':'')+asset.license;
+    if(asset.license==='CC BY-SA 3.0'){
+      var license=document.createElement('a');license.href='https://creativecommons.org/licenses/by-sa/3.0/';license.textContent=' · Điều khoản CC BY-SA 3.0';license.target='_blank';license.rel='noopener noreferrer';small.appendChild(license);
+    }
     li.append(a,small);sourceList.appendChild(li);
   });
   tracks.forEach(function(track){
